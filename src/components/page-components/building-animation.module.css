@@ -14,92 +14,41 @@
   border-radius: 4px;
   box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.2), inset -2px -2px 2px rgba(0, 0, 0, 0.2);
   transform-origin: center;
-}
-
-/* --- Base Structure Bricks --- */
-.baseStructure {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-}
-
-.base1 { bottom: 0; left: 75px; }
-.base2 { bottom: 0; left: 125px; }
-.base3 { bottom: 0; left: 175px; }
-.base4 { bottom: 25px; left: 75px; }
-.base5 { bottom: 25px; left: 175px; }
-.base6 { bottom: 50px; left: 100px; }
-.base7 { bottom: 50px; left: 150px; }
-
-
-/* --- Falling Bricks --- */
-.fallingBrick {
   opacity: 0;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation-timing-function: cubic-bezier(0.5, 0.05, 0.5, 1);
+  animation-fill-mode: forwards;
 }
 
-.falling1 {
-  top: 0;
-  left: 125px;
-  animation-name: fall1;
-  animation-delay: 1.5s;
-}
+/* --- Arch Bricks --- */
 
-@keyframes fall1 {
-  0% { transform: translateY(-50px) rotate(0); opacity: 0; }
-  25% { transform: translateY(125px) rotate(0); opacity: 1; }
-  100% { transform: translateY(125px) rotate(0); opacity: 1; }
-}
+/* Left Pillar */
+.arch1 { animation-name: fall-arch1; animation-delay: 0.1s; }
+.arch2 { animation-name: fall-arch2; animation-delay: 0.3s; }
+.arch3 { animation-name: fall-arch3; animation-delay: 0.5s; }
 
-.falling2 {
-  top: 0;
-  left: 100px;
-  animation-name: fall2;
-  animation-delay: 1s;
-}
+/* Right Pillar */
+.arch4 { animation-name: fall-arch4; animation-delay: 0.2s; }
+.arch5 { animation-name: fall-arch5; animation-delay: 0.4s; }
+.arch6 { animation-name: fall-arch6; animation-delay: 0.6s; }
 
-@keyframes fall2 {
-  0% { transform: translateY(-50px) rotate(-10deg); opacity: 0; }
-  25% { transform: translateY(75px) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(75px) rotate(0deg); opacity: 1; }
-}
+/* Arch Curve */
+.arch7 { animation-name: fall-arch7; animation-delay: 0.8s; } /* Left curve */
+.arch8 { animation-name: fall-arch8; animation-delay: 0.9s; } /* Right curve */
+.arch9 { animation-name: fall-arch9; animation-delay: 1.2s; } /* Keystone */
 
-.falling3 {
-  top: 0;
-  left: 150px;
-  animation-name: fall3;
-  animation-delay: 0.5s;
-}
-@keyframes fall3 {
-  0% { transform: translateY(-50px) rotate(10deg); opacity: 0; }
-  25% { transform: translateY(75px) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(75px) rotate(0deg); opacity: 1; }
-}
 
-.falling4 {
-  top: 0;
-  left: 125px;
-  animation-name: fall4;
-  animation-delay: 0s;
-}
-@keyframes fall4 {
-  0% { transform: translateY(-50px) rotate(5deg); opacity: 0; }
-  25% { transform: translateY(100px) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(100px) rotate(0deg); opacity: 1; }
-}
+/* --- Keyframes --- */
+@keyframes fall-arch1 { 0% { transform: translateY(-100px); opacity: 0;} 30%, 100% { transform: translate(50px, 250px); opacity: 1; } }
+@keyframes fall-arch2 { 0% { transform: translateY(-100px); opacity: 0;} 30%, 100% { transform: translate(50px, 225px); opacity: 1; } }
+@keyframes fall-arch3 { 0% { transform: translateY(-100px); opacity: 0;} 30%, 100% { transform: translate(50px, 200px); opacity: 1; } }
 
-.falling5 {
-  top: 0;
-  left: 125px;
-  animation-name: fall5;
-  animation-delay: 2s;
-}
-@keyframes fall5 {
-  0% { transform: translateY(-50px) rotate(-5deg); opacity: 0; }
-  25% { transform: translateY(150px) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(150px) rotate(0deg); opacity: 1; }
-}
+@keyframes fall-arch4 { 0% { transform: translateY(-100px); opacity: 0;} 30%, 100% { transform: translate(200px, 250px); opacity: 1; } }
+@keyframes fall-arch5 { 0% { transform: translateY(-100px); opacity: 0;} 30%, 100% { transform: translate(200px, 225px); opacity: 1; } }
+@keyframes fall-arch6 { 0% { transform: translateY(-100px); opacity: 0;} 30%, 100% { transform: translate(200px, 200px); opacity: 1; } }
+
+@keyframes fall-arch7 { 0% { transform: translateY(-100px) rotate(0); opacity: 0;} 40%, 100% { transform: translate(85px, 185px) rotate(-30deg); opacity: 1; } }
+@keyframes fall-arch8 { 0% { transform: translateY(-100px) rotate(0); opacity: 0;} 40%, 100% { transform: translate(165px, 185px) rotate(30deg); opacity: 1; } }
+
+@keyframes fall-arch9 { 0% { transform: translateY(-100px); opacity: 0;} 50%, 100% { transform: translate(125px, 175px); opacity: 1; } }
