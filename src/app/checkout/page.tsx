@@ -37,7 +37,7 @@ const checkoutSchema = z.object({
 function CheckoutOrderSummary() {
   const searchParams = useSearchParams();
   const quantity = parseInt(searchParams.get('quantity') || '1', 10);
-  const price = 25.00;
+  const price = 60.00;
   const subtotal = price * quantity;
   const freeShippingThreshold = 75.00;
   const shipping = subtotal >= freeShippingThreshold ? 0.00 : 5.00;
@@ -90,7 +90,7 @@ export default function CheckoutPage() {
 
   const searchParams = useSearchParams();
   const quantity = parseInt(searchParams.get('quantity') || '1', 10);
-  const price = 25.00;
+  const price = 60.00;
   const subtotal = price * quantity;
   const freeShippingThreshold = 75.00;
   const shipping = subtotal >= freeShippingThreshold ? 0.00 : 5.00;

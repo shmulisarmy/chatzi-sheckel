@@ -40,7 +40,7 @@ function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
 export function ProductCheckout() {
   const [quantity, setQuantity] = React.useState(1);
 
-  const price = 25.00;
+  const price = 60.00;
   const freeShippingThreshold = 75.00;
   const itemsForFreeShipping = Math.ceil(freeShippingThreshold / price);
   const itemsToAdd = itemsForFreeShipping - quantity;
