@@ -16,7 +16,6 @@ import { Badge } from "@/components/ui/badge";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Minus, Plus, ShoppingCart, Sparkles } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { Confetti } from '@/components/confetti';
 
 function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
   if (itemsToAdd <= 0) {
@@ -41,8 +40,6 @@ function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
 
 export function ProductCheckout() {
   const [quantity, setQuantity] = React.useState(1);
-  const [showConfetti, setShowConfetti] = React.useState(false);
-  const [hasShownConfetti, setHasShownConfetti] = React.useState(false);
   const prevQuantityRef = React.useRef(quantity);
 
   const price = 25.00;
@@ -54,13 +51,8 @@ export function ProductCheckout() {
   const productImages = PlaceHolderImages.filter(p => p.id.startsWith('product-image'));
 
   React.useEffect(() => {
-    if (prevQuantityRef.current < itemsForFreeShipping && quantity >= itemsForFreeShipping && !hasShownConfetti) {
-      setShowConfetti(true);
-      setHasShownConfetti(true);
-      setTimeout(() => setShowConfetti(false), 4000); // Confetti lasts 4 seconds
-    }
     prevQuantityRef.current = quantity;
-  }, [quantity, hasShownConfetti, itemsForFreeShipping]);
+  }, [quantity]);
 
 
   const handleQuantityChange = (amount: number) => {
@@ -69,7 +61,6 @@ export function ProductCheckout() {
 
   return (
     <Card className="overflow-hidden shadow-lg relative">
-      {showConfetti && <Confetti />}
       <CardContent className="p-0">
         <Carousel className="w-full" opts={{ loop: true }}>
           <CarouselContent>
