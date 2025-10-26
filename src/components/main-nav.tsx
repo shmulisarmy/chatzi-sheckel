@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Coin } from "lucide-react";
+import { Menu, Coins } from "lucide-react";
 
 const navItems = [
   { name: "Sources", href: "/#sources" },
@@ -51,7 +51,7 @@ export function MainNav() {
         </SheetTrigger>
         <SheetContent side="left">
           <Link href="/" className="flex items-center space-x-2 mb-8">
-            <Coin className="h-6 w-6 text-primary" />
+            <Coins className="h-6 w-6 text-primary" />
             <span className="font-headline text-2xl font-bold text-primary">MitzvahReady</span>
           </Link>
           <div className="flex flex-col space-y-4">
