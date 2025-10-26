@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Label } from "@/components/ui/label";
@@ -6,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
 
 function SourcesSection() {
     return (
@@ -117,6 +119,31 @@ function QuestionnaireSection() {
     )
 }
 
+function FinalCtaSection() {
+    return (
+        <section id="final-cta" className="mb-12 text-center">
+            <Card className="shadow-lg bg-primary/10 border-primary/20">
+                <CardContent className="p-8 md:p-12 space-y-6">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
+                        Ready to Fulfill the Mitzvah?
+                    </h2>
+                    <p className="max-w-2xl mx-auto text-lg text-primary/90">
+                        The time is now. Acquire your Machatzis Hashekel coin and be prepared for the coming of Moshiach.
+                    </p>
+                    <div className="flex justify-center">
+                        <Link href={{ pathname: '/checkout', query: { quantity: 1 } }} passHref>
+                           <Button size="lg" className="text-lg font-semibold transition-transform hover:scale-105 active:scale-100 py-6 px-10">
+                               Start Preparing for Moshiach Today
+                               <ArrowRight className="ml-2 h-5 w-5" />
+                          </Button>
+                        </Link>
+                    </div>
+                </CardContent>
+            </Card>
+        </section>
+    );
+}
+
 export function InformationalSections() {
     return (
         <div className="flex flex-col">
@@ -124,6 +151,7 @@ export function InformationalSections() {
             <RabbiKellerSection />
             <FaqSection />
             <QuestionnaireSection />
+            <FinalCtaSection />
         </div>
     )
 }
