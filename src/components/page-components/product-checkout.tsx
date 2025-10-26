@@ -78,8 +78,8 @@ export function ProductCheckout() {
               <p className="font-headline text-4xl font-bold text-primary">${(price * quantity).toFixed(2)}</p>
           </div>
           
-          <Link href="/checkout" passHref legacyBehavior>
-            <Button as="a" size="lg" className="w-full text-lg font-semibold transition-transform hover:scale-[1.02] active:scale-100">
+          <Link href="/checkout">
+            <Button size="lg" className="w-full text-lg font-semibold transition-transform hover:scale-[1.02] active:scale-100">
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Continue to Checkout
             </Button>
