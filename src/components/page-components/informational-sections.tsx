@@ -24,8 +24,10 @@ function SourcesSection() {
                     <CardTitle className="font-headline text-3xl">Sources</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
-                    <p>{staticText}</p>
-                    <WritingAnimation text={animatedText} />
+                    <p>
+                        {staticText}{' '}
+                        <WritingAnimation text={animatedText} />
+                    </p>
                 </CardContent>
             </Card>
         </section>

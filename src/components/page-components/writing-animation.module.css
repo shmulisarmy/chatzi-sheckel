@@ -2,15 +2,15 @@
     display: inline-block;
     width: 1.2em;
     height: 1.2em;
-    margin-right: 0.25em;
-    transform: translateY(-2px) rotate(-45deg);
+    margin-left: 0.1em;
+    transform: translateY(-4px) rotate(-45deg);
     color: hsl(var(--foreground) / 0.6);
-    animation: writing 0.5s ease-in-out infinite alternate;
+    animation: writing 0.7s ease-in-out infinite alternate;
 }
 
-.word {
+.char {
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 0.1s forwards;
 }
 
 @keyframes fadeIn {
@@ -21,9 +21,9 @@
 
 @keyframes writing {
     from {
-        transform: translateY(-2px) rotate(-40deg);
+        transform: translateY(-4px) rotate(-40deg);
     }
     to {
-        transform: translateY(0px) rotate(-50deg);
+        transform: translateY(0px) rotate(-50deg) scale(1.05);
     }
 }
