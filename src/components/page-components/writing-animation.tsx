@@ -15,8 +15,9 @@ const QuillIcon = () => (
         strokeLinejoin="round"
         className={styles.quill}
     >
-        <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3 16.828V21h4.172l14.002-14.002z"></path>
-        <path d="m15 5-3 3"></path>
+        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+        <path d="M16 8 2 22"></path>
+        <path d="m17.5 15 3-3"></path>
     </svg>
 );
 
