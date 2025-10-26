@@ -8,8 +8,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, ShoppingCart } from 'lucide-react';
+import { WritingAnimation } from './writing-animation';
 
 function SourcesSection() {
+    const fullText = `The Rambam writes in the beginning of the laws of Shkalim (in Sefer Zmanim): “it contains one positive commandment: [The obligation] that every man give a half-shekel [to the Bais Hamikdash treasury] every year. This commandment is commandment # 171 in the Rambam’s enumeration of the Mitzvot in his introduction to the Mishneh Torah and in his book of commandments: The Positive Commandments. To give a Half-shekel each year, as stated: “..This shall be given by all those included in the census”. The Rambam writes in Hilchot Ysodei Hatorah (9:1): “It is clear and explicit in the Torah, that it is G-d’s commandment, remaining forever without change, addition, or diminishment, as it is stated: “All these matters which I command to you, you shall be careful to perform; You may not add to it or diminish from it” (Dvorim 13:1). [Reflecting the ninth of the Rambam’s thirteen principles of faith: “The Torah given by Moshe will not be nullified, and G-d will never grant another Torah in its place. One may not add to it or diminish it, neither the written law nor its explanation (the oral law)”]. And in the laws of Mlochim Umilchamoseihem (11:1) the Rambam writes that in the era of Moshiach, when the Jews return to Eretz Yisroel, establish dominion over the entire world, and rebuild the Bais Hamikdash, “[the observance of] all the laws will return to their previous state.. According to all the particulars mentioned by the Torah”. A prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel”, is to mint a silver coin “Machatzis Hashekel” that people can contribute to the Beis Hamikdash once a year.`;
+    
+    const words = fullText.split(' ');
+    const staticText = words.slice(0, 100).join(' ');
+    const animatedText = words.slice(100).join(' ');
+
     return (
         <section id="sources" className="mb-12 scroll-mt-24">
             <Card className="shadow-sm">
@@ -17,12 +24,8 @@ function SourcesSection() {
                     <CardTitle className="font-headline text-3xl">Sources</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
-                    <p>The Rambam writes in the beginning of the laws of Shkalim (in Sefer Zmanim): “it contains one positive commandment: [The obligation] that every man give a half-shekel [to the Bais Hamikdash treasury] every year.</p>
-                    <p>This commandment is commandment # 171 in the Rambam’s enumeration of the Mitzvot in his introduction to the Mishneh Torah and in his book of commandments: The Positive Commandments. To give a Half-shekel each year, as stated: “..This shall be given by all those included in the census”.</p>
-                    <p>The Rambam writes in Hilchot Ysodei Hatorah (9:1): “It is clear and explicit in the Torah, that it is G-d’s commandment, remaining forever without change, addition, or diminishment, as it is stated: “All these matters which I command to you, you shall be careful to perform; You may not add to it or diminish from it” (Dvorim 13:1).</p>
-                    <p>[Reflecting the ninth of the Rambam’s thirteen principles of faith: “The Torah given by Moshe will not be nullified, and G-d will never grant another Torah in its place. One may not add to it or diminish it, neither the written law nor its explanation (the oral law)”].</p>
-                    <p>And in the laws of Mlochim Umilchamoseihem (11:1) the Rambam writes that in the era of Moshiach, when the Jews return to Eretz Yisroel, establish dominion over the entire world, and rebuild the Bais Hamikdash, “[the observance of] all the laws will return to their previous state.. According to all the particulars mentioned by the Torah”.</p>
-                    <p>A prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel”, is to mint a silver coin “Machatzis Hashekel” that people can contribute to the Beis Hamikdash once a year.</p>
+                    <p>{staticText}</p>
+                    <WritingAnimation text={animatedText} />
                 </CardContent>
             </Card>
         </section>
