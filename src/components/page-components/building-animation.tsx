@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import styles from './building-animation.module.css';
 
-const Brick = ({ id, animate }: { id: string; animate: boolean }) => (
-  <div className={cn(styles.brick, styles[id], animate && styles.animate)} />
+const FallingBrick = ({ id, animate }: { id: string; animate: boolean }) => (
+  <div className={cn(styles.brick, styles.fallingBrick, styles[id], { [styles.animate]: animate })} />
 );
 
 const BaseStructure = () => (
@@ -35,9 +35,9 @@ export const BuildingAnimation = () => {
   return (
     <div className={styles.animationContainer}>
       <BaseStructure />
-      <Brick id="brick1" animate={animate} />
-      <Brick id="brick2" animate={animate} />
-      <Brick id="brick3" animate={animate} />
+      <FallingBrick id="falling1" animate={animate} />
+      <FallingBrick id="falling2" animate={animate} />
+      <FallingBrick id="falling3" animate={animate} />
     </div>
   );
 };
