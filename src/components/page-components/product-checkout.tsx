@@ -30,7 +30,11 @@ function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
 
   return (
     <div className="border border-dashed border-muted-foreground/50 rounded-md p-2 text-center text-sm text-muted-foreground -rotate-1 transform bg-background">
-      <span>Add <strong>{itemsToAdd}</strong> more item{itemsToAdd > 1 ? 's' : ''} to get <strong>free shipping</strong>!</span>
+      {itemsToAdd === 1 ? (
+        <span>Just <strong>one</strong> more item to get <strong>free shipping</strong>!</span>
+      ) : (
+        <span>Add <strong>{itemsToAdd}</strong> more items to get <strong>free shipping</strong>!</span>
+      )}
     </div>
   );
 }
