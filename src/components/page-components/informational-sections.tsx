@@ -33,19 +33,21 @@ function SourcesSection() {
                     <CardTitle className="font-headline text-3xl">Sources</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
-                    {staticParagraphs.map((text, index) => (
-                        <p key={`static-${index}`}>{text}</p>
-                    ))}
-                    {animatedParagraphs.map((text, index) => {
-                        const startDelay = cumulativeDelay;
-                        // a small pause between paragraphs
-                        cumulativeDelay += text.length * animationSpeed + 500; 
-                        return (
-                            <p key={`animated-${index}`}>
-                                <WritingAnimation text={text} speed={animationSpeed} startDelay={startDelay} />
-                            </p>
-                        );
-                    })}
+                   <ol className="list-decimal list-inside space-y-4">
+                        {staticParagraphs.map((text, index) => (
+                            <li key={`static-${index}`}>{text}</li>
+                        ))}
+                        {animatedParagraphs.map((text, index) => {
+                            const startDelay = cumulativeDelay;
+                            // a small pause between paragraphs
+                            cumulativeDelay += text.length * animationSpeed + 500; 
+                            return (
+                                <li key={`animated-${index}`}>
+                                    <WritingAnimation text={text} speed={animationSpeed} startDelay={startDelay} />
+                                </li>
+                            );
+                        })}
+                    </ol>
                 </CardContent>
             </Card>
         </section>
