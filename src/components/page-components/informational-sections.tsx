@@ -20,6 +20,9 @@ function SourcesSection() {
         `A prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel”, is to mint a silver coin “Machatzis Hashekel” that people can contribute to the Beis Hamikdash once a year.`
     ];
 
+    const staticParagraphs = paragraphs.slice(0, 3);
+    const animatedParagraphs = paragraphs.slice(3);
+
     const animationSpeed = 50; // ms per character
     let cumulativeDelay = 0;
 
@@ -30,12 +33,15 @@ function SourcesSection() {
                     <CardTitle className="font-headline text-3xl">Sources</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
-                    {paragraphs.map((text, index) => {
+                    {staticParagraphs.map((text, index) => (
+                        <p key={`static-${index}`}>{text}</p>
+                    ))}
+                    {animatedParagraphs.map((text, index) => {
                         const startDelay = cumulativeDelay;
                         // a small pause between paragraphs
                         cumulativeDelay += text.length * animationSpeed + 500; 
                         return (
-                            <p key={index}>
+                            <p key={`animated-${index}`}>
                                 <WritingAnimation text={text} speed={animationSpeed} startDelay={startDelay} />
                             </p>
                         );
