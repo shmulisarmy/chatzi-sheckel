@@ -1,43 +1,38 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import styles from './building-animation.module.css';
 
-const FallingBrick = ({ id, animate }: { id: string; animate: boolean }) => (
-  <div className={cn(styles.brick, styles.fallingBrick, styles[id], { [styles.animate]: animate })} />
+const Brick = ({ className }: { className?: string }) => (
+  <div className={cn(styles.brick, className)} />
+);
+
+const FallingBrick = ({ id }: { id: string }) => (
+  <Brick className={cn(styles.fallingBrick, styles[id])} />
 );
 
 const BaseStructure = () => (
   <div className={styles.baseStructure}>
-    {/* Create the base structure with individual divs */}
-    <div className={cn(styles.brick, styles.base1)} />
-    <div className={cn(styles.brick, styles.base2)} />
-    <div className={cn(styles.brick, styles.base3)} />
-    <div className={cn(styles.brick, styles.base4)} />
-    <div className={cn(styles.brick, styles.base5)} />
-    <div className={cn(styles.brick, styles.base6)} />
-    <div className={cn(styles.brick, styles.base7)} />
-    <div className={cn(styles.brick, styles.base8)} />
+    <Brick className={styles.base1} />
+    <Brick className={styles.base2} />
+    <Brick className={styles.base3} />
+    <Brick className={styles.base4} />
+    <Brick className={styles.base5} />
+    <Brick className={styles.base6} />
+    <Brick className={styles.base7} />
   </div>
 );
 
-
 export const BuildingAnimation = () => {
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    // Trigger animation shortly after component mounts
-    const timer = setTimeout(() => setAnimate(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className={styles.animationContainer}>
       <BaseStructure />
-      <FallingBrick id="falling1" animate={animate} />
-      <FallingBrick id="falling2" animate={animate} />
-      <FallingBrick id="falling3" animate={animate} />
+      <FallingBrick id="falling1" />
+      <FallingBrick id="falling2" />
+      <FallingBrick id="falling3" />
+      <FallingBrick id="falling4" />
+      <FallingBrick id="falling5" />
     </div>
   );
 };
