@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Coins } from "lucide-react";
 
 const navItems = [
@@ -50,6 +50,9 @@ export function MainNav() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
+          <SheetHeader>
+            <SheetTitle className="sr-only">Menu</SheetTitle>
+          </SheetHeader>
           <Link href="/" className="flex items-center space-x-2 mb-8">
             <Coins className="h-6 w-6 text-primary" />
             <span className="font-headline text-2xl font-bold text-primary">MitzvahReady</span>
