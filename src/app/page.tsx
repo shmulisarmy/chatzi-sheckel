@@ -1,5 +1,6 @@
 import { InformationalSections } from '@/components/page-components/informational-sections';
 import { ProductCheckout } from '@/components/page-components/product-checkout';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
         </div>
         <div className="w-full lg:w-1/3">
           <div className="lg:sticky lg:top-24">
-            <ProductCheckout />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <ProductCheckout />
+            </React.Suspense>
           </div>
         </div>
       </div>

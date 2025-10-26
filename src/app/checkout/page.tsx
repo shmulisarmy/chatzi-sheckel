@@ -1,6 +1,8 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useSearchParams } from 'next/navigation';
+import React from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
@@ -31,6 +33,43 @@ const checkoutSchema = z.object({
   cvc: z.string().min(3, { message: "CVC must be 3-4 digits." }).max(4),
 });
 
+
+function CheckoutOrderSummary() {
+  const searchParams = useSearchParams();
+  const quantity = parseInt(searchParams.get('quantity') || '1', 10);
+  const price = 25.00;
+  const subtotal = price * quantity;
+  const freeShippingThreshold = 75.00;
+  const shipping = subtotal >= freeShippingThreshold ? 0.00 : 5.00;
+  const total = subtotal + shipping;
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="font-headline text-2xl">Order Summary</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="flex justify-between items-center">
+          <span className="font-medium">Machatzis Hashekel Coin x {quantity}</span>
+          <span className="font-semibold">${subtotal.toFixed(2)}</span>
+        </div>
+        <div className="flex justify-between items-center text-sm">
+          <span className="text-muted-foreground">Shipping</span>
+          <span className={shipping === 0 ? "text-green-600 font-semibold" : ""}>
+            {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
+          </span>
+        </div>
+        <Separator />
+        <div className="flex justify-between items-center font-bold text-lg">
+          <span>Total</span>
+          <span>${total.toFixed(2)}</span>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+
 export default function CheckoutPage() {
   const form = useForm<z.infer<typeof checkoutSchema>>({
     resolver: zodResolver(checkoutSchema),
@@ -48,6 +87,14 @@ export default function CheckoutPage() {
       cvc: "",
     },
   });
+
+  const searchParams = useSearchParams();
+  const quantity = parseInt(searchParams.get('quantity') || '1', 10);
+  const price = 25.00;
+  const subtotal = price * quantity;
+  const freeShippingThreshold = 75.00;
+  const shipping = subtotal >= freeShippingThreshold ? 0.00 : 5.00;
+  const total = subtotal + shipping;
 
   function onSubmit(values: z.infer<typeof checkoutSchema>) {
     console.log(values);
@@ -109,7 +156,7 @@ export default function CheckoutPage() {
 
               <Button type="submit" size="lg" className="w-full text-lg">
                 <Lock className="mr-2 h-5 w-5" />
-                Pay $25.00
+                Pay ${total.toFixed(2)}
               </Button>
             </form>
           </Form>
@@ -117,26 +164,9 @@ export default function CheckoutPage() {
 
         <div className="w-full lg:w-2/5 mb-8 lg:mb-0">
           <div className="lg:sticky lg:top-24">
-            <Card>
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl">Order Summary</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="font-medium">Machatzis Hashekel Coin x 1</span>
-                  <span className="font-semibold">$25.00</span>
-                </div>
-                <div className="flex justify-between items-center text-sm text-muted-foreground">
-                  <span>Shipping</span>
-                  <span>Free</span>
-                </div>
-                <Separator />
-                <div className="flex justify-between items-center font-bold text-lg">
-                  <span>Total</span>
-                  <span>$25.00</span>
-                </div>
-              </CardContent>
-            </Card>
+             <React.Suspense fallback={<div>Loading...</div>}>
+                <CheckoutOrderSummary />
+              </React.Suspense>
           </div>
         </div>
       </div>
