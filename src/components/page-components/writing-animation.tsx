@@ -21,18 +21,34 @@ const QuillIcon = () => (
     </svg>
 );
 
-export const WritingAnimation = ({ text, speed = 50 }: { text: string, speed?: number }) => {
+export const WritingAnimation = ({ text, speed = 50, startDelay = 0 }: { text: string, speed?: number, startDelay?: number }) => {
     const chars = React.useMemo(() => text.split(''), [text]);
     const [visibleCharsCount, setVisibleCharsCount] = useState(0);
+    const [isStarted, setIsStarted] = useState(false);
 
     useEffect(() => {
-        if (visibleCharsCount < chars.length) {
-            const timer = setTimeout(() => {
+        if (startDelay > 0) {
+            const startTimer = setTimeout(() => {
+                setIsStarted(true);
+            }, startDelay);
+            return () => clearTimeout(startTimer);
+        } else {
+            setIsStarted(true);
+        }
+    }, [startDelay]);
+
+    useEffect(() => {
+        if (isStarted && visibleCharsCount < chars.length) {
+            const charTimer = setTimeout(() => {
                 setVisibleCharsCount(prevCount => prevCount + 1);
             }, speed);
-            return () => clearTimeout(timer);
+            return () => clearTimeout(charTimer);
         }
-    }, [visibleCharsCount, chars.length, speed]);
+    }, [isStarted, visibleCharsCount, chars.length, speed]);
+
+    if (!isStarted && startDelay > 0) {
+        return null;
+    }
 
     const visibleText = chars.slice(0, visibleCharsCount).map((char, index) => (
         <span key={index} className={styles.char}>{char}</span>
