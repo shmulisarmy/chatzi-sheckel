@@ -50,7 +50,6 @@ export function ProductCheckout() {
   const itemsForFreeShipping = Math.ceil(freeShippingThreshold / price);
   const itemsToAdd = itemsForFreeShipping - quantity;
   const total = price * quantity;
-  const shippingCost = total >= freeShippingThreshold ? 0 : 5.00;
 
   const productImages = PlaceHolderImages.filter(p => p.id.startsWith('product-image'));
 
