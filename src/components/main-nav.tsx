@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { Menu, Coins } from "lucide-react";
 
 const navItems = [
+  { name: "About", href: "/about" },
   { name: "Sources", href: "/#sources" },
   { name: "Who is Rabbi Keller", href: "/#rabbi-keller" },
   { name: "FAQ's", href: "/#faq" },
@@ -36,7 +37,7 @@ export function MainNav() {
           <Link
             key={item.name}
             href={item.href}
-            className="transition-colors hover:text-primary"
+            className={`transition-colors hover:text-primary ${pathname === item.href ? 'text-primary' : ''}`}
           >
             {item.name}
           </Link>
@@ -53,7 +54,7 @@ export function MainNav() {
           <SheetHeader>
             <SheetTitle className="sr-only">Menu</SheetTitle>
           </SheetHeader>
-          <Link href="/" className="flex items-center space-x-2 mb-8">
+          <Link href="/" className="flex items-center space-x-2 mb-8" onClick={handleLinkClick}>
             <Coins className="h-6 w-6 text-primary" />
             <span className="font-headline text-2xl font-bold text-primary">MitzvahReady</span>
           </Link>
@@ -63,7 +64,7 @@ export function MainNav() {
                 key={item.name}
                 href={item.href}
                 onClick={handleLinkClick}
-                className="text-lg font-medium transition-colors hover:text-primary"
+                className={`text-lg font-medium transition-colors hover:text-primary ${pathname === item.href ? 'text-primary' : ''}`}
               >
                 {item.name}
               </Link>
