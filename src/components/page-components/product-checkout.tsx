@@ -59,7 +59,7 @@ export function ProductCheckout() {
           <CarouselContent>
             {productImages.map((image) => (
               <CarouselItem key={image.id}>
-                <div className="relative aspect-[4/3] bg-muted">
+                <div className="relative aspect-[1/1] bg-muted">
                   <Image
                     src={image.imageUrl}
                     alt={image.description}
