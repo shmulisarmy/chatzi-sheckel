@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MitzvahReady",
+  title: "Machatzis Hashekel",
   description:
     "Purchase a Machatzis Hashekel to be ready for when Moshiach comes.",
 };

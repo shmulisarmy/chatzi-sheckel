@@ -20,8 +20,7 @@ import { Separator } from '@/components/ui/separator';
 function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
   if (itemsToAdd <= 0) {
     return (
-      <Badge variant="secondary" className="border border-green-500/50 bg-green-50 text-green-700 -rotate-2 transform">
-        <Sparkles className="mr-2 h-4 w-4 text-green-500" />
+      <Badge variant="secondary" className="border border-green-500/50 bg-green-50 text-green-700">
         You've unlocked free shipping!
       </Badge>
     );
