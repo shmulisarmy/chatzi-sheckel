@@ -57,6 +57,46 @@
   }
 }
 
+@layer utilities {
+  @keyframes border-shine {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .btn-shine {
+    @apply relative overflow-hidden;
+  }
+  .btn-shine::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      transparent 0%,
+      transparent 60%,
+      hsl(var(--primary) / 0.8),
+      white,
+      hsl(var(--primary) / 0.8),
+      transparent 80%,
+      transparent 100%
+    );
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: border-shine 4s linear infinite;
+    z-index: 1; /* Ensure it's above the button background */
+  }
+  /* This creates a "mask" so the shine only appears on the border */
+  .btn-shine > span {
+    @apply relative inline-flex h-full w-full items-center justify-center rounded-[calc(var(--radius)-2px)] bg-primary px-6 py-3;
+    z-index: 2;
+  }
+}
+
 @keyframes confetti-fall {
   0% { transform: translateY(-100%) rotateZ(0deg); opacity: 1; }
   100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0; }

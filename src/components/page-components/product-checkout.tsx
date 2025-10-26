@@ -123,9 +123,11 @@ export function ProductCheckout() {
           </div>
           
           <Link href={{ pathname: '/checkout', query: { quantity: quantity } }} passHref>
-             <Button size="lg" className="w-full text-lg font-semibold transition-transform hover:scale-[1.02] active:scale-100">
-                <ShoppingCart className="mr-2 h-5 w-5" />
-                Continue to Checkout
+             <Button size="lg" className="w-full text-lg font-semibold transition-transform hover:scale-[1.02] active:scale-100 btn-shine p-0">
+                <span className="w-full h-full flex items-center justify-center gap-2">
+                  <ShoppingCart className="mr-2 h-5 w-5" />
+                  Continue to Checkout
+                </span>
             </Button>
           </Link>
         </div>
