@@ -22,7 +22,7 @@ function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
   
   if (itemsToAdd <= 0) {
     return (
-      <Badge variant="secondary" className="w-full justify-center border border-green-500/50 bg-green-50 text-green-700 font-normal py-2 text-sm gap-2">
+      <Badge variant="secondary" className="w-full justify-center border border-green-500/50 bg-green-50 text-green-700 font-normal py-2 text-xs gap-2">
         <Truck className="h-4 w-4" />
         You've unlocked free shipping!
       </Badge>
@@ -30,7 +30,7 @@ function ShippingMessage({ itemsToAdd }: { itemsToAdd: number }) {
   }
 
   return (
-    <Button variant="outline" className="w-full border-dashed h-auto py-2 text-muted-foreground font-normal text-sm">
+    <Button variant="outline" className="w-full border-dashed h-auto py-1.5 text-muted-foreground font-normal text-xs">
        Add ${15.00.toFixed(2)} more for free shipping
     </Button>
   );
@@ -64,7 +64,7 @@ export function ProductCheckout() {
                     alt={image.description}
                     data-ai-hint={image.imageHint}
                     fill
-                    sizes="(max-width: 1023px) 90vw, 30vw"
+                    sizes="(max-width: 1023px) 90vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -75,30 +75,30 @@ export function ProductCheckout() {
           <CarouselNext className="right-4" />
         </Carousel>
 
-        <div className="p-6 space-y-6">
-          <div className="space-y-2">
-            <h2 className="font-headline text-2xl font-bold">The Machatzis Hashekel Coin</h2>
-            <p className="text-muted-foreground text-sm">Genuine silver coin, minted according to tradition to be ready for the mitzvah when Moshiach arrives.</p>
+        <div className="p-4 space-y-4">
+          <div className="space-y-1">
+            <h2 className="font-headline text-xl font-bold">The Machatzis Hashekel</h2>
+            <p className="text-muted-foreground text-xs">Genuine silver coin, minted according to tradition.</p>
           </div>
 
           <div className="flex items-baseline gap-2">
-            <span className="font-headline text-3xl font-bold">${price.toFixed(2)}</span>
-            <span className="text-muted-foreground text-sm">per coin</span>
+            <span className="font-headline text-2xl font-bold">${price.toFixed(2)}</span>
+            <span className="text-muted-foreground text-xs">per coin</span>
           </div>
 
           <ShippingMessage itemsToAdd={itemsToAdd} />
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-base font-medium">Quantity</span>
-              <div className="flex items-center gap-2 border rounded-md px-2 py-1">
-                <Button variant="ghost" size="icon" className="h-7 w-7 shrink-0 rounded-md" onClick={() => handleQuantityChange(-1)} disabled={quantity <= 1}>
-                  <Minus className="h-4 w-4" />
+              <span className="text-sm font-medium">Quantity</span>
+              <div className="flex items-center gap-1 border rounded-md px-1 py-0.5">
+                <Button variant="ghost" size="icon" className="h-6 w-6 shrink-0 rounded-sm" onClick={() => handleQuantityChange(-1)} disabled={quantity <= 1}>
+                  <Minus className="h-3 w-3" />
                   <span className="sr-only">Decrease quantity</span>
                 </Button>
-                <span className="w-10 text-center text-lg font-bold tabular-nums">{quantity}</span>
-                <Button variant="ghost" size="icon" className="h-7 w-7 shrink-0 rounded-md" onClick={() => handleQuantityChange(1)}>
-                  <Plus className="h-4 w-4" />
+                <span className="w-8 text-center text-base font-bold tabular-nums">{quantity}</span>
+                <Button variant="ghost" size="icon" className="h-6 w-6 shrink-0 rounded-sm" onClick={() => handleQuantityChange(1)}>
+                  <Plus className="h-3 w-3" />
                   <span className="sr-only">Increase quantity</span>
                 </Button>
               </div>
@@ -106,26 +106,26 @@ export function ProductCheckout() {
 
             <Separator />
             
-            <div className="flex items-baseline justify-between gap-4">
-                <span className="text-base font-medium">Total</span>
-                <p className="font-headline text-2xl font-bold text-primary">${total.toFixed(2)}</p>
+            <div className="flex items-baseline justify-between gap-2">
+                <span className="text-sm font-medium">Total</span>
+                <p className="font-headline text-xl font-bold text-primary">${total.toFixed(2)}</p>
             </div>
           </div>
           
-          <div className='space-y-3'>
+          <div className='space-y-2'>
             <Link href={{ pathname: '/checkout', query: { quantity: quantity } }} passHref>
-               <Button size="lg" className="w-full text-lg h-12 font-semibold transition-transform hover:scale-[1.02] active:scale-100">
+               <Button size="lg" className="w-full text-base h-10 font-semibold transition-transform hover:scale-[1.02] active:scale-100">
                     Continue to Checkout
               </Button>
             </Link>
-            <div className="flex justify-center items-center gap-6 text-xs text-muted-foreground">
-                <div className="flex items-center gap-2">
+            <div className="flex justify-center items-center gap-4 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1.5">
                     <Lock className="h-3 w-3" />
                     <span>Secure checkout</span>
                 </div>
-                 <div className="flex items-center gap-2">
+                 <div className="flex items-center gap-1.5">
                     <Truck className="h-3 w-3" />
-                    <span>Fast & reliable shipping</span>
+                    <span>Fast shipping</span>
                 </div>
             </div>
           </div>
