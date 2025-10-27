@@ -2,11 +2,13 @@ import { InformationalSections } from '@/components/page-components/informationa
 import { ProductCheckout } from '@/components/page-components/product-checkout';
 import { Hero } from '@/components/page-components/hero';
 import React from 'react';
+import Header from '@/components/header';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col-reverse lg:flex-row lg:space-x-12">
           <div className="w-full lg:w-3/4 mt-8 lg:mt-0">
