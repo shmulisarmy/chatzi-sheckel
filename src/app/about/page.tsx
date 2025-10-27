@@ -6,7 +6,7 @@ import { BuildingAnimation } from '@/components/page-components/building-animati
 export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-8 md:py-16 animate-in fade-in duration-500">
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center pt-16">
         <BuildingAnimation />
         <div className="mt-12 space-y-6 text-lg md:text-xl leading-relaxed text-foreground/90">
           <p className="font-headline text-2xl md:text-3xl">

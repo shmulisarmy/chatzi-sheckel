@@ -9,6 +9,7 @@ import { Menu, Coins } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
+  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Sources", href: "/#sources" },
   { name: "Rabbi Keller", href: "/#rabbi-keller" },
@@ -26,14 +27,17 @@ export function MainNav() {
   
   const isCheckoutPage = pathname === '/checkout';
 
+  const desktopNavItems = navItems.filter(item => item.href !== '/');
+  
   if (isCheckoutPage) {
     return null; // Don't show nav items on checkout page for a focused experience
   }
 
+
   return (
     <>
       <nav className="hidden md:flex items-center space-x-2 text-sm font-medium">
-        {navItems.map((item) => (
+        {desktopNavItems.map((item) => (
           <Button key={item.name} variant="ghost" asChild className={cn(
             'transition-colors font-semibold',
             'text-muted-foreground hover:text-foreground',
@@ -68,7 +72,9 @@ export function MainNav() {
                 key={item.name}
                 href={item.href}
                 onClick={handleLinkClick}
-                className={`text-lg font-medium rounded-md px-3 py-2 transition-colors hover:bg-accent ${pathname === item.href ? 'bg-accent text-accent-foreground' : ''}`}
+                className={cn('text-lg font-medium rounded-md px-3 py-2 transition-colors hover:bg-accent', 
+                  (pathname === item.href || (pathname ==='/' && item.href === '/')) ? 'bg-accent text-accent-foreground' : ''
+                )}
               >
                 {item.name}
               </Link>

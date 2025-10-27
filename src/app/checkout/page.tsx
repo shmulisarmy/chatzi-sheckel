@@ -102,7 +102,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-8 animate-in fade-in duration-500">
+    <div className="container mx-auto max-w-6xl px-4 py-8 animate-in fade-in duration-500 pt-16">
       <div className="text-center">
         <h1 className="font-headline text-4xl font-bold mb-2">Checkout</h1>
         <p className="text-muted-foreground mb-8">This is the checkout page. Complete your purchase to be ready for the mitzvah.</p>

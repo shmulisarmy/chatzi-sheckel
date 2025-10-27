@@ -16,10 +16,12 @@ export default function Header() {
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <MainNav />
-          <Button variant="ghost" size="icon" className='hover:bg-accent'>
-            <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Shopping Cart</span>
-          </Button>
+          <Link href={{ pathname: '/checkout', query: { quantity: 1 } }} passHref>
+            <Button variant="ghost" size="icon" className='hover:bg-accent'>
+              <ShoppingCart className="h-5 w-5" />
+              <span className="sr-only">Shopping Cart</span>
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
