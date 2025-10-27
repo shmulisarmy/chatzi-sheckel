@@ -50,7 +50,7 @@ export function ProductCheckout() {
   };
 
   return (
-    <Card className="overflow-hidden shadow-lg border">
+    <Card className="overflow-hidden shadow-lg border @container">
       <CardContent className="p-0">
         <div className="flex flex-col @[400px]:flex-row">
             <div className="w-full @[400px]:w-1/2">
