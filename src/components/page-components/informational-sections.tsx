@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BookOpen } from 'lucide-react';
 import { WritingAnimation } from './writing-animation';
 
 function SourcesSection() {
@@ -28,12 +28,15 @@ function SourcesSection() {
 
     return (
         <section id="sources" className="mb-12 scroll-mt-24">
-            <Card className="shadow-sm">
+            <Card className="shadow-lg border">
                 <CardHeader>
-                    <CardTitle className="font-headline text-3xl">Sources</CardTitle>
+                    <CardTitle className="font-headline text-3xl flex items-center gap-3">
+                        <BookOpen className="w-8 h-8 text-primary" />
+                        Sources
+                    </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
-                   <ol className="list-decimal list-inside space-y-4">
+                   <ol className="list-decimal list-inside space-y-4 pl-2">
                         {staticParagraphs.map((text, index) => (
                             <li key={`static-${index}`}>{text}</li>
                         ))}
@@ -58,7 +61,7 @@ function RabbiKellerSection() {
     const rabbiImage = PlaceHolderImages.find(p => p.id === 'rabbi-keller-portrait');
     return (
         <section id="rabbi-keller" className="mb-12 scroll-mt-24">
-            <Card className="shadow-sm">
+            <Card className="shadow-lg border">
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Who is Rabbi Keller</CardTitle>
                 </CardHeader>
@@ -88,7 +91,7 @@ function RabbiKellerSection() {
 function FaqSection() {
     return (
         <section id="faq" className="mb-12 scroll-mt-24">
-            <Card className="shadow-sm">
+            <Card className="shadow-lg border">
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Frequently Asked Questions</CardTitle>
                     <CardDescription>
@@ -129,7 +132,7 @@ function FaqSection() {
 function QuestionnaireSection() {
     return (
         <section id="questionnaire" className="mb-12 scroll-mt-24">
-            <Card className="shadow-sm">
+            <Card className="shadow-lg border">
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Questionnaire</CardTitle>
                     <CardDescription>Have a question not listed here? Ask us directly.</CardDescription>

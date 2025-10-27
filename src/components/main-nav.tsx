@@ -35,9 +35,9 @@ export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
       <nav className="hidden md:flex items-center space-x-2 text-sm font-medium">
         {navItems.map((item) => (
           <Button key={item.name} variant="ghost" asChild className={cn(
-            'transition-colors',
-            isHeroVisible ? 'hover:bg-white/20 hover:text-white' : 'hover:bg-accent hover:text-accent-foreground',
-            pathname === item.href && (isHeroVisible ? 'bg-white/10' : 'bg-accent/50')
+            'transition-colors font-semibold',
+            isHeroVisible ? 'text-white hover:bg-white/20 hover:text-white' : 'text-muted-foreground hover:text-foreground',
+            (pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))) && !isHeroVisible && 'text-foreground'
           )}>
             <Link
               href={item.href}
@@ -49,7 +49,7 @@ export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
       </nav>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" className={cn("md:hidden", isHeroVisible ? "hover:bg-white/20" : "")} size="icon">
+          <Button variant="ghost" className={cn("md:hidden", isHeroVisible ? "hover:bg-white/20 text-white" : "")} size="icon">
             <Menu className="h-6 w-6" />
             <span className="sr-only">Open Menu</span>
           </Button>
@@ -59,6 +59,7 @@ export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
             <SheetTitle className="sr-only">Menu</SheetTitle>
           </SheetHeader>
           <Link href="/" className="flex items-center space-x-2 mb-8" onClick={handleLinkClick}>
+             <Coins className="h-6 w-6 text-primary" />
             <span className="font-headline text-2xl font-bold text-primary">MitzvahReady</span>
           </Link>
           <div className="flex flex-col space-y-2">
