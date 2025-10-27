@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "MitzvahReady",
@@ -30,7 +30,6 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background">
-        <Header />
         <main>{children}</main>
         <Toaster />
         <Footer />
