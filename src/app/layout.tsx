@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Machatzis Hashekel",
+  title: "MitzvahReady",
   description:
     "Purchase a Machatzis Hashekel to be ready for when Moshiach comes.",
 };
@@ -28,9 +28,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased bg-background min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">{children}</main>
+      <body className="font-body antialiased bg-background">
+        <main>{children}</main>
         <Toaster />
       </body>
     </html>

@@ -6,20 +6,20 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Coins } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "About", href: "/about" },
   { name: "Sources", href: "/#sources" },
-  { name: "Who is Rabbi Keller", href: "/#rabbi-keller" },
-  { name: "FAQ's", href: "/#faq" },
+  { name: "Rabbi Keller", href: "/#rabbi-keller" },
+  { name: "FAQ", href: "/#faq" },
   { name: "Questionnaire", href: "/#questionnaire" },
 ];
 
-export function MainNav() {
+export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
 
-  // Close sheet on navigation to a new hash link
   const handleLinkClick = () => {
     setOpen(false);
   };
@@ -32,39 +32,42 @@ export function MainNav() {
 
   return (
     <>
-      <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+      <nav className="hidden md:flex items-center space-x-2 text-sm font-medium">
         {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className={`transition-colors hover:text-primary ${pathname === item.href ? 'text-primary' : ''}`}
-          >
-            {item.name}
-          </Link>
+          <Button key={item.name} variant="ghost" asChild className={cn(
+            'transition-colors',
+            isHeroVisible ? 'hover:bg-white/20 hover:text-white' : 'hover:bg-accent hover:text-accent-foreground',
+            pathname === item.href && (isHeroVisible ? 'bg-white/10' : 'bg-accent/50')
+          )}>
+            <Link
+              href={item.href}
+            >
+              {item.name}
+            </Link>
+          </Button>
         ))}
       </nav>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" className="md:hidden" size="icon">
+          <Button variant="ghost" className={cn("md:hidden", isHeroVisible ? "hover:bg-white/20" : "")} size="icon">
             <Menu className="h-6 w-6" />
             <span className="sr-only">Open Menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left">
+        <SheetContent side="left" className="bg-background text-foreground">
           <SheetHeader>
             <SheetTitle className="sr-only">Menu</SheetTitle>
           </SheetHeader>
           <Link href="/" className="flex items-center space-x-2 mb-8" onClick={handleLinkClick}>
-            <Coins className="h-6 w-6 text-primary" />
-            <span className="font-headline text-2xl font-bold text-primary">Machatzis Hashekel</span>
+            <span className="font-headline text-2xl font-bold text-primary">MitzvahReady</span>
           </Link>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={handleLinkClick}
-                className={`text-lg font-medium transition-colors hover:text-primary ${pathname === item.href ? 'text-primary' : ''}`}
+                className={`text-lg font-medium rounded-md px-3 py-2 transition-colors hover:bg-accent ${pathname === item.href ? 'bg-accent text-accent-foreground' : ''}`}
               >
                 {item.name}
               </Link>
