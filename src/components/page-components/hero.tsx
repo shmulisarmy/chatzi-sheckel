@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Gem, ShieldCheck, Clock, Mouse } from "lucide-react";
-import Header from "@/components/header";
-import { useEffect, useState } from "react";
 
 const heroImage = {
   id: "hero-background",
@@ -21,19 +19,8 @@ const Feature = ({ icon: Icon, children }: { icon: React.ElementType, children: 
 );
 
 export function Hero() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="relative h-[90vh] min-h-[600px] max-h-[1000px] w-full text-white overflow-hidden">
-      <Header isHeroVisible={!isScrolled} />
+    <div className="relative h-[80vh] min-h-[500px] max-h-[800px] w-full text-white overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={heroImage.imageUrl}
@@ -47,7 +34,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 -mt-16">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tight text-shadow-lg">
             Be Ready for <span className="text-blue-400">Moshiach</span>

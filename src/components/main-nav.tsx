@@ -16,7 +16,7 @@ const navItems = [
   { name: "Questionnaire", href: "/#questionnaire" },
 ];
 
-export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
+export function MainNav() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
 
@@ -36,8 +36,8 @@ export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
         {navItems.map((item) => (
           <Button key={item.name} variant="ghost" asChild className={cn(
             'transition-colors font-semibold',
-            isHeroVisible ? 'text-white hover:bg-white/20 hover:text-white' : 'text-muted-foreground hover:text-foreground',
-            (pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))) && !isHeroVisible && 'text-foreground'
+            'text-muted-foreground hover:text-foreground',
+            (pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))) && 'text-foreground'
           )}>
             <Link
               href={item.href}
@@ -49,7 +49,7 @@ export function MainNav({ isHeroVisible }: { isHeroVisible?: boolean }) {
       </nav>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" className={cn("md:hidden", isHeroVisible ? "hover:bg-white/20 text-white" : "")} size="icon">
+          <Button variant="ghost" className="md:hidden" size="icon">
             <Menu className="h-6 w-6" />
             <span className="sr-only">Open Menu</span>
           </Button>
