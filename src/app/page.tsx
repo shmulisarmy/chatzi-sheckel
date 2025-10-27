@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <Header />
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col-reverse lg:flex-row lg:space-x-8">
+        <div className="flex flex-col-reverse lg:flex-row lg:space-x-16">
           <div className="w-full lg:w-3/4 mt-8 lg:mt-0">
             <InformationalSections />
           </div>
