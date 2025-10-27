@@ -75,14 +75,14 @@ export function ProductCheckout() {
           <CarouselNext className="right-4" />
         </Carousel>
 
-        <div className="p-4 space-y-3">
-          <div className="space-y-1">
-            <h2 className="font-headline text-lg font-bold">The Machatzis Hashekel</h2>
+        <div className="p-3 space-y-2">
+          <div className="space-y-0.5">
+            <h2 className="font-headline text-base font-bold">The Machatzis Hashekel</h2>
             <p className="text-muted-foreground text-xs">Genuine silver coin, minted according to tradition.</p>
           </div>
 
           <div className="flex items-baseline gap-2">
-            <span className="font-headline text-xl font-bold">${price.toFixed(2)}</span>
+            <span className="font-headline text-lg font-bold">${price.toFixed(2)}</span>
             <span className="text-muted-foreground text-xs">per coin</span>
           </div>
 
@@ -90,14 +90,14 @@ export function ProductCheckout() {
           
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium">Quantity</span>
+              <span className="text-xs font-medium">Quantity</span>
               <div className="flex items-center gap-1 border rounded-md px-1 py-0.5">
-                <Button variant="ghost" size="icon" className="h-6 w-6 shrink-0 rounded-sm" onClick={() => handleQuantityChange(-1)} disabled={quantity <= 1}>
+                <Button variant="ghost" size="icon" className="h-5 w-5 shrink-0 rounded-sm" onClick={() => handleQuantityChange(-1)} disabled={quantity <= 1}>
                   <Minus className="h-3 w-3" />
                   <span className="sr-only">Decrease quantity</span>
                 </Button>
-                <span className="w-6 text-center text-sm font-bold tabular-nums">{quantity}</span>
-                <Button variant="ghost" size="icon" className="h-6 w-6 shrink-0 rounded-sm" onClick={() => handleQuantityChange(1)}>
+                <span className="w-5 text-center text-sm font-bold tabular-nums">{quantity}</span>
+                <Button variant="ghost" size="icon" className="h-5 w-5 shrink-0 rounded-sm" onClick={() => handleQuantityChange(1)}>
                   <Plus className="h-3 w-3" />
                   <span className="sr-only">Increase quantity</span>
                 </Button>
@@ -108,13 +108,13 @@ export function ProductCheckout() {
             
             <div className="flex items-baseline justify-between gap-2">
                 <span className="text-sm font-medium">Total</span>
-                <p className="font-headline text-lg font-bold text-primary">${total.toFixed(2)}</p>
+                <p className="font-headline text-base font-bold text-primary">${total.toFixed(2)}</p>
             </div>
           </div>
           
-          <div className='space-y-2 pt-2'>
+          <div className='space-y-1.5 pt-1'>
             <Link href={{ pathname: '/checkout', query: { quantity: quantity } }} passHref>
-               <Button size="default" className="w-full text-base h-9 font-semibold transition-transform hover:scale-[1.02] active:scale-100">
+               <Button size="sm" className="w-full text-sm h-8 font-semibold transition-transform hover:scale-[1.02] active:scale-100">
                     Continue to Checkout
               </Button>
             </Link>
