@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
 
 export const metadata: Metadata = {
-  title: "MitzvahReady",
+  title: "Chatzi Shekel",
   description:
     "Purchase a Machatzis Hashekel to be ready for when Moshiach comes.",
 };

@@ -64,7 +64,7 @@ export function MainNav() {
           </SheetHeader>
           <Link href="/" className="flex items-center space-x-2 mb-8" onClick={handleLinkClick}>
              <Coins className="h-6 w-6 text-primary" />
-            <span className="font-headline text-2xl font-bold text-primary">MitzvahReady</span>
+            <span className="font-headline text-2xl font-bold text-primary">Chatzi Shekel</span>
           </Link>
           <div className="flex flex-col space-y-2">
             {navItems.map((item) => (

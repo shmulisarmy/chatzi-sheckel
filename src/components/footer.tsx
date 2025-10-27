@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="space-y-4">
                 <div className="flex items-center space-x-2">
                     <Coins className="h-8 w-8 text-primary" />
-                    <span className="font-headline text-3xl font-bold">MitzvahReady</span>
+                    <span className="font-headline text-3xl font-bold">Chatzi Shekel</span>
                 </div>
                 <p className="text-sm text-secondary-foreground/70 max-w-xs">
                     Preparing the Jewish community for Moshiach with authentic religious items and guidance.
@@ -42,19 +42,19 @@ export default function Footer() {
                 <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-secondary-foreground/70" />
-                        <a href="mailto:info@mitzvahready.com" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
-                            info@mitzvahready.com
+                        <a href="mailto:info@chatzishekel.com" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
+                            info@chatzishekel.com
                         </a>
                     </li>
                     <li className="flex items-center gap-3">
                         <Phone className="h-5 w-5 text-secondary-foreground/70" />
-                        <span className="text-base text-secondary-foreground/70">1-800-MITZVAH</span>
+                        <span className="text-base text-secondary-foreground/70">1-800-SHEKEL</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div className="mt-8 text-center text-sm text-secondary-foreground/60">
-            <p>&copy; {new Date().getFullYear()} MitzvahReady. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Chatzi Shekel. All rights reserved.</p>
         </div>
       </div>
     </footer>
