@@ -15,7 +15,7 @@ export default function Home() {
             <InformationalSections />
           </div>
           <div className="w-full lg:w-1/4">
-            <div className="lg:sticky lg:top-24">
+            <div className="lg:sticky lg:top-24 @container">
               <React.Suspense fallback={<div>Loading...</div>}>
                 <ProductCheckout />
               </React.Suspense>
