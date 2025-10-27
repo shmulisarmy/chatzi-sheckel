@@ -114,19 +114,4 @@
     @apply relative inline-flex h-full w-full items-center justify-center rounded-[calc(var(--radius)-2px)] bg-primary px-6 py-3;
     z-index: 2;
   }
-
-  @keyframes scroll-down-animation {
-    0%, 100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    50% {
-      transform: translateY(10px);
-      opacity: 0.8;
-    }
-  }
-
-  .animate-scroll-down {
-    animation: scroll-down-animation 2s ease-in-out infinite;
-  }
 }

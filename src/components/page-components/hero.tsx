@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Gem, ShieldCheck, Clock, Mouse } from "lucide-react";
+import { Gem, ShieldCheck, Clock } from "lucide-react";
 
 const heroImage = {
   id: "hero-background",
@@ -59,10 +59,6 @@ export function Hero() {
           </Button>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll-down">
-          <Mouse className="h-8 w-8" />
-          <span className="text-xs font-mono">Scroll</span>
-        </div>
     </div>
   );
 }
