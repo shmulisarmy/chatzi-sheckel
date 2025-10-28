@@ -52,8 +52,8 @@ export function ProductCheckout() {
   return (
     <Card className="overflow-hidden shadow-lg border @container">
       <CardContent className="p-0">
-        <div className="flex flex-col @[400px]:flex-row">
-            <div className="w-full @[400px]:w-1/2 p-2">
+        <div className="flex flex-col @[450px]:flex-row">
+            <div className="w-full @[450px]:w-1/2 p-4">
                 <Carousel className="w-full" opts={{ loop: true }}>
                 <CarouselContent>
                     {productImages.map((image) => (
@@ -76,7 +76,7 @@ export function ProductCheckout() {
                 </Carousel>
             </div>
 
-            <div className="w-full @[400px]:w-1/2 flex flex-col p-2">
+            <div className="w-full @[450px]:w-1/2 flex flex-col p-4">
                 <div className="space-y-2 flex-grow">
                 <div className="space-y-0.5">
                     <h2 className="font-headline text-sm font-bold">The Machatzis Hashekel</h2>
