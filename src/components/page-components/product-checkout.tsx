@@ -53,7 +53,7 @@ export function ProductCheckout() {
     <Card className="overflow-hidden shadow-lg border @container">
       <CardContent className="p-0">
         <div className="flex flex-col @[400px]:flex-row">
-            <div className="w-full @[400px]:w-1/2">
+            <div className="w-full @[400px]:w-1/2 p-2">
                 <Carousel className="w-full" opts={{ loop: true }}>
                 <CarouselContent>
                     {productImages.map((image) => (
@@ -76,8 +76,8 @@ export function ProductCheckout() {
                 </Carousel>
             </div>
 
-            <div className="w-full @[400px]:w-1/2 flex flex-col">
-                <div className="p-3 space-y-2 flex-grow">
+            <div className="w-full @[400px]:w-1/2 flex flex-col p-2">
+                <div className="space-y-2 flex-grow">
                 <div className="space-y-0.5">
                     <h2 className="font-headline text-sm font-bold">The Machatzis Hashekel</h2>
                     <p className="text-muted-foreground text-[11px]">Genuine silver coin, minted according to tradition.</p>
@@ -115,7 +115,7 @@ export function ProductCheckout() {
                 </div>
                 </div>
                 
-                <div className='space-y-1 p-3 pt-0'>
+                <div className='space-y-1 pt-0'>
                 <Link href={{ pathname: '/checkout', query: { quantity: quantity } }} passHref>
                     <Button size="sm" className="w-full text-xs h-8 font-semibold transition-transform hover:scale-[1.02] active:scale-100">
                         Continue to Checkout
