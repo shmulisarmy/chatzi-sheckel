@@ -44,12 +44,6 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Feature icon={Gem}>Genuine Silver Coin</Feature>
-          <Feature icon={ShieldCheck}>Rabbinically Approved</Feature>
-          <Feature icon={Clock}>Ready When Needed</Feature>
-        </div>
-
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button size="lg" className="px-8 py-6 text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
             Order Your Coin Now
