@@ -19,7 +19,7 @@ const SHOPIFY_PREVIEW_URL = "https://kizztqg68ma73w13-68110680175.shopifypreview
 
 export function ProductCheckout() {
   const price = 60.00;
-  const productImages = PlaceHolderImages.filter(p => p.id.startsWith('product-image'));
+  const productImages = PlaceHolderImages.filter(p => p.id.startsWith('product-image-new'));
 
   return (
     <Card className="overflow-hidden shadow-lg border @container">
