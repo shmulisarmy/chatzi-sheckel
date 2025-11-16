@@ -42,13 +42,15 @@ export default function Footer() {
                 <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-secondary-foreground/70" />
-                        <a href="mailto:info@chatzishekel.com" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
-                            info@chatzishekel.com
+                        <a href="mailto:mindel@chatzishekel.com" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
+                            mindel@chatzishekel.com
                         </a>
                     </li>
                     <li className="flex items-center gap-3">
                         <Phone className="h-5 w-5 text-secondary-foreground/70" />
-                        <span className="text-base text-secondary-foreground/70">1-800-SHEKEL</span>
+                        <a href="tel:+13475565576" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
+                            +1 (347) 556-5576
+                        </a>
                     </li>
                 </ul>
             </div>
