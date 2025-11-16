@@ -22,11 +22,8 @@ function SourcesSection() {
         `A prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel”, is to mint a silver coin “Machatzis Hashekel” that people can contribute to the Beis Hamikdash once a year.`
     ];
 
-    const staticParagraphs = paragraphs.slice(0, 3);
-    const animatedParagraphs = paragraphs.slice(3);
-
-    const animationSpeed = 50; // ms per character
-    let cumulativeDelay = 0;
+    const staticParagraphs = paragraphs.slice(0, 5);
+    const animatedParagraph = paragraphs[5];
 
     return (
         <section id="sources" className="mb-12 scroll-mt-24">
@@ -42,16 +39,9 @@ function SourcesSection() {
                         {staticParagraphs.map((text, index) => (
                             <li key={`static-${index}`}>{text}</li>
                         ))}
-                        {animatedParagraphs.map((text, index) => {
-                            const startDelay = cumulativeDelay;
-                            // a small pause between paragraphs
-                            cumulativeDelay += text.length * animationSpeed + 500; 
-                            return (
-                                <li key={`animated-${index}`}>
-                                    <WritingAnimation text={text} speed={animationSpeed} startDelay={startDelay} />
-                                </li>
-                            );
-                        })}
+                        <li>
+                            <WritingAnimation text={animatedParagraph} speed={50} />
+                        </li>
                     </ol>
                 </CardContent>
             </Card>
