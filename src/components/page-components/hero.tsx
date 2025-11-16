@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { Gem, ShieldCheck, Clock } from "lucide-react";
+
+const SHOPIFY_PREVIEW_URL = "https://kizztqg68ma73w13-68110680175.shopifypreview.com/products_preview?preview_key=1d7442e0b9a1592ede792f5b7b15e3ab";
 
 const heroImage = {
   id: "hero-background",
@@ -10,13 +12,6 @@ const heroImage = {
   imageUrl: "https://picsum.photos/seed/hero2/1920/1080",
   imageHint: "temple interior light",
 };
-
-const Feature = ({ icon: Icon, children }: { icon: React.ElementType, children: React.ReactNode }) => (
-  <div className="flex items-center gap-2 text-sm">
-    <Icon className="h-5 w-5 text-blue-300" />
-    <span>{children}</span>
-  </div>
-);
 
 export function Hero() {
   return (
@@ -45,12 +40,16 @@ export function Hero() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="px-8 py-6 text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
-            Order Your Coin Now
-          </Button>
-          <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-semibold bg-white/10 border-white/50 backdrop-blur-sm hover:bg-white/20 transition-transform hover:scale-105">
-            Learn More
-          </Button>
+            <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
+                <Button size="lg" className="px-8 py-6 text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
+                    Order Your Coin Now
+                </Button>
+            </Link>
+            <Link href="/#sources" passHref>
+                <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-semibold bg-white/10 border-white/50 backdrop-blur-sm hover:bg-white/20 transition-transform hover:scale-105">
+                    Learn More
+                </Button>
+            </Link>
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { WritingAnimation } from './writing-animation';
 
+const SHOPIFY_PREVIEW_URL = "https://kizztqg68ma73w13-68110680175.shopifypreview.com/products_preview?preview_key=1d7442e0b9a1592ede792f5b7b15e3ab";
+
 function SourcesSection() {
     const paragraphs = [
         `The Rambam writes in the beginning of the laws of Shkalim (in Sefer Zmanim): “it contains one positive commandment: [The obligation] that every man give a half-shekel [to the Bais Hamikdash treasury] every year.`,
@@ -173,7 +175,7 @@ function FinalCtaSection() {
                         The time is now. Acquire your Machatzis Hashekel coin and be prepared for the coming of Moshiach.
                     </p>
                     <div className="flex justify-center">
-                        <Link href={{ pathname: '/checkout', query: { quantity: 1 } }} passHref>
+                        <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
                            <Button size="lg" className="text-lg font-semibold transition-transform hover:scale-105 active:scale-100 py-6 px-10">
                                Start Preparing for Moshiach Today
                                <ArrowRight className="ml-2 h-5 w-5" />
