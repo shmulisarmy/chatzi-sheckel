@@ -11,8 +11,8 @@ const AnimatedBrick = ({ id }: { id: string }) => (
 export const BuildingAnimation = () => {
   return (
     <div className={styles.animationContainer}>
-      {/* This renders 13 bricks and assigns them each a unique animation from the CSS module */}
-      {Array.from({ length: 13 }).map((_, i) => (
+      {/* This renders 12 bricks and assigns them each a unique animation from the CSS module */}
+      {Array.from({ length: 12 }).map((_, i) => (
         <AnimatedBrick key={i} id={`arch${i + 1}`} />
       ))}
     </div>

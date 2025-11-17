@@ -40,7 +40,6 @@
 .arch10 { animation-name: fall-arch10; animation-delay: 1.2s; } /* Mid-right */
 .arch11 { animation-name: fall-arch11; animation-delay: 1.4s; } /* Top-left */
 .arch12 { animation-name: fall-arch12; animation-delay: 1.5s; } /* Top-right */
-.arch13 { animation-name: fall-arch13; animation-delay: 1.8s; } /* Keystone */
 
 
 /* --- Keyframes --- */
@@ -61,6 +60,3 @@
 
 @keyframes fall-arch11 { 0% { transform: translateY(-120px) rotate(0); opacity: 0;} 60%, 100% { transform: translate(115px, 160px) rotate(-60deg); opacity: 1; } }
 @keyframes fall-arch12 { 0% { transform: translateY(-120px) rotate(0); opacity: 0;} 60%, 100% { transform: translate(135px, 160px) rotate(60deg); opacity: 1; } }
-
-/* Keystone */
-@keyframes fall-arch13 { 0% { transform: translateY(-120px); opacity: 0;} 70%, 100% { transform: translate(125px, 145px); opacity: 1; } }
