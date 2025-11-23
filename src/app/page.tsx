@@ -2,7 +2,7 @@
 import { InformationalSections } from '@/components/page-components/informational-sections';
 import { ProductCheckout } from '@/components/page-components/product-checkout';
 import { Hero } from '@/components/page-components/hero';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from '@/components/header';
 
 
