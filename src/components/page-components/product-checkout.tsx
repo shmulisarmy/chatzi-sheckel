@@ -14,8 +14,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ShoppingCart } from 'lucide-react';
+import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
 
-const SHOPIFY_PREVIEW_URL = "https://kizztqg68ma73w13-68110680175.shopifypreview.com/products_preview?preview_key=1d7442e0b9a1592ede792f5b7b15e3ab";
 
 export function ProductCheckout() {
   const price = 60.00;

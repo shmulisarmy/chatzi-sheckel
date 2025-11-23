@@ -1,0 +1,1 @@
+export const SHOPIFY_PREVIEW_URL = "https://ierojuh34lj6o4p3-68110680175.shopifypreview.com/products_preview?preview_key=c713c1132e1bb7f9e805525e34148c04";
