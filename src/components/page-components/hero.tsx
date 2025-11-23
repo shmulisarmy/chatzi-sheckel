@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 
-const SHOPIFY_PREVIEW_URL = "https://kizztqg68ma73w13-68110680175.shopifypreview.com/products_preview?preview_key=1d7442e0b9a1592ede792f5b7b15e3ab";
+const SHOPIFY_PREVIEW_URL = "https://ierojuh34lj6o4p3-68110680175.shopifypreview.com/products_preview?preview_key=c713c1132e1bb7f9e805525e34148c04";
 
 const heroImage = {
   id: "hero-background",

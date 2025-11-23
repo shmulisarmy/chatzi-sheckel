@@ -4,13 +4,14 @@ import { ProductCheckout } from '@/components/page-components/product-checkout';
 import { Hero } from '@/components/page-components/hero';
 import React from 'react';
 import Header from '@/components/header';
+import DesignComment from '@/components/design-comment';
 
 
 
 
 
 
-
+DesignComment()
 export default function Home() {
   // useEffect(() => {
   //   const icon_rel_link = document.createElement("link");
