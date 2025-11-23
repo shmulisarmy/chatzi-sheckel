@@ -1,15 +1,9 @@
 "use server";
 import Database from "better-sqlite3";
 
-const db = new Database("app.db");
+const db = new Database("questions.db");
 
-db.prepare(`
-  CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    age INTEGER
-  )
-`).run();
+
 
 
 

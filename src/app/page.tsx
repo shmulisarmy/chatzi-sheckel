@@ -1,7 +1,7 @@
 import { InformationalSections } from '@/components/page-components/informational-sections';
 import { ProductCheckout } from '@/components/page-components/product-checkout';
 import { Hero } from '@/components/page-components/hero';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/header';
 
 
@@ -11,6 +11,12 @@ import Header from '@/components/header';
 
 
 export default function Home() {
+  useEffect(() => {
+    const icon_rel_link = document.createElement("link");
+    icon_rel_link.rel = "icon";
+    icon_rel_link.href = "https://chatzishekel.com/favicon.ico";
+    document.head.appendChild(icon_rel_link);
+  }, []);
   return (
     <>
       <Hero />
