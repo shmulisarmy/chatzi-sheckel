@@ -159,10 +159,10 @@ function FinalCtaSection() {
             <Card className="shadow-lg bg-primary/10 border-primary/20">
                 <CardContent className="p-8 md:p-12 space-y-6">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
-                        Ready to Fulfill the Mitzvah?
+                        don't wanna wait till the last minute?
                     </h2>
                     <p className="max-w-2xl mx-auto text-lg text-primary/90">
-                        The time is now. Acquire your Machatzis Hashekel coin and be prepared for the coming of Moshiach.
+                        theres no time better then right now. Acquire your Machatzis Hashekel coin and be prepared for the coming of Moshiach.
                     </p>
                     <div className="flex justify-center">
                         <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
