@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { WritingAnimation } from './writing-animation';
+import { HaskomohSection } from './haskomoh-section';
 import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
 
 
@@ -183,6 +184,7 @@ export function InformationalSections() {
         <div className="flex flex-col">
             <SourcesSection />
             <RabbiKellerSection />
+            <HaskomohSection />
             <FaqSection />
             <QuestionnaireSection />
             <FinalCtaSection />

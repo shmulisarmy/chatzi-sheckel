@@ -42,10 +42,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'yoshkeller.com',
+        hostname: 'www.chabadftl.com',
         port: '',
         pathname: '/**',
-      }
+      },
     ],
   },
 };

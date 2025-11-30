@@ -35,6 +35,18 @@
       "description": "Portrait of Rabbi Keller.",
       "imageUrl": "https://i.postimg.cc/pd3qhMvt/sheckel-profile.jpg",
       "imageHint": "portrait man"
+    },
+    {
+      "id": "rabbi-edelman-portrait",
+      "description": "Portrait of Rabbi Yisroel Edelman.",
+      "imageUrl": "https://collive.com/wp-content/uploads/2021/08/Edelman-Yisroel.jpg",
+      "imageHint": "portrait man"
+    },
+    {
+      "id": "rabbi-lieberman-portrait",
+      "description": "Portrait of Rabbi Aharon Lieberman.",
+      "imageUrl": "https://www.chabadftl.com/wp-content/uploads/2020/09/Rabbi-Lieberman-1-1.jpg",
+      "imageHint": "portrait man"
     }
   ]
 }
