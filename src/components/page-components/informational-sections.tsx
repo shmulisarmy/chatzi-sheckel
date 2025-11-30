@@ -58,7 +58,7 @@ function RabbiKellerSection() {
                     <CardTitle className="font-headline text-3xl">Who is Rabbi Keller</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed">
-                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div className="flex flex-col sm:flex-row items-center gap-6">
                         {rabbiImage && (
                           <Image
                               src={rabbiImage.imageUrl}
