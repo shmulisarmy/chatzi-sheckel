@@ -1,6 +1,8 @@
 import type {Config} from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 export default {
+  darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,13 +11,14 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: '2rem',
       screens: {
-        "2xl": "1400px",
+        '2xl': '1400px',
       },
     },
     extend: {
       fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
         body: ["'PT Sans'", 'sans-serif'],
         headline: ["'Playfair Display'", 'serif'],
         code: ['monospace'],
@@ -99,10 +102,25 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
     },
   },
   plugins: [
     require('tailwindcss-animate'),
     require('@tailwindcss/container-queries'),
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      );
+    },
   ],
 } satisfies Config;
