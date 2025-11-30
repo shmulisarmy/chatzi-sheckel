@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -52,7 +53,7 @@ export function HaskomohSection() {
     const isVisible = entry?.isIntersecting;
 
     const haskomohText = [
-        "We are counted - because we count, and everyone counts!",
+        "We are counted - because we count, and <span class=\"text-blue-400\">everyone counts!</span>",
         "Historically this was accomplished by presenting a Machatzis Hashekel to the Beis Hamikdash.",
         "Occasionally, we are presented with an opportunity to have the Zchus to fulfill a special Mitzvah.",
         "Rabbi Yossi Keller has undertaken an incredible project to reinvigorate the Mitzvah of Machatzis Hashekel in a meaningful and practical manner with the issuing of magnificent silver Half Shekel coins for this purpose. Their availability will surely bring renewed enthusiasm for this Mitzvah to a wider audience.",
@@ -72,7 +73,7 @@ export function HaskomohSection() {
                     <CardContent className="space-y-6 text-base leading-relaxed text-foreground/90">
                         <div className="space-y-4">
                             {haskomohText.map((paragraph, index) => (
-                                <p key={index}>{paragraph}</p>
+                                <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
                             ))}
                         </div>
 
