@@ -54,7 +54,7 @@ export function ProductCheckout() {
                     <p className="text-muted-foreground text-sm">Genuine silver coin, minted according to tradition.</p>
                 
                     <div className="flex items-baseline gap-1.5 pt-2">
-                        <span className="font-headline text-xl font-bold">${price.toFixed(2)}</span>
+                        <span className="text-xl font-bold">${price.toFixed(2)}</span>
                         <span className="text-muted-foreground text-xs">per coin</span>
                     </div>
                 </div>

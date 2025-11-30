@@ -19,9 +19,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["'PT Sans'", 'sans-serif', ...fontFamily.sans],
-        body: ["'PT Sans'", 'sans-serif'],
         headline: ["'Playfair Display'", 'serif'],
-        code: ['monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
