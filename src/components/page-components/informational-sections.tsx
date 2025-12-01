@@ -36,40 +36,48 @@ function SourcesSection() {
                     <p>Hence, a prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel” is to mint a silver “Machatzis Hashekel” coin that people can contribute to the Beis Hamikdash once a year.</p>
 
                     <p>We pray each day: והשב העבודה לדביר ביתך .. ותחזינה עינינו בשובך לציון ברחמים (restore the service to Your holy Sanctuary.. May our eyes behold Your merciful return to Zion). When Moshiach comes and The Beis Hamikdash is rebuilt, the Kohanim will bring the communal sacrifices that are financed by every member of Klal Yisroel (obligatory for Men who are twenty years and older; optional for boys under the age of twenty and for women) contributing a Machatzis Hashekel (a half-shekel) once a year (which pays: for the Communal offerings).</p>
-
-                    <div className="pt-4">
-                        <h3 className="font-headline text-2xl font-semibold mb-3">Weight of the Half-Shekel</h3>
-                        <p>A half-shekel weighs one quarter of an ounce of silver.</p>
-                        <ul className="list-disc space-y-3 pl-5 mt-3">
-                            <li>
-                                <strong>According to Rashi:</strong>
-                                <ul className="list-circle space-y-1 pl-5 mt-1">
-                                    <li>An ounce (Kolonia standard): 450 barley grains (~29.16 grams)</li>
-                                    <li>Shekel is ½ of the Kolonia standard of the ounce= 225 grains (~14.58 g)</li>
-                                    <li>Half-shekel = 112.5 grains (~7.29 g)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Other Opinions:</strong>
-                                <ul className="list-circle space-y-1 pl-5 mt-1">
-                                     <li>Lekach Tov / Rabbeinu Tam: Machatzis HaShekel ≈ 108 grains (~7 g)</li>
-                                </ul>
-                            </li>
-                             <li>
-                                <strong>The Rambam rules (Hilchos Shekalim 1:5):</strong>
-                                <p className="pl-5 mt-1">One may never give less than the weight of Moshe Rabbeinu’s half-shekel.</p>
-                            </li>
-                             <li>
-                                <strong>Some interpret the Rif (in the beginning of the first chapter of Kidushin) that:</strong>
-                                <ul className="list-circle space-y-1 pl-5 mt-1">
-                                    <li>A Shekel in time of Moshe Rabeinu = 320 wheat grains, a half of a Troy Ounce: 15.552 gram</li>
-                                    <li>A Half-Shekel in time of Moshe Rabeinu = 160 wheat grains, which is a quarter of a Troy ounce: 7.776 gram</li>
-                                </ul>
-                                <p className="pl-5 mt-1">But according to the Rambam’s interpretation in the Rif (as explained by his son, Rabbi Avrohom), the weight of a half a shekel in times of Moshe Rabeinu is slightly less than 160 wheat grains.</p>
-                            </li>
-                        </ul>
-                    </div>
                     
+                    <div className="pt-4">
+                         <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="item-1" className="border-b-0">
+                                <AccordionTrigger className="text-left font-headline text-2xl font-semibold hover:no-underline py-2">
+                                    Weight of the Half-Shekel
+                                </AccordionTrigger>
+                                <AccordionContent className="pt-4 space-y-3">
+                                    <p>A half-shekel weighs one quarter of an ounce of silver.</p>
+                                    <ul className="list-disc space-y-3 pl-5 mt-3">
+                                        <li>
+                                            <strong>According to Rashi:</strong>
+                                            <ul className="list-circle space-y-1 pl-5 mt-1">
+                                                <li>An ounce (Kolonia standard): 450 barley grains (~29.16 grams)</li>
+                                                <li>Shekel is ½ of the Kolonia standard of the ounce= 225 grains (~14.58 g)</li>
+                                                <li>Half-shekel = 112.5 grains (~7.29 g)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Other Opinions:</strong>
+                                            <ul className="list-circle space-y-1 pl-5 mt-1">
+                                                <li>Lekach Tov / Rabbeinu Tam: Machatzis HaShekel ≈ 108 grains (~7 g)</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>The Rambam rules (Hilchos Shekalim 1:5):</strong>
+                                            <p className="pl-5 mt-1">One may never give less than the weight of Moshe Rabbeinu’s half-shekel.</p>
+                                        </li>
+                                        <li>
+                                            <strong>Some interpret the Rif (in the beginning of the first chapter of Kidushin) that:</strong>
+                                            <ul className="list-circle space-y-1 pl-5 mt-1">
+                                                <li>A Shekel in time of Moshe Rabeinu = 320 wheat grains, a half of a Troy Ounce: 15.552 gram</li>
+                                                <li>A Half-Shekel in time of Moshe Rabeinu = 160 wheat grains, which is a quarter of a Troy ounce: 7.776 gram</li>
+                                            </ul>
+                                            <p className="pl-5 mt-1">But according to the Rambam’s interpretation in the Rif (as explained by his son, Rabbi Avrohom), the weight of a half a shekel in times of Moshe Rabeinu is slightly less than 160 wheat grains.</p>
+                                        </li>
+                                    </ul>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </div>
+
                     <p className="pt-2">The mitzvah of the annual contribution of Machatzis Hashekel for the Korbonos Tzibur [described ibid 30:12-13] must be fulfilled by any child who reaches the age of 13 years old (see Ramban Exodus 30:12; Tosfos Yom Tov Shkolim 1:4).</p>
                 </CardContent>
             </Card>
