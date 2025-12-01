@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Chatzi Shekel",
   description:
     "Purchase a Machatzis Hashekel to be ready for when Moshiach comes.",
+  icons: {
+    icon: [
+      { url: 'https://shmulisarmy.github.io/resume/images/profile.png', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="https://media.istockphoto.com/id/1829241109/photo/enjoying-a-brunch-together.jpg?s=612x612&w=0&k=20&c=9awLLRMBLeiYsrXrkgzkoscVU_3RoVwl_HA-OT-srjQ=" />
+        <link rel="icon" href="https://shmulisarmy.github.io/resume/images/profile.png?v=1" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
