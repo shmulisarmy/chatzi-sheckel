@@ -1,29 +1,17 @@
 {
   "placeholderImages": [
-    {
-      "id": "product-image-new-1",
-      "description": "Machatzis Hashekel coin design front.",
-      "imageUrl": "https://i.postimg.cc/vcxKwVK4/MACHATZIS-HASHEKEL-FINAL-page-0001.jpg",
-      "imageHint": "silver coin"
-    },
-    {
-      "id": "product-image-new-2",
-      "description": "Machatzis Hashekel coin design back.",
-      "imageUrl": "https://i.postimg.cc/2VLtNZtb/MACHATZIS-HASHEKEL-FINAL-page-0002.jpg",
-      "imageHint": "silver coin"
-    },
-    {
-      "id": "product-image-1",
-      "description": "A close up of a silver Machatzis Hashekel coin.",
-      "imageUrl": "https://images.unsplash.com/photo-1626679787984-d28b05e9ec4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaWx2ZXIlMjBjb2lufGVufDB8fHx8MTc2MTQ3ODgxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "silver coin"
-    },
-    {
-      "id": "product-image-2",
-      "description": "A silver coin held between fingers.",
-      "imageUrl": "https://images.unsplash.com/photo-1738460340635-101f1e8d2856?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmNpZW50JTIwY29pbnxlbnwwfHx8fDE3NjE0NzIzNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ancient coin"
-    },
+   {
+  "id": "product-image-new-1",
+  "description": "Local Machatzis Hashekel coin image",
+  "imageUrl": "/images/product-image-new-front.png",
+  "imageHint": "local silver coin"
+},
+ {
+  "id": "product-image-new-2",
+  "description": "Local Machatzis Hashekel coin image - alternate view",
+  "imageUrl": "/images/product-image-new-back.png",
+  "imageHint": "local silver coin"
+},
     {
       "id": "product-image-3",
       "description": "Multiple stacked silver coins.",
