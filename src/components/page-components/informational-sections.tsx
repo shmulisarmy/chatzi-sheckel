@@ -15,18 +15,6 @@ import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
 
 
 function SourcesSection() {
-    const paragraphs = [
-        `The Rambam writes in the beginning of the laws of Shkalim (in Sefer Zmanim): “it contains one positive commandment: [The obligation] that every man give a half-shekel [to the Bais Hamikdash treasury] every year.`,
-        `This commandment is commandment # 171 in the Rambam’s enumeration of the Mitzvot in his introduction to the Mishneh Torah and in his book of commandments: The Positive Commandments. To give a Half-shekel each year, as stated: “..This shall be given by all those included in the census”.`,
-        `The Rambam writes in Hilchot Ysodei Hatorah (9:1): “It is clear and explicit in the Torah, that it is G-d’s commandment, remaining forever without change, addition, or diminishment, as it is stated: “All these matters which I command to you, you shall be careful to perform; You may not add to it or diminish from it” (Dvorim 13:1).`,
-        `[Reflecting the ninth of the Rambam’s thirteen principles of faith: “The Torah given by Moshe will not be nullified, and G-d will never grant another Torah in its place. One may not add to it or diminish it, neither the written law nor its explanation (the oral law)”].`,
-        `And in the laws of Mlochim Umilchamoseihem (11:1) the Rambam writes that in the era of Moshiach, when the Jews return to Eretz Yisroel, establish dominion over the entire world, and rebuild the Bais Hamikdash, “[the observance of] all the laws will return to their previous state.. According to all the particulars mentioned by the Torah”.`,
-        `A prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel”, is to mint a silver coin “Machatzis Hashekel” that people can contribute to the Beis Hamikdash once a year.`
-    ];
-
-    const staticParagraphs = paragraphs.slice(0, 5);
-    const animatedParagraph = paragraphs[5];
-
     return (
         <section id="sources" className="mb-12 scroll-mt-24">
             <Card className="shadow-lg border">
@@ -37,14 +25,52 @@ function SourcesSection() {
                     </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
-                   <ol className="list-decimal list-inside space-y-4 pl-2">
-                        {staticParagraphs.map((text, index) => (
-                            <li key={`static-${index}`}>{text}</li>
-                        ))}
-                        <li>
-                            <WritingAnimation text={animatedParagraph} speed={50} />
-                        </li>
+                    <p>The Rambam writes:</p>
+                    <ol className="list-alpha list-outside space-y-2 pl-6">
+                        <li>There is a positive commandment that every Jewish man gives a half-shekel [to the Bais Hamikdash treasury], as stated in the Torah: “..This shall be given by all those included in the census”.</li>
+                        <li>It is clear and explicit in the Torah, that G-d’s commandments remain forever without change, addition, or diminishment; one may not add to it or diminish from it.</li>
+                        <li>In the era of Moshiach, when the Jews return to Eretz Yisroel, establish dominion over the entire world, and rebuild the Bais Hamikdash; the observance of all the laws will return to their previous state.. according to all the particulars mentioned by the Torah.</li>
+                        <li>A Jewish man must give the half-shekel all at once (and not a portion of it at one time, and the remainder in a separate donation to the Beis Hamikdash).</li>
                     </ol>
+
+                    <p>Hence, a prerequisite to fulfilling the Mitzvah of “Machatzis Hashekel” is to mint a silver “Machatzis Hashekel” coin that people can contribute to the Beis Hamikdash once a year.</p>
+
+                    <p>We pray each day: והשב העבודה לדביר ביתך .. ותחזינה עינינו בשובך לציון ברחמים (restore the service to Your holy Sanctuary.. May our eyes behold Your merciful return to Zion). When Moshiach comes and The Beis Hamikdash is rebuilt, the Kohanim will bring the communal sacrifices that are financed by every member of Klal Yisroel (obligatory for Men who are twenty years and older; optional for boys under the age of twenty and for women) contributing a Machatzis Hashekel (a half-shekel) once a year (which pays: for the Communal offerings).</p>
+
+                    <div className="pt-4">
+                        <h3 className="font-headline text-2xl font-semibold mb-3">Weight of the Half-Shekel</h3>
+                        <p>A half-shekel weighs one quarter of an ounce of silver.</p>
+                        <ul className="list-disc space-y-3 pl-5 mt-3">
+                            <li>
+                                <strong>According to Rashi:</strong>
+                                <ul className="list-circle space-y-1 pl-5 mt-1">
+                                    <li>An ounce (Kolonia standard): 450 barley grains (~29.16 grams)</li>
+                                    <li>Shekel is ½ of the Kolonia standard of the ounce= 225 grains (~14.58 g)</li>
+                                    <li>Half-shekel = 112.5 grains (~7.29 g)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Other Opinions:</strong>
+                                <ul className="list-circle space-y-1 pl-5 mt-1">
+                                     <li>Lekach Tov / Rabbeinu Tam: Machatzis HaShekel ≈ 108 grains (~7 g)</li>
+                                </ul>
+                            </li>
+                             <li>
+                                <strong>The Rambam rules (Hilchos Shekalim 1:5):</strong>
+                                <p className="pl-5 mt-1">One may never give less than the weight of Moshe Rabbeinu’s half-shekel.</p>
+                            </li>
+                             <li>
+                                <strong>Some interpret the Rif (in the beginning of the first chapter of Kidushin) that:</strong>
+                                <ul className="list-circle space-y-1 pl-5 mt-1">
+                                    <li>A Shekel in time of Moshe Rabeinu = 320 wheat grains, a half of a Troy Ounce: 15.552 gram</li>
+                                    <li>A Half-Shekel in time of Moshe Rabeinu = 160 wheat grains, which is a quarter of a Troy ounce: 7.776 gram</li>
+                                </ul>
+                                <p className="pl-5 mt-1">But according to the Rambam’s interpretation in the Rif (as explained by his son, Rabbi Avrohom), the weight of a half a shekel in times of Moshe Rabeinu is slightly less than 160 wheat grains.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p className="pt-2">The mitzvah of the annual contribution of Machatzis Hashekel for the Korbonos Tzibur [described ibid 30:12-13] must be fulfilled by any child who reaches the age of 13 years old (see Ramban Exodus 30:12; Tosfos Yom Tov Shkolim 1:4).</p>
                 </CardContent>
             </Card>
         </section>
@@ -192,3 +218,5 @@ export function InformationalSections() {
         </div>
     )
 }
+
+    
