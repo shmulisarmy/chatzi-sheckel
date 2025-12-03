@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="bg-secondary/10 border-t border-border">
             <div className="container mx-auto max-w-4xl px-4 py-8 md:py-16">
                  <div className="text-left space-y-8">
-                        <iframe  style={{width: "100%"}} height="454" src="https://www.youtube.com/embed/QTksqBzQENg" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <iframe  style={{width: "100%"}} height="454" src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     {/* <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video">
                     </div> */}
 
