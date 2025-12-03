@@ -31,8 +31,8 @@ export function Hero() {
     };
   }, []);
 
-  const scale = 1 + scrollY / 2000;
-  const blur = scrollY / 100;
+  const scale = 1 + scrollY / 3000;
+  const blur = scrollY / 200;
 
   return (
     <div className="relative h-[80vh] min-h-[500px] max-h-[800px] w-full text-white overflow-hidden">
@@ -80,3 +80,4 @@ export function Hero() {
     </div>
   );
 }
+
