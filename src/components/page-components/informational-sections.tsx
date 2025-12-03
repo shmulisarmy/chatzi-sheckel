@@ -12,16 +12,53 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, BookOpen, ArrowUp } from 'lucide-react';
-import { WritingAnimation } from './writing-animation';
 import { HaskomohSection } from './haskomoh-section';
 import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+
+function useDynamicShadow() {
+    const cardRef = useRef<HTMLDivElement>(null);
+    const [shadow, setShadow] = useState('0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (cardRef.current) {
+                const { top, height } = cardRef.current.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                
+                // Calculate the card's position relative to the viewport center
+                const cardCenterY = top + height / 2;
+                const viewportCenterY = viewportHeight / 2;
+                const difference = cardCenterY - viewportCenterY;
+                
+                // Normalize the difference to a value between -1 and 1
+                const normalized = Math.max(-1, Math.min(1, difference / (viewportHeight / 2)));
+                
+                // Animate offsetY and blur. As card goes up (normalized -> -1), shadow moves down.
+                const offsetY = 15 - (normalized * 10); // from 5px to 25px
+                const blur = 20 - Math.abs(normalized * 10); // from 10px to 20px
+                const spread = -3 - (normalized * 2); // from -5px to -1px
+
+                setShadow(`0px ${offsetY}px ${blur}px ${spread}px rgba(0,0,0,0.1)`);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial calculation
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return { ref: cardRef, style: { boxShadow: shadow, transition: 'box-shadow 0.1s linear' } };
+}
 
 
 function SourcesSection() {
+    const shadowProps = useDynamicShadow();
     return (
         <section id="sources" className="mb-12 scroll-mt-24">
-            <Card className="shadow-lg border">
+            <Card {...shadowProps}>
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl flex items-center gap-3">
                         <BookOpen className="w-8 h-8 text-primary" />
@@ -91,9 +128,10 @@ function SourcesSection() {
 
 function RabbiKellerSection() {
     const rabbiImage = PlaceHolderImages.find(p => p.id === 'rabbi-keller-portrait');
+    const shadowProps = useDynamicShadow();
     return (
         <section id="rabbi-keller" className="mb-12 scroll-mt-24">
-            <Card className="shadow-lg border">
+            <Card {...shadowProps}>
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Who is Rabbi Keller</CardTitle>
                 </CardHeader>
@@ -222,10 +260,11 @@ function FaqSection() {
     ];
 
     const displayedFaqs = showAll ? faqs : faqs.slice(0, 3);
+    const shadowProps = useDynamicShadow();
 
     return (
         <section id="faq" className="mb-12 scroll-mt-24">
-            <Card className="shadow-lg border">
+            <Card {...shadowProps}>
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Frequently Asked Questions</CardTitle>
                     <CardDescription>
@@ -271,9 +310,10 @@ function FaqSection() {
 }
 
 function QuestionnaireSection() {
+    const shadowProps = useDynamicShadow();
     return (
         <section id="questionnaire" className="mb-12 scroll-mt-24">
-            <Card className="shadow-lg border">
+            <Card {...shadowProps}>
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Questionnaire</CardTitle>
                     <CardDescription>Have a question not listed here? Ask us directly.</CardDescription>
@@ -303,9 +343,10 @@ function QuestionnaireSection() {
 }
 
 function FinalCtaSection() {
+    const shadowProps = useDynamicShadow();
     return (
         <section id="final-cta" className="mb-12 text-center">
-            <Card className="shadow-lg bg-primary/10 border-primary/20">
+            <Card className="bg-primary/10 border-primary/20" {...shadowProps}>
                 <CardContent className="p-8 md:p-12 space-y-6">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
                         don't wanna wait till the last minute?
