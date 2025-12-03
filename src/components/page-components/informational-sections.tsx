@@ -42,7 +42,7 @@ function useDynamicShadow() {
                 const spread = -3 - (normalized * 2);
                 const newShadow = `0px ${offsetY}px ${blur}px ${spread}px rgba(0,0,0,0.1)`;
 
-                const rotateX = -normalized * 5; // Tilt from -5deg to 5deg
+                const rotateX = -normalized * 2; // Tilt from -2deg to 2deg
                 const newTransform = `perspective(1000px) rotateX(${rotateX}deg)`;
 
                 setStyle(prev => ({
