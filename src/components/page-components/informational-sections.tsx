@@ -117,44 +117,137 @@ function RabbiKellerSection() {
 }
 
 function FaqSection() {
+    const faqs = [
+        {
+            question: "Don’t we already give “Machatzis Hashekel” every year before Purim?",
+            answer: [
+                { type: 'strong', content: 'Short answer:' },
+                { type: 'p', content: 'What we give before Purim is only a commemoration—not the actual mitzvah.' },
+                { type: 'strong', content: 'Clear explanation:' },
+                { type: 'p', content: 'The true biblical mitzvah of Machatzis Hashekel applies only when Korbonos are brought on the Mizbeiach. Every Jewish man was commanded to give a real silver half-shekel each year to fund the communal sacrifices.' },
+                { type: 'p', content: 'In exile, since we cannot fulfill that mitzvah, the R’ma writes that we give three half-coins of local currency before Purim to remember the original mitzvah.' },
+                { type: 'strong', content: 'This campaign is different.' },
+                { type: 'p', content: 'It is about setting aside a silver coin that weighs not less than the weight of a half-shekel during the time of Moshe Rabeinu (which according to the Rif is a quarter of a Troy ounce); so that when Moshiach comes and Korbonos Tzibur resume, you are ready to fulfill the actual biblical mitzvah immediately.' }
+            ]
+        },
+        {
+            question: "If it’s so important, why is it only being introduced now?",
+            answer: [
+                { type: 'strong', content: 'Response:' },
+                { type: 'p', content: 'Recently, Rabbis the world over joined the campaign (initiated by the Lubavitcher Rebbe) for all Jews to prepare themselves for the coming of Moshiach.' },
+                { type: 'p', content: 'When Moshiach comes, the first communal korban will be brought immediately. To participate, each man must already have his Machatzis Hashekel ready.' }
+            ]
+        },
+        {
+            question: "Why must every Jew give a Machatzis Hashekel? Why not let each person fund his own korban?",
+            answer: [
+                { type: 'p', content: 'Because communal offerings are not private donations.' },
+                { type: 'p', content: 'Private sacrifices (such as a Korbon Chagigah that individuals bring on Yom Tov, a Pesach offering, or any voluntary offering) are paid for by the individual who brings that sacrifice.' },
+                { type: 'p', content: 'But Korbonos Tzibur (communal offerings) [like the daily Tamid; the Musaf offerings of Shabbos, Yom Tov, and Rosh Chodesh; the Lechem Haponim; and the daily Ktores] must be funded equally by all Jewish men.' },
+                { type: 'p', content: 'The Torah requires that every man contribute one half-shekel each year, so all share equally in the Korbonos Tzibur); therefore, Rabbi Yosef Keller, took upon himself the task to make the Machatzis Hashekel available to those who want to purchase it so that they can donate it the day we start bringing the sacrifices after the coming of Moshiach.' }
+            ]
+        },
+        {
+            question: "Who says we will still use a half-shekel in the times of Moshiach? Maybe the system will change.",
+            answer: [
+                { type: 'strong', content: 'The Rambam is explicit:' },
+                { type: 'p', content: 'Every Jewish man is obligated to give a half-shekel each year (Maimonides, beginning of the laws of Shkalim; see also: laws of kings and their wars 11:1).' },
+                { type: 'p', content: 'This is one of the 613 mitzvos (Maimonides, Book of Commandments: Positive Commandment #171).' },
+                { type: 'p', content: 'Torah law never changes (Maimonides, the laws of The Basics of the Torah, 9:1), as it says: “You shall not add to it or subtract from it” (Dvorim 13:1).' },
+                { type: 'p', content: 'The Rambam further states (in laws of kings and their wars, ib) that when Moshiach comes and the Beis Hamikdash is rebuilt, all mitzvos will return exactly as they were; this applies also to the annual Machatzis Hashekel obligation.' }
+            ]
+        },
+        {
+            question: "Do we have to wait for the full Beis Hamikdash to be rebuilt before bringing sacrifices?",
+            answer: [
+                { type: 'strong', content: 'No.' },
+                { type: 'p', content: 'The Talmud teaches that sacrifices may begin on the Mizbeiach even before the full rebuilding of the Beis Hamikdash.' },
+                { type: 'p', content: 'Once the Mizbeiach is standing and the place is sanctified, communal offerings can begin immediately even on the very day Moshiach comes.' }
+            ]
+        },
+        {
+            question: "From what age is a Jewish male obligated to give Machatzis Hashekel?",
+            answer: [
+                { type: 'p', content: 'Although the original census in the desert counted men aged twenty and older, the mitzvah of the annual Machatzis Hashekel applies from age thirteen.' }
+            ]
+        },
+        {
+            question: "Are women and children obligated to give Machatzis Hashekel?",
+            answer: [
+                { type: 'strong', content: 'No, they are not obligated.' },
+                { type: 'p', content: 'However, if they choose to participate, their coins are accepted and counted, and they fulfilled the Miitzvoh of giving a Machatzis Hashekel (Rambam laws of Shkolim 1:7; see also Rambam’s sefer Hamitzvos #171 (Rabbi Kapech’s and Rabbi Heler’s editions)).' }
+            ]
+        },
+        {
+            question: "When the Jews were in the desert, where did they even get silver coins to fulfill the Mitzvah of giving it?",
+            answer: [
+                { type: 'strong', content: 'Silver shekels already existed in earlier generations:' },
+                { type: 'p', content: 'Avraham used them to purchase the Me’aras Hamachpelah.' },
+                { type: 'p', content: 'Yosef was sold for silver shekels.' },
+                { type: 'p', content: 'These coins circulated in Egypt and the Jews took them along with them during the Exodus From Mitzrayim (named Egypt by the Greeks and Romans). Additional coins were acquired through trade with neighboring nations in the desert.' }
+            ]
+        },
+        {
+            question: "What types of coins did Jews historically use for the Machatzis Hashekel?",
+            answer: [
+                { type: 'p', content: 'Rabbi Yehudoh states in Tractate Shkolim: “When Israel ascended to Eretz Yisroel from the babylonian exile (in the times of the Kohen Gadol: Yhoshua ben Yhotzadak, Zerubbabel and Nechemiah), they used Median and Persian gold coins called darkonos as their standard coin for the Machatzis Hashekel; later, after the collapse of the Persian-Median empire, they reverted to using a sela; still later, when Israel was dominated by the Roman Empire, they reverted to using coins called T’iva. They wished to contribute only a dinar for their Machatzis Hashekel obligation [and they refused to accept it upon themselves (to contribute less than the ten gerah required in the Torah)].' },
+                { type: 'p', content: 'Darkon (plural: Darkonos) - is a Golden dinar (that weighs 24 Karats (a third of a gold shekel)).' },
+                { type: 'p', content: 'Sela (plural: Slo’im) - is the equivalent of the holy shekel mentioned in the Torah, which is equal to four silver dinars' },
+                { type: 'p', content: 'Tiv’a (plural: Tiv’im) - is Half a sela (i.e. the Roman shekel which is half the weight of a holy shekel).' },
+                { type: 'p', content: '[The phrase they wished to contribute only a dinar - refers to a quarter of a selah (i.e. a silver dinar), and they refused to accept it upon themselves (to contribute less than the ten gerah required in the Torah)].' },
+                { type: 'p', content: 'The Darkonos were minted by the persian government; During the era that The Chashmonaim ruled over Israel (following the Miraculous victories of Yehuda the Maccabi and his brothers: Yochanan and Shimon), the holy shekel (which was equivalent to the sela which the Romans first minted during the final years of the 2nd Beis Hamikdash) was minted in Tyre (located in Lebanon) by the local gentiles, the Roman shekel and the silver dinar were minted by the Roman government.' },
+                { type: 'p', content: 'From this we can deduce that there is no Halachic requirement that the silver coin used for Machatzis Hashekel be minted by a Jewish person, only that its weight and metal content comply with halachic standards.' }
+            ]
+        },
+        {
+            question: "How will the coins be collected when Moshiach comes?",
+            answer: [
+                { type: 'p', content: 'Once the Mizbeiach is built, every Jewish community will appoint a trusted treasurer who collects the half-shekel coins and brings them to the Lishkah (the chamber where the coins collected for the Korbonos Tzibur are kept).' },
+                { type: 'p', content: 'The treasurers outside Israel may exchange the silver coins for gold coins (that have a set exchange rate with the silver coins), so that it is easier for the treasurer to bring it to Jerisalem.' }
+            ]
+        },
+        {
+            question: "How often must one give Machatzis Hashekel?",
+            answer: [
+                { type: 'strong', content: 'Once a year.' },
+                { type: 'p', content: 'The new year for Korbonos begins at Rosh Chodesh Nissan.' },
+                { type: 'p', content: 'Before that, on the first of Adar, the Beis Din announces that every adult male must set aside his half-shekel for that year.' }
+            ]
+        }
+    ];
+
     return (
         <section id="faq" className="mb-12 scroll-mt-24">
             <Card className="shadow-lg border">
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl">Frequently Asked Questions</CardTitle>
                     <CardDescription>
-                        About the campaign to purchase a Machatzis Hashekel so one can donate it when Moshiach comes.
+                        About purchasing a Machatzis Hashekel now so it can be donated when Moshiach comes.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">Isn’t Machatzis Hashekel something that all observant yidden engage in every year the day before purim?</AccordionTrigger>
-                            <AccordionContent className="space-y-4 pt-4 text-base leading-relaxed text-foreground/90">
-                                <p><strong>Response:</strong> There is a biblical Mitzvah that applies exclusively during the time when we bring Korbonos on the Mizbeiach, even more so when the Beis Hamikdash is rebuilt, that every man give a half-shekel silver coin to the Bais Hamikdash treasury every year to finance the Korbonos.</p>
-                                <p>During the time of Golus (=the exile), the Rema (Orach Chayim 694:1) writes that that on Erev Purim before Mincha one should give for poor people 3 halves of the local coin to commemorate the Machatzis Hashekel that was given for the Beis Hamikdash.</p>
-                                <p>The present campaign is about setting aside a silver coin that weighs not less than the weight of a half-shekel during the time of Moshe Rabeinu (which according to the Rif is a quarter of a Troy ounce), so we can be ready to give it for the purpose of Korbonos Tzibur as soon as Moshiach comes and the Bais Hamikdash or the Mizbeach is rebuilt; fulfilling the biblical Mitzvah of giving a Machatzis Hashekel for this purpose once a year.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-2">
-                            <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">If it’s so important, why is it only being introduced now?</AccordionTrigger>
-                            <AccordionContent className="space-y-4 pt-4 text-base leading-relaxed text-foreground/90">
-                                <p><strong>Response:</strong> following the attack of the terrorists against Israel on Shmini Atzeres and Simchas Torah 5784 (2023), Rabbis the world over joined the campaign initiated by the Lubavitcher Rebbe for all Jews to prepare themselves for the coming of Moshiach, when his identity will be revealed to the entire world according to the criteria codified by the Rambam in his code of Jewish law (laws of Kings and their wars,11:4), and he will redeem us from the exile.</p>
-                                <p>On the day that Moshiach comes we will recite five blessings, and we will need a Machatzish Hashekel to participate in the financing of the communal sacrifices (קרבנות ציבור); therefore, Rabbi Yosef Keller, who was told by the Rebbe (on sunday, the 17h of Menachem Av, 5751) that he should prepare himself to rule on commandments that will be fulfilled properly when Moshiach comes and there is a proper Bais Din (like קידוש החודש על פי הראיה), took upon himself the task to make the Machatzis Hashekel available to those who want to purchase it so that they can donate it the day we start bringing the sacrifices after the coming of Moshiach.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">Let every individual who wants to offer sacrifices pay for his own sacrifices. Why does every Jew have to bring a Machatzis Hashekel to pay for the Korbonos ?</AccordionTrigger>
-                            <AccordionContent className="space-y-4 pt-4 text-base leading-relaxed text-foreground/90">
-                                <p><strong>Response:</strong> the sacrifices that an individual is obligated to bring every Yom Tov, as well as the Pesach that one brings on Erev Pesach, or any Korbon that an individual either chooses to bring or is obligated to bring, are paid for by that individual.</p>
-                                <p>However,communal offerings that are brought on behalf of the nation as a whole [the daily Tamid offerings [one lamb in the morning and another in the afternoon], and the Musaf offerings of Shabbos, Rosh Chodesh and Yom tov; the Lechem Haponim that is constantly on the Shulchon (and distributed to the Kohanim on Shabbos), and the Ktores offered on behalf of the Jewish people each day], since they are communal offerings, they must be paid for by the community.</p>
-                            </AccordionContent>
-                        </AccordionItem>
+                        {faqs.map((faq, index) => (
+                            <AccordionItem key={index} value={`item-${index + 1}`}>
+                                <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="space-y-4 pt-4 text-base leading-relaxed text-foreground/90">
+                                    {faq.answer.map((item, i) =>
+                                        item.type === 'strong' ? (
+                                            <p key={i} className="font-bold">{item.content}</p>
+                                        ) : (
+                                            <p key={i}>{item.content}</p>
+                                        )
+                                    )}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
                     </Accordion>
                 </CardContent>
             </Card>
         </section>
-    )
+    );
 }
 
 function QuestionnaireSection() {
@@ -226,5 +319,7 @@ export function InformationalSections() {
         </div>
     )
 }
+
+    
 
     
