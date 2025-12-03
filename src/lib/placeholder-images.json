@@ -1,5 +1,10 @@
 {
   "placeholderImages": [
+    {
+      "id": "kosel",
+      "description": "Kosel",
+      "imageUrl": "/images/kosel.png"
+    },
    {
   "id": "product-image-new-1",
   "description": "Local Machatzis Hashekel coin image",

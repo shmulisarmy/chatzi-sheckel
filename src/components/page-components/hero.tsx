@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { SHOPIFY_PREVIEW_URL } from "@/app/urls";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 
 const heroImage = {
@@ -18,7 +19,7 @@ export function Hero() {
     <div className="relative h-[80vh] min-h-[500px] max-h-[800px] w-full text-white overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={heroImage.imageUrl}
+          src={PlaceHolderImages.find(image => image.id === "kosel").imageUrl}
           alt={heroImage.description}
           data-ai-hint={heroImage.imageHint}
           fill
