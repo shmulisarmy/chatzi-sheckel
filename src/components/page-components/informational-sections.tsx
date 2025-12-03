@@ -19,7 +19,11 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function useDynamicShadow() {
     const cardRef = useRef<HTMLDivElement>(null);
-    const [shadow, setShadow] = useState('0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)');
+    const [style, setStyle] = useState({
+        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        transform: 'perspective(1000px) rotateX(0deg)',
+        transition: 'box-shadow 0.1s linear, transform 0.1s linear'
+    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,30 +31,35 @@ function useDynamicShadow() {
                 const { top, height } = cardRef.current.getBoundingClientRect();
                 const viewportHeight = window.innerHeight;
                 
-                // Calculate the card's position relative to the viewport center
                 const cardCenterY = top + height / 2;
                 const viewportCenterY = viewportHeight / 2;
                 const difference = cardCenterY - viewportCenterY;
                 
-                // Normalize the difference to a value between -1 and 1
                 const normalized = Math.max(-1, Math.min(1, difference / (viewportHeight / 2)));
                 
-                // Animate offsetY and blur. As card goes up (normalized -> -1), shadow moves down.
-                const offsetY = 15 - (normalized * 10); // from 5px to 25px
-                const blur = 20 - Math.abs(normalized * 10); // from 10px to 20px
-                const spread = -3 - (normalized * 2); // from -5px to -1px
+                const offsetY = 15 - (normalized * 10);
+                const blur = 20 - Math.abs(normalized * 10);
+                const spread = -3 - (normalized * 2);
+                const newShadow = `0px ${offsetY}px ${blur}px ${spread}px rgba(0,0,0,0.1)`;
 
-                setShadow(`0px ${offsetY}px ${blur}px ${spread}px rgba(0,0,0,0.1)`);
+                const rotateX = -normalized * 5; // Tilt from -5deg to 5deg
+                const newTransform = `perspective(1000px) rotateX(${rotateX}deg)`;
+
+                setStyle(prev => ({
+                    ...prev,
+                    boxShadow: newShadow,
+                    transform: newTransform
+                }));
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial calculation
+        handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    return { ref: cardRef, style: { boxShadow: shadow, transition: 'box-shadow 0.1s linear' } };
+    return { ref: cardRef, style };
 }
 
 
@@ -386,3 +395,4 @@ export function InformationalSections() {
     
 
     
+
