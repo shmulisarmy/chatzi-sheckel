@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -21,37 +21,7 @@ const endorsers = [
     },
 ];
 
-const useIntersectionObserver = (options: IntersectionObserverInit) => {
-    const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
-    const [node, setNode] = useState<HTMLElement | null>(null);
-
-    const observer = useRef<IntersectionObserver | null>(null);
-
-    useEffect(() => {
-        if (observer.current) observer.current.disconnect();
-
-        observer.current = new IntersectionObserver(([entry]) => {
-            setEntry(entry);
-        }, options);
-
-        const { current: currentObserver } = observer;
-
-        if (node) currentObserver.observe(node);
-
-        return () => currentObserver.disconnect();
-    }, [node, options]);
-
-    return [setNode, entry] as const;
-};
-
-
 export function HaskomohSection() {
-    const [setNode, entry] = useIntersectionObserver({
-        threshold: 0.2,
-        triggerOnce: true,
-    });
-    const isVisible = entry?.isIntersecting;
-
     const haskomohText = [
         "We are counted - because we count, and <span class=\"text-blue-400\">everyone counts!</span>",
         "Historically this was accomplished by presenting a Machatzis Hashekel to the Beis Hamikdash.",
@@ -62,8 +32,8 @@ export function HaskomohSection() {
 
     return (
         <section id="haskomoh" className="mb-12 scroll-mt-24">
-            <div ref={setNode}>
-                <Card className={cn("shadow-lg border transition-opacity duration-1000 ease-in", isVisible ? "opacity-100" : "opacity-0")}>
+            <div>
+                <Card className="shadow-lg border">
                     <CardHeader>
                         <CardTitle className="font-headline text-3xl flex items-center gap-3">
                             <BadgeCheck className="w-8 h-8 text-primary" />
