@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import Image from 'next/image';
@@ -10,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, BookOpen, ArrowUp } from 'lucide-react';
 import { WritingAnimation } from './writing-animation';
 import { HaskomohSection } from './haskomoh-section';
 import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
@@ -250,13 +251,19 @@ function FaqSection() {
                             </AccordionItem>
                         ))}
                     </Accordion>
-                    {!showAll && (
-                        <div className="mt-6 text-center">
+                    <div className="mt-6 text-center">
+                        {!showAll && faqs.length > 3 && (
                             <Button onClick={() => setShowAll(true)} variant="outline">
                                 Show More
                             </Button>
-                        </div>
-                    )}
+                        )}
+                        {showAll && (
+                            <Button onClick={() => setShowAll(false)} variant="outline">
+                                <ArrowUp className="mr-2 h-4 w-4" />
+                                Show Less
+                            </Button>
+                        )}
+                    </div>
                 </CardContent>
             </Card>
         </section>
