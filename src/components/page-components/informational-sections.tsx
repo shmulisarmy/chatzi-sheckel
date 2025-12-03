@@ -1,4 +1,6 @@
 
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -12,6 +14,7 @@ import { ArrowRight, BookOpen } from 'lucide-react';
 import { WritingAnimation } from './writing-animation';
 import { HaskomohSection } from './haskomoh-section';
 import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
+import React, { useState } from 'react';
 
 
 function SourcesSection() {
@@ -117,6 +120,7 @@ function RabbiKellerSection() {
 }
 
 function FaqSection() {
+    const [showAll, setShowAll] = useState(false);
     const faqs = [
         {
             question: "Don’t we already give “Machatzis Hashekel” every year before Purim?",
@@ -216,6 +220,8 @@ function FaqSection() {
         }
     ];
 
+    const displayedFaqs = showAll ? faqs : faqs.slice(0, 3);
+
     return (
         <section id="faq" className="mb-12 scroll-mt-24">
             <Card className="shadow-lg border">
@@ -227,7 +233,7 @@ function FaqSection() {
                 </CardHeader>
                 <CardContent>
                     <Accordion type="single" collapsible className="w-full">
-                        {faqs.map((faq, index) => (
+                        {displayedFaqs.map((faq, index) => (
                             <AccordionItem key={index} value={`item-${index + 1}`}>
                                 <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">
                                     {faq.question}
@@ -244,6 +250,13 @@ function FaqSection() {
                             </AccordionItem>
                         ))}
                     </Accordion>
+                    {!showAll && (
+                        <div className="mt-6 text-center">
+                            <Button onClick={() => setShowAll(true)} variant="outline">
+                                Show More
+                            </Button>
+                        </div>
+                    )}
                 </CardContent>
             </Card>
         </section>
@@ -319,6 +332,8 @@ export function InformationalSections() {
         </div>
     )
 }
+
+    
 
     
 
