@@ -57,7 +57,7 @@ export default function Header() {
       </div>
       <div className="absolute bottom-0 w-full bg-border/50 h-[2px]">
         <div 
-          className="bg-progress h-[2px] transition-all duration-75" 
+          className="bg-progress h-[2px]" 
           style={{ width: `${scrollPercentage}%` }}
         />
       </div>
