@@ -16,18 +16,6 @@ const endorsers = [
     {
         name: "Rabbi Aharon Lieberman",
         title: "Chabad of greater Fort Lauderdale, Florida",
-    },
-    {
-        name: "Rabbi Mordechai Anati",
-        title: "Head Rabbi, Bais Menachem North Miami",
-    },
-    {
-        name: "Rabbi Yossi Biston",
-        title: "Head Rabbi, Chabad of Coral Springs",
-    },
-     {
-        name: "Rabbi Raphael Tennenhaus",
-        title: "Head Rabbi, Chabad of Lauderhill"
     }
 ];
 
