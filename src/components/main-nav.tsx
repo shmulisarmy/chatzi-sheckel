@@ -2,11 +2,13 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Coins } from "lucide-react";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -20,6 +22,7 @@ const navItems = [
 export function MainNav() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
+  const productImage = PlaceHolderImages.find(p => p.id === 'product-image-new-1');
 
   const handleLinkClick = () => {
     setOpen(false);
@@ -63,7 +66,15 @@ export function MainNav() {
             <SheetTitle className="sr-only">Menu</SheetTitle>
           </SheetHeader>
           <Link href="/" className="flex items-center space-x-2 mb-8" onClick={handleLinkClick}>
-             <Coins className="h-6 w-6 text-primary" />
+             {productImage && (
+                <Image
+                  src={productImage.imageUrl}
+                  alt="Chatzi Shekel coin"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6"
+                />
+             )}
             <span className="font-headline text-2xl font-bold text-primary">Chatzi Shekel</span>
           </Link>
           <div className="flex flex-col space-y-2">
