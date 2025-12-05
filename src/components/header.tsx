@@ -55,7 +55,7 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <div className="w-full bg-border/50 h-[2px]">
+      <div className="absolute bottom-0 w-full bg-border/50 h-[2px]">
         <div 
           className="bg-progress h-[2px] transition-all duration-75" 
           style={{ width: `${scrollPercentage}%` }}
