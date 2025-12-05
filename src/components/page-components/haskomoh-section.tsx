@@ -71,6 +71,7 @@ export function HaskomohSection() {
                                         </li>
                                     ))}
                                 </ul>
+                                <p className="text-sm text-primary font-semibold">+3 more</p>
                             </div>
                         </div>
                     </CardContent>
