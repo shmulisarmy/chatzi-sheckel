@@ -1,6 +1,11 @@
 {
   "placeholderImages": [
     {
+      "id": "signatures",
+      "description": "Signatures",
+      "imageUrl": "/images/signatures.jpg"
+    },
+    {
       "id": "kosel",
       "description": "Kosel",
       "imageUrl": "/images/kosel-2.png"

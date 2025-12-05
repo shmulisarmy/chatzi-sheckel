@@ -40,7 +40,7 @@ export function HaskomohSection() {
         "The design and minting of such a coin at a price point available to everyone, involves significant financial expenditure. We urge your participation in this noble endeavor which will surely bring unity and pride to all of Klal Yisrael."
     ];
     
-    const haskomohImage = PlaceHolderImages.find(p => p.id === 'haskomoh-letter');
+    const haskomohImage = PlaceHolderImages.find(p => p.id === 'signatures')
 
     return (
         <section id="haskomoh" className="mb-12 scroll-mt-24">
