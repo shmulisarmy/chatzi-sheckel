@@ -1,1 +1,1 @@
-export const SHOPIFY_PREVIEW_URL = "https://ierojuh34lj6o4p3-68110680175.shopifypreview.com/products_preview?preview_key=c713c1132e1bb7f9e805525e34148c04";
+export const SHOPIFY_PREVIEW_URL = "https://xxdxz5kroz9zjil4-92269838653.shopifypreview.com/products_preview?preview_key=f4a3bd4785d67da46851b566a1096b66";
