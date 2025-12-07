@@ -1,9 +1,12 @@
+
 "use client";
 
 import Image from "next/image";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { SHOPIFY_PREVIEW_URL } from "@/app/urls";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { useState, useEffect } from 'react';
 
 
 const heroImage = {
@@ -14,16 +17,38 @@ const heroImage = {
 };
 
 export function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scale = 1 + scrollY / 3000;
+  const blur = scrollY / 200;
+
   return (
     <div className="relative h-[80vh] min-h-[500px] max-h-[800px] w-full text-white overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={heroImage.imageUrl}
+          src={PlaceHolderImages.find(image => image.id === "kosel").imageUrl}
           alt={heroImage.description}
           data-ai-hint={heroImage.imageHint}
           fill
           className="object-cover"
           priority
+          style={{
+            transform: `scale(${scale})`,
+            filter: `blur(${blur}px)`,
+            transition: 'transform 0.1s ease-out, filter 0.1s ease-out',
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-black/30" />
@@ -55,3 +80,4 @@ export function Hero() {
     </div>
   );
 }
+

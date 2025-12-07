@@ -1,17 +1,27 @@
 {
   "placeholderImages": [
-   {
-  "id": "product-image-new-1",
-  "description": "Local Machatzis Hashekel coin image",
-  "imageUrl": "/images/product-image-new-front.png",
-  "imageHint": "local silver coin"
-},
- {
-  "id": "product-image-new-2",
-  "description": "Local Machatzis Hashekel coin image - alternate view",
-  "imageUrl": "/images/product-image-new-back.png",
-  "imageHint": "local silver coin"
-},
+    {
+      "id": "Haskomoh",
+      "description": "Signatures",
+      "imageUrl": "/images/Haskomoh.jpg"
+    },
+    {
+      "id": "kosel",
+      "description": "Kosel",
+      "imageUrl": "/images/kosel-2.png"
+    },
+    {
+      "id": "product-image-new-1",
+      "description": "Local Machatzis Hashekel coin image",
+      "imageUrl": "/images/product-image-new-front.png",
+      "imageHint": "local silver coin"
+    },
+    {
+      "id": "product-image-new-2",
+      "description": "Local Machatzis Hashekel coin image - alternate view",
+      "imageUrl": "/images/product-image-new-back.png",
+      "imageHint": "local silver coin"
+    },
     {
       "id": "product-image-3",
       "description": "Multiple stacked silver coins.",
@@ -25,16 +35,10 @@
       "imageHint": "portrait man"
     },
     {
-      "id": "rabbi-edelman-portrait",
-      "description": "Portrait of Rabbi Yisroel Edelman.",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbmy_p4yNWJ8GmJXDM44ItC0dXZJ2YC6y5OQ&s",
-      "imageHint": "portrait man"
-    },
-    {
-      "id": "rabbi-lieberman-portrait",
-      "description": "Portrait of Rabbi Aharon Lieberman.",
-      "imageUrl": "https://www.orbkosher.com/img/team/aaron.png",
-      "imageHint": "portrait man"
+      "id": "haskomoh-letter",
+      "description": "Haskomoh letter with signatures.",
+      "imageUrl": "https://i.postimg.cc/mD3f4Y0Z/haskomoh-letter.jpg",
+      "imageHint": "letter signature"
     }
   ]
 }
