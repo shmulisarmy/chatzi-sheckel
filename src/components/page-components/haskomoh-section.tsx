@@ -28,7 +28,7 @@ export function HaskomohSection() {
         "The design and minting of such a coin at a price point available to everyone, involves significant financial expenditure. We urge your participation in this noble endeavor which will surely bring unity and pride to all of Klal Yisrael."
     ];
     
-    const haskomohImage = PlaceHolderImages.find(p => p.id === 'signatures')
+    const haskomohImage = PlaceHolderImages.find(p => p.id === 'Haskomoh')
 
     return (
         <section id="haskomoh" className="mb-12 scroll-mt-24">
@@ -41,11 +41,7 @@ export function HaskomohSection() {
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-6 text-base leading-relaxed text-foreground/90">
-                        <div className="space-y-4">
-                            {haskomohText.map((paragraph, index) => (
-                                <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
-                            ))}
-                        </div>
+     
 
                         <div className="space-y-6">
                             {haskomohImage && (
