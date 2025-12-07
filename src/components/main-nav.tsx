@@ -22,7 +22,7 @@ const navItems = [
 export function MainNav() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
-  const productImage = PlaceHolderImages.find(p => p.id === 'product-image-new-1');
+  const productImage = PlaceHolderImages.find(p => p.id === '2-coins');
 
   const handleLinkClick = () => {
     setOpen(false);
