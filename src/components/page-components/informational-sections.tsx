@@ -101,10 +101,9 @@ function SourcesSection() {
             </li>
             <li>
               In the era of Moshiach, when the Jews return to Eretz Yisroel,
-              establish dominion over the entire world, and rebuild the Bais
-              Hamikdash; the observance of all the laws will return to their
-              previous state.. according to all the particulars mentioned by the
-              Torah.
+              and rebuild the Bais Hamikdash; [the observance of] all the laws will return to
+              their previous state.. according to all the particulars mentioned
+              by the Torah.
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
@@ -114,19 +113,19 @@ function SourcesSection() {
           </ol>
 
           <p>
-            Hence, a prerequisite to fulfilling the Mitzvah of “Machatzis
+            Therefore, a prerequisite to fulfilling the Mitzvah of “Machatzis
             Hashekel” is to mint a silver “Machatzis Hashekel” coin that people
-            can contribute to the Beis Hamikdash once a year.
+            can contribute to the Beis Hamikdosh once a year.
           </p>
 
           <p>
             We pray each day: והשב העבודה לדביר ביתך .. ותחזינה עינינו בשובך
             לציון ברחמים (restore the service to Your holy Sanctuary.. May our
             eyes behold Your merciful return to Zion). When Moshiach comes and
-            The Beis Hamikdash is rebuilt, the Kohanim will bring the communal
+            The Beis Hamikdosh is rebuilt, the Kohanim will bring the communal
             sacrifices that are financed by every member of Klal Yisroel
-            (obligatory for Men who are twenty years and older; optional for
-            boys under the age of twenty and for women) contributing a Machatzis
+            (obligatory for Men who are thirteen years and older; optional for
+            boys under the age of thirteen and for women) contributing a Machatzis
             Hashekel (a half-shekel) once a year (which pays: for the Communal
             offerings).
           </p>
@@ -164,7 +163,7 @@ function SourcesSection() {
                       </ul>
                     </li>
                     <li>
-                      <strong>The Rambam rules (Hilchos Shekalim 1:5):</strong>
+                      <strong>The Rambam rules (Hilchos Shkolim 1:5):</strong>
                       <p className="pl-5 mt-1">
                         One may never give less than the weight of Moshe
                         Rabbeinu’s half-shekel.
