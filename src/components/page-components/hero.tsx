@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { SHOPIFY_PREVIEW_URL } from "@/app/urls";
+import { SHOPIFY_PRODUCT_URL } from "@/app/urls";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useState, useEffect } from 'react';
 
@@ -65,7 +65,7 @@ export function Hero() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
+            <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
                 <Button size="lg" className="px-8 py-6 text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
                     Order Your Coin Now
                 </Button>
