@@ -16,15 +16,15 @@ export function RabbiKellerIntro() {
     return (
         <div className="bg-secondary/5 py-12 md:py-20">
             <div className="container mx-auto">
-                <Card className="overflow-hidden shadow-lg border-none bg-transparent">
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div className="p-6 flex flex-col justify-center">
-                            <CardHeader className="p-0 mb-4">
-                                <CardTitle className="font-headline text-4xl text-center md:text-left">
-                                    Who is Rabbi Keller?
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-0 space-y-4 text-base leading-relaxed">
+                <div className="flex flex-col items-center">
+                    <CardHeader className="p-0 mb-8">
+                        <CardTitle className="font-headline text-4xl text-center">
+                            Who is Rabbi Keller?
+                        </CardTitle>
+                    </CardHeader>
+                    <div className="w-full flex flex-col lg:flex-row gap-8 items-center">
+                        <div className="w-full lg:w-1/2 flex flex-col p-6 items-center">
+                            <CardContent className="p-0 w-full">
                                 <div className="flex flex-col sm:flex-row items-center gap-6">
                                     {rabbiImage && (
                                     <Image
@@ -54,7 +54,7 @@ export function RabbiKellerIntro() {
                             </CardContent>
                         </div>
                         
-                        <div className="p-6 flex flex-col items-center text-center justify-center">
+                        <div className="w-full lg:w-1/2 flex flex-col items-center text-center justify-center p-6">
                              <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6">
                                 <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             </div>
@@ -66,7 +66,7 @@ export function RabbiKellerIntro() {
                             </Link>
                         </div>
                     </div>
-                </Card>
+                </div>
             </div>
         </div>
     );
