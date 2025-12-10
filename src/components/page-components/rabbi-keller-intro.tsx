@@ -23,7 +23,7 @@ export function RabbiKellerIntro() {
                         </CardTitle>
                     </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
-                        <div className="w-full lg:w-1/2 flex flex-col p-6 items-center justify-between">
+                        <div className="w-full lg:w-1/2 flex flex-col p-6 items-center">
                             <CardContent className="p-0 w-full">
                                 <div className="flex flex-col sm:flex-row items-center gap-6">
                                     {rabbiImage && (
