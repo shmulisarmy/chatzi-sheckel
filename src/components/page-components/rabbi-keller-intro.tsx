@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
@@ -22,8 +22,8 @@ export function RabbiKellerIntro() {
                             Who is Rabbi Keller?
                         </CardTitle>
                     </CardHeader>
-                    <div className="w-full flex flex-col lg:flex-row gap-8 items-center">
-                        <div className="w-full lg:w-1/2 flex flex-col p-6 items-center">
+                    <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
+                        <div className="w-full lg:w-1/2 flex flex-col p-6 items-center justify-between">
                             <CardContent className="p-0 w-full">
                                 <div className="flex flex-col sm:flex-row items-center gap-6">
                                     {rabbiImage && (
@@ -62,9 +62,9 @@ export function RabbiKellerIntro() {
                             </div>
                         </div>
                         
-                        <div className="w-full lg:w-1/2 flex flex-col items-center text-center justify-center p-6">
+                        <div className="w-full lg:w-1/2 flex flex-col items-center text-center justify-between p-6">
                              <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6">
-                                <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://www.youtube.com/embed/SofcE-GGlla" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             </div>
                             <Link href="/the-rebbes-message" passHref>
                                 <Button size="lg" variant="outline" className="bg-transparent text-lg font-semibold">
