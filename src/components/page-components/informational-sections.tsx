@@ -54,7 +54,7 @@ function useDynamicShadow() {
         const spread = -3 - normalized * 2;
         const newShadow = `0px ${offsetY}px ${blur}px ${spread}px rgba(0,0,0,0.1)`;
 
-        const rotateX = -normalized * 2; // Tilt from -2deg to 2deg
+        const rotateX = -normalized * 0.5; // Tilt from -2deg to 2deg
         const newTransform = `perspective(1000px) rotateX(${rotateX}deg)`;
 
         setStyle((prev) => ({
@@ -87,7 +87,7 @@ function SourcesSection() {
         </CardHeader>
         <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
           <p>The Rambam writes:</p>
-          <ol className="list-alpha list-outside space-y-2 pl-6">
+          <ol className="list-decimal list-outside space-y-2 pl-6">
             <li>
               There is a positive commandment that every Jewish man gives a
               half-shekel [to the Bais Hamikdash treasury], as stated in the
@@ -100,11 +100,10 @@ function SourcesSection() {
               not add to it or diminish from it.
             </li>
             <li>
-              In the era of Moshiach, when the Jews return to Eretz Yisroel,
-              establish dominion over the entire world, and rebuild the Bais
-              Hamikdash; the observance of all the laws will return to their
-              previous state.. according to all the particulars mentioned by the
-              Torah.
+              In the era of Moshiach, when the Jews return to Eretz Yisroel, and
+              rebuild the Bais Hamikdash; [the observance of] all the laws will
+              return to their previous state.. according to all the particulars
+              mentioned by the Torah.
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
@@ -114,21 +113,21 @@ function SourcesSection() {
           </ol>
 
           <p>
-            Hence, a prerequisite to fulfilling the Mitzvah of “Machatzis
+            Therefore, a prerequisite to fulfilling the Mitzvah of “Machatzis
             Hashekel” is to mint a silver “Machatzis Hashekel” coin that people
-            can contribute to the Beis Hamikdash once a year.
+            can contribute to the Beis Hamikdosh once a year.
           </p>
 
           <p>
             We pray each day: והשב העבודה לדביר ביתך .. ותחזינה עינינו בשובך
             לציון ברחמים (restore the service to Your holy Sanctuary.. May our
             eyes behold Your merciful return to Zion). When Moshiach comes and
-            The Beis Hamikdash is rebuilt, the Kohanim will bring the communal
+            The Beis Hamikdosh is rebuilt, the Kohanim will bring the communal
             sacrifices that are financed by every member of Klal Yisroel
-            (obligatory for Men who are twenty years and older; optional for
-            boys under the age of twenty and for women) contributing a Machatzis
-            Hashekel (a half-shekel) once a year (which pays: for the Communal
-            offerings).
+            (obligatory for Men who are thirteen years and older; optional for
+            boys under the age of thirteen and for women) contributing a
+            Machatzis Hashekel (a half-shekel) once a year (which pays: for the
+            Communal offerings).
           </p>
 
           <div className="pt-4">
@@ -144,8 +143,8 @@ function SourcesSection() {
                       <strong>According to Rashi:</strong>
                       <ul className="list-circle space-y-1 pl-5 mt-1">
                         <li>
-                          An ounce (Kolonia standard): 450 barley grains (~29.16
-                          grams)
+                          An ounce (Kolonia standard): 450 barley grains
+                          (~29.16 grams)
                         </li>
                         <li>
                           Shekel is ½ of the Kolonia standard of the ounce= 225
@@ -164,7 +163,7 @@ function SourcesSection() {
                       </ul>
                     </li>
                     <li>
-                      <strong>The Rambam rules (Hilchos Shekalim 1:5):</strong>
+                      <strong>The Rambam rules (Hilchos Shkolim 1:5):</strong>
                       <p className="pl-5 mt-1">
                         One may never give less than the weight of Moshe
                         Rabbeinu’s half-shekel.
@@ -204,52 +203,6 @@ function SourcesSection() {
             child who reaches the age of 13 years old (see Ramban Exodus 30:12;
             Tosfos Yom Tov Shkolim 1:4).
           </p>
-        </CardContent>
-      </Card>
-    </section>
-  );
-}
-
-function RabbiKellerSection() {
-  const rabbiImage = PlaceHolderImages.find(
-    (p) => p.id === "rabbi-keller-portrait"
-  );
-  const shadowProps = useDynamicShadow();
-  return (
-    <section id="rabbi-keller" className="mb-12 scroll-mt-24">
-      <Card {...shadowProps}>
-        <CardHeader>
-          <CardTitle className="font-headline text-3xl">
-            Who is Rabbi Keller
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 text-base leading-relaxed">
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            {rabbiImage && (
-              <Image
-                src={rabbiImage.imageUrl}
-                alt={rabbiImage.description}
-                data-ai-hint={rabbiImage.imageHint}
-                width={150}
-                height={150}
-                className="rounded-lg object-cover  shrink-0"
-              />
-            )}
-            <div className="space-y-2 text-center sm:text-left text-foreground/90">
-              <p>
-                With a profound dedication to Torah and Mitzvos, Rabbi Keller
-                has been a guiding light in the community for decades. His
-                teachings emphasize the importance of preparing for the coming
-                of Moshiach, not just spiritually, but through practical actions
-                that strengthen our connection to the Bais Hamikdash.
-              </p>
-              <p>
-                This campaign is a direct result of his vision to empower every
-                individual to be ready to fulfill the Mitzvah of Machatzis
-                Hashekel immediately, without delay, when the time comes.{" "}
-              </p>
-            </div>
-          </div>
         </CardContent>
       </Card>
     </section>
@@ -617,9 +570,8 @@ function FinalCtaSection() {
 
 export function InformationalSections() {
   return (
-    <div className="flex flex-col">
+    <div id="rabbi-keller" className="flex flex-col">
       <SourcesSection />
-      <RabbiKellerSection />
       <HaskomohSection />
       <FaqSection />
       <QuestionnaireSection />

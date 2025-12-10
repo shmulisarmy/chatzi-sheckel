@@ -33,9 +33,9 @@ export default function AboutPage() {
         <div className="bg-secondary/10 border-t border-border">
             <div className="container mx-auto max-w-4xl px-4 py-8 md:py-16">
                  <div className="text-left space-y-8">
-                        <iframe  style={{width: "100%"}} height="454" src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                    {/* <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video">
-                    </div> */}
+                        <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video">
+                            <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://www.youtube.com/embed/SofcE-GGlla" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        </div>
 
                     <div className="space-y-4 text-lg leading-relaxed text-foreground/90">
                         <p>The first book written by Rabbi Yosef Keller, published in 5748 (1988), is a comprehensive work explaining the calculations the Sanhedrin — the Rabbinical Court — used to determine the earliest night the new moon would be visible. This allowed them to anticipate when witnesses would come forward to testify that they had seen the new moon, as described in the Rambam’s laws of Kiddush HaChodesh (Sanctification of the New Moon).</p>

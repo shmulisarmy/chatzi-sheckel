@@ -5,24 +5,15 @@ import { Hero } from '@/components/page-components/hero';
 import React from 'react';
 import Header from '@/components/header';
 import DesignComment from '@/components/design-comment';
-
-
-
-
-
+import { RabbiKellerIntro } from '@/components/page-components/rabbi-keller-intro';
 
 DesignComment()
 export default function Home() {
-  // useEffect(() => {
-  //   const icon_rel_link = document.createElement("link");
-  //   icon_rel_link.rel = "icon";
-  //   icon_rel_link.href = "https://chatzishekel.com/favicon.ico";
-  //   document.head.appendChild(icon_rel_link);
-  // }, []);
   return (
     <>
       <Hero />
       <Header />
+      <RabbiKellerIntro />
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col-reverse lg:flex-row lg:space-x-12">
