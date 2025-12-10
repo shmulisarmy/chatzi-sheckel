@@ -14,7 +14,7 @@ export function RabbiKellerIntro() {
     );
 
     return (
-        <div className="bg-secondary/5 py-12 md:py-20">
+        <div className="bg-secondary/5 py-12">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
                     <CardHeader className="p-0 mb-8">
