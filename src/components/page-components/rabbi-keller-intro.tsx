@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -17,9 +18,9 @@ export function RabbiKellerIntro() {
             <div className="container mx-auto">
                 <Card className="overflow-hidden shadow-lg border-none bg-transparent">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div className="p-6">
+                        <div className="p-6 flex flex-col justify-center">
                             <CardHeader className="p-0 mb-4">
-                                <CardTitle className="font-headline text-4xl">
+                                <CardTitle className="font-headline text-4xl text-center md:text-left">
                                     Who is Rabbi Keller?
                                 </CardTitle>
                             </CardHeader>
@@ -53,7 +54,7 @@ export function RabbiKellerIntro() {
                             </CardContent>
                         </div>
                         
-                        <div className="p-6 flex flex-col items-center text-center">
+                        <div className="p-6 flex flex-col items-center text-center justify-center">
                              <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6">
                                 <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             </div>
