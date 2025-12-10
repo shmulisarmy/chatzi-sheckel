@@ -52,6 +52,14 @@ export function RabbiKellerIntro() {
                                     </div>
                                 </div>
                             </CardContent>
+                             <div className="mt-6">
+                                <Link href="/about" passHref>
+                                    <Button size="lg" variant="outline" className="bg-transparent text-lg font-semibold">
+                                        Learn more about Rabbi Keller
+                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                         
                         <div className="w-full lg:w-1/2 flex flex-col items-center text-center justify-center p-6">
