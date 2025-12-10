@@ -67,7 +67,7 @@ export function RabbiKellerIntro() {
                         <div className="w-full lg:w-1/2 flex flex-col items-center p-6">
                             <div className="flex flex-col flex-1 h-full w-full">
                                 <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6 flex-1">
-                                    <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://www.youtube.com/embed/SofcE-GGlla" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                    <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                 </div>
                                 <div className="flex justify-center">
                                     <Link href="/the-rebbes-message" passHref>
