@@ -57,7 +57,7 @@ export function RabbiKellerIntro() {
                              <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6">
                                 <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="The Rebbe's words to Rabbi Keller" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             </div>
-                            <Link href="/about" passHref>
+                            <Link href="/the-rebbes-message" passHref>
                                 <Button size="lg" variant="outline" className="bg-transparent text-lg font-semibold">
                                     Learn more about the Rebbe's message
                                     <ArrowRight className="ml-2 h-5 w-5" />
