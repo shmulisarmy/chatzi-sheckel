@@ -13,8 +13,8 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "The Rebbe's Message", href: "/the-rebbes-message" },
   { name: "Sources", href: "/#sources" },
-  { name: "Rabbi Keller", href: "/#rabbi-keller" },
   { name: "FAQ", href: "/#faq" },
   { name: "Questionnaire", href: "/#questionnaire" },
 ];
