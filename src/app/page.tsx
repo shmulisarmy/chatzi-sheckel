@@ -19,7 +19,7 @@ export default function Home() {
 
       {/* Main Content Section (Sources & Product) */}
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col-reverse lg:flex-row lg:space-x-12">
+        <div className="flex flex-col-reverse lg:flex-row lg:space-x-12 p-8">
           <div className="w-full lg:w-3/4 mt-8 lg:mt-0">
             <InformationalSections />
           </div>
