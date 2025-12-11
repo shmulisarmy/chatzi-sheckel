@@ -16,6 +16,16 @@ export function RabbiKellerIntro() {
     const [scrollY, setScrollY] = useState(0);
     const sectionRef = useRef<HTMLDivElement>(null);
     const [startParallax, setStartParallax] = useState(0);
+    const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsLargeScreen(window.innerWidth >= 1024);
+        };
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     useEffect(() => {
         if (sectionRef.current) {
@@ -24,27 +34,29 @@ export function RabbiKellerIntro() {
     }, []);
 
     useEffect(() => {
+        if (!isLargeScreen) return;
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isLargeScreen]);
 
-    const parallaxOffset = scrollY > startParallax ? (scrollY - startParallax) * 0.2 : 0;
-    const blur = scrollY > startParallax ? Math.min(((scrollY - startParallax) / 300), 5) : 0;
-    const opacity = scrollY > startParallax ? Math.max(1 - ((scrollY - startParallax) / 500), 0.5) : 1;
-
+    const parallaxOffset = isLargeScreen && scrollY > startParallax ? (scrollY - startParallax) * 0.2 : 0;
+    const blur = isLargeScreen && scrollY > startParallax ? Math.min(((scrollY - startParallax) / 300), 5) : 0;
+    const opacity = isLargeScreen && scrollY > startParallax ? Math.max(1 - ((scrollY - startParallax) / 500), 0.5) : 1;
 
     return (
         <div 
             ref={sectionRef}
-            className="bg-secondary/5 py-12 relative z-0"
-            style={{ 
+            className="bg-secondary/5 py-12"
+            style={isLargeScreen ? { 
                 transform: `translateY(${parallaxOffset}px)`,
                 filter: `blur(${blur}px)`,
                 opacity: opacity,
-            }}
+                position: 'relative',
+                zIndex: 0,
+            } : {}}
         >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
