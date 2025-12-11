@@ -7,13 +7,21 @@ import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export function RabbiKellerIntro() {
     const rabbiImage = PlaceHolderImages.find(
         (p) => p.id === "rabbi-keller-portrait"
     );
     const [scrollY, setScrollY] = useState(0);
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const [startParallax, setStartParallax] = useState(0);
+
+    useEffect(() => {
+        if (sectionRef.current) {
+            setStartParallax(sectionRef.current.offsetTop);
+        }
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,10 +31,13 @@ export function RabbiKellerIntro() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const parallaxOffset = scrollY > startParallax ? (scrollY - startParallax) * 0.2 : 0;
+
     return (
         <div 
-            className="bg-secondary/5 py-12 md:py-20 relative z-0"
-            style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+            ref={sectionRef}
+            className="bg-secondary/5 py-12 relative z-0"
+            style={{ transform: `translateY(${parallaxOffset}px)` }}
         >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
@@ -36,8 +47,8 @@ export function RabbiKellerIntro() {
                         </CardTitle>
                     </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
-                        <div className="w-full lg:w-1/2 flex flex-col p-6 items-center">
-                            <div className="flex flex-col flex-1 h-full w-full justify-between">
+                        <div className="w-full lg:w-1/2 flex">
+                            <div className="flex flex-col flex-1 h-full w-full justify-between bg-white/50 border border-border rounded-lg p-6 shadow-sm">
                                 <CardContent className="p-0 w-full flex-1">
                                     <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                                         {rabbiImage && (
@@ -77,8 +88,8 @@ export function RabbiKellerIntro() {
                             </div>
                         </div>
                         
-                        <div className="w-full lg:w-1/2 flex flex-col items-center p-6">
-                            <div className="flex flex-col flex-1 h-full w-full">
+                        <div className="w-full lg:w-1/2 flex">
+                            <div className="flex flex-col flex-1 h-full w-full bg-white/50 border border-border rounded-lg p-6 shadow-sm">
                                 <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6 flex-1">
                                     <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                 </div>
