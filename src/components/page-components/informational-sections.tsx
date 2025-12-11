@@ -531,36 +531,6 @@ function ContactSection() {
   );
 }
 
-function FinalCtaSection() {
-  const shadowProps = useDynamicShadow();
-  return (
-    <section id="final-cta" className="mb-12 text-center">
-      <Card className="bg-primary/10 border-primary/20" {...shadowProps}>
-        <CardContent className="p-8 md:p-12 space-y-6">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
-            don't wanna wait till the last minute?
-          </h2>
-          <p className="max-w-2xl mx-auto text-lg text-primary/90">
-            theres no time better then right now. Acquire your Machatzis
-            Hashekel coin and be prepared for the coming of Moshiach.
-          </p>
-          <div className="flex justify-center">
-            <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
-              <Button
-                size="lg"
-                className="text-lg font-semibold transition-transform hover:scale-105 active:scale-100 py-6 px-10"
-              >
-                Start Preparing for Moshiach Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </CardContent>
-      </Card>
-    </section>
-  );
-}
-
 export function InformationalSections() {
   return (
     <div id="rabbi-keller" className="flex flex-col">
@@ -568,7 +538,6 @@ export function InformationalSections() {
       <HaskomohSection />
       <FaqSection />
       <ContactSection />
-      <FinalCtaSection />
     </div>
   );
 }
