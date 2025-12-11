@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, BookOpen, ArrowUp } from "lucide-react";
+import { ArrowRight, BookOpen, ArrowUp, Mail, ArrowUpRight } from "lucide-react";
 import { HaskomohSection } from "./haskomoh-section";
 import { SHOPIFY_PREVIEW_URL } from "@/app/urls";
 import React, { useState, useEffect, useRef } from "react";
@@ -496,42 +496,30 @@ function FaqSection() {
   );
 }
 
-function QuestionnaireSection() {
+function ContactSection() {
   const shadowProps = useDynamicShadow();
   return (
     <section id="questionnaire" className="mb-12 scroll-mt-24">
       <Card {...shadowProps}>
         <CardHeader>
-          <CardTitle className="font-headline text-3xl">
-            Questionnaire
+          <CardTitle className="font-headline text-3xl flex items-center gap-3">
+            <Mail className="w-8 h-8 text-primary" />
+            Have a Question?
           </CardTitle>
           <CardDescription>
-            Have a question not listed here? Ask us directly.
+            If your question isn't answered in the FAQ, feel free to reach out.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="your@email.com" />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="question">Your Question</Label>
-              <Textarea
-                id="question"
-                placeholder="Type your question here..."
-              />
-            </div>
-            <Button type="submit" className="w-full md:w-auto">
-              Submit Question
-            </Button>
-          </form>
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <p className="text-foreground/90">
+              You can email us directly at:
+            </p>
+            <a href="mailto:mindel@chatzishekel.com" className="inline-flex items-center gap-2 rounded-md bg-secondary/80 px-4 py-2 text-base font-semibold text-secondary-foreground transition-colors hover:bg-secondary">
+              mindel@chatzishekel.com
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
         </CardContent>
       </Card>
     </section>
@@ -574,7 +562,7 @@ export function InformationalSections() {
       <SourcesSection />
       <HaskomohSection />
       <FaqSection />
-      <QuestionnaireSection />
+      <ContactSection />
       <FinalCtaSection />
     </div>
   );
