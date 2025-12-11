@@ -48,7 +48,7 @@ export function RabbiKellerIntro() {
                     </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                         <div className="w-full lg:w-1/2 flex">
-                            <div className="flex flex-col flex-1 h-full w-full justify-between bg-white/50 border border-border rounded-lg p-6 shadow-sm">
+                            <div className="flex flex-col flex-1 h-full w-full justify-between p-6">
                                 <CardContent className="p-0 w-full flex-1">
                                     <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                                         {rabbiImage && (
@@ -89,7 +89,7 @@ export function RabbiKellerIntro() {
                         </div>
                         
                         <div className="w-full lg:w-1/2 flex">
-                            <div className="flex flex-col flex-1 h-full w-full bg-white/50 border border-border rounded-lg p-6 shadow-sm">
+                            <div className="flex flex-col flex-1 h-full w-full p-6">
                                 <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6 flex-1">
                                     <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                 </div>
