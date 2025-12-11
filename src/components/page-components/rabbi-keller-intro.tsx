@@ -32,12 +32,16 @@ export function RabbiKellerIntro() {
     }, []);
 
     const parallaxOffset = scrollY > startParallax ? (scrollY - startParallax) * 0.2 : 0;
+    const blur = scrollY > startParallax ? Math.min(((scrollY - startParallax) / 300), 5) : 0;
 
     return (
         <div 
             ref={sectionRef}
             className="bg-secondary/5 py-12 relative z-0"
-            style={{ transform: `translateY(${parallaxOffset}px)` }}
+            style={{ 
+                transform: `translateY(${parallaxOffset}px)`,
+                filter: `blur(${blur}px)`,
+            }}
         >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
