@@ -531,6 +531,38 @@ function ContactSection() {
   );
 }
 
+function FinalCtaSection() {
+  const shadowProps = useDynamicShadow();
+  return (
+    <section id="final-cta" className="mb-12 scroll-mt-24">
+      <Card
+        {...shadowProps}
+        className="bg-primary text-primary-foreground border-primary"
+      >
+        <CardContent className="p-6">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <p className="max-w-prose">
+              Be prepared for the coming of Moshiach. Purchase your authentic
+              Machatzis Hashekel today and be ready to perform the mitzvah.
+            </p>
+            <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+              >
+                Order Your Coin Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </CardContent>
+      </Card>
+    </section>
+  );
+}
+
+
 export function InformationalSections() {
   return (
     <div id="rabbi-keller" className="flex flex-col">
@@ -538,6 +570,7 @@ export function InformationalSections() {
       <HaskomohSection />
       <FaqSection />
       <ContactSection />
+      <FinalCtaSection />
     </div>
   );
 }
