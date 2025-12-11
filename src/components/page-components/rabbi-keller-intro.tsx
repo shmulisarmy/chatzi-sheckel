@@ -7,14 +7,27 @@ import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
+import React, { useState, useEffect } from 'react';
 
 export function RabbiKellerIntro() {
     const rabbiImage = PlaceHolderImages.find(
         (p) => p.id === "rabbi-keller-portrait"
     );
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <div className="bg-secondary/5 py-12">
+        <div 
+            className="bg-secondary/5 py-12 md:py-20 relative z-0"
+            style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+        >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
                     <CardHeader className="p-0 mb-8">
@@ -24,7 +37,7 @@ export function RabbiKellerIntro() {
                     </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                         <div className="w-full lg:w-1/2 flex flex-col p-6 items-center">
-                            <div className="flex flex-col flex-1 h-full w-full">
+                            <div className="flex flex-col flex-1 h-full w-full justify-between">
                                 <CardContent className="p-0 w-full flex-1">
                                     <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                                         {rabbiImage && (
