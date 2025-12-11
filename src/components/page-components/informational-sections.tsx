@@ -509,7 +509,7 @@ function ContactSection() {
           </CardTitle>
           <CardDescription>
             If your question isn&apos;t answered in the{' '}
-            <Link href="/#faq" className="text-primary underline hover:text-primary/80">
+            <Link href="/#faq" className="text-foreground underline">
               FAQ
             </Link>
             , feel free to reach out.
