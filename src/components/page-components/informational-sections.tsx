@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -507,7 +508,11 @@ function ContactSection() {
             Have a Question?
           </CardTitle>
           <CardDescription>
-            If your question isn't answered in the FAQ, feel free to reach out.
+            If your question isn&apos;t answered in the{' '}
+            <Link href="/#faq" className="text-primary underline hover:text-primary/80">
+              FAQ
+            </Link>
+            , feel free to reach out.
           </CardDescription>
         </CardHeader>
         <CardContent>
