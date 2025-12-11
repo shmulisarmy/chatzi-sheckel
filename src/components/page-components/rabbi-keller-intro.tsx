@@ -33,6 +33,8 @@ export function RabbiKellerIntro() {
 
     const parallaxOffset = scrollY > startParallax ? (scrollY - startParallax) * 0.2 : 0;
     const blur = scrollY > startParallax ? Math.min(((scrollY - startParallax) / 300), 5) : 0;
+    const opacity = scrollY > startParallax ? Math.max(1 - ((scrollY - startParallax) / 500), 0.5) : 1;
+
 
     return (
         <div 
@@ -41,6 +43,7 @@ export function RabbiKellerIntro() {
             style={{ 
                 transform: `translateY(${parallaxOffset}px)`,
                 filter: `blur(${blur}px)`,
+                opacity: opacity,
             }}
         >
             <div className="container mx-auto">
