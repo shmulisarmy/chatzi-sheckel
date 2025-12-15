@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-import { CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
@@ -20,9 +20,14 @@ export function RabbiKellerIntro() {
         >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
+                    <CardHeader className="p-0 mb-8">
+                        <CardTitle className="font-headline text-4xl text-center">
+                            Who is Rabbi Keller?
+                        </CardTitle>
+                    </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                         <div className="w-full lg:w-1/2 flex">
-                            <div className="flex flex-col flex-1 h-full w-full justify-between">
+                            <div className="flex flex-col flex-1 h-full w-full justify-between p-6">
                                 <CardContent className="p-0 w-full flex-1">
                                     <div className="flex flex-col sm:flex-row items-center gap-6 h-full">
                                         {rabbiImage && (
@@ -63,7 +68,7 @@ export function RabbiKellerIntro() {
                         </div>
                         
                         <div className="w-full lg:w-1/2 flex">
-                            <div className="flex flex-col flex-1 h-full w-full">
+                            <div className="flex flex-col flex-1 h-full w-full p-6">
                                 <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video mb-6 flex-1">
                                     <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                 </div>
