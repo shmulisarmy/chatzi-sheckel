@@ -61,9 +61,9 @@ export function RabbiKellerIntro() {
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
                     <CardHeader className="p-0 mb-8">
-                        <CardTitle className="font-headline text-4xl text-center">
+                        {/* <CardTitle className="font-headline text-4xl text-center">
                             Who is Rabbi Keller?
-                        </CardTitle>
+                        </CardTitle> */}
                     </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                         <div className="w-full lg:w-1/2 flex">
