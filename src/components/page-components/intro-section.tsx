@@ -56,8 +56,8 @@ export function IntroSection() {
                                     src={coinImage.imageUrl}
                                     alt={coinImage.description}
                                     data-ai-hint={coinImage.imageHint}
-                                    width={200}
-                                    height={200}
+                                    width={300}
+                                    height={300}
                                     className=""
                                 />
                             </div>
