@@ -13,8 +13,14 @@
     {
       "id": "base-hamikdash",
       "description": "base-hamikdash",
-      "imageUrl": "/images/base-hamikdash.png"
+      "imageUrl": "/images/base-hamikdash1.png"
     },
+    {
+      "id": "transparent-coin",
+      "description": "transparent-coin",
+      "imageUrl": "/images/transparent-coin.png"
+    },
+    
     {
       "id": "silver-coin",
       "description": "silver-coin",

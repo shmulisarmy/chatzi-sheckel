@@ -8,7 +8,7 @@ import { ArrowDown } from 'lucide-react';
 
 export function IntroSection() {
     const baseHamikdash = PlaceHolderImages.find(p => p.id === 'base-hamikdash');
-    const coinImage = PlaceHolderImages.find(p => p.id === 'silver-coin');
+    const coinImage = PlaceHolderImages.find(p => p.id === 'transparent-coin');
 
     return (
         <div className="bg-background py-16">
@@ -51,7 +51,7 @@ export function IntroSection() {
                             <p>The Machatzis Hashekel enables each of us to move from hope to action: united, prepared, and ready.</p>
                         </div>
                         {coinImage && (
-                            <div className="md:w-1/2 flex-shrink-0 order-1 md:order-2 self-center flex justify-center">
+                            <div className="md:w-1/2 flex-shrink-0 order-1 md:order-2 self-center flex justify-center width-100 height-100"> 
                                 <Image
                                     src={coinImage.imageUrl}
                                     alt={coinImage.description}
