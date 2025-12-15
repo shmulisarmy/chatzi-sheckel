@@ -6,19 +6,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowDown } from 'lucide-react';
 
 export function IntroSection() {
-    const templeImage = PlaceHolderImages.find(p => p.id === 'temple-illustration');
-    const coinImage = PlaceHolderImages.find(p => p.id === 'product-image-new-2');
+    const baseHamikdash = PlaceHolderImages.find(p => p.id === 'base-hamikdash');
+    const coinImage = PlaceHolderImages.find(p => p.id === 'silver-coin');
 
     return (
         <div className="bg-background py-16">
             <div className="container mx-auto max-w-4xl px-4">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                    {templeImage && (
+                    {baseHamikdash && (
                         <div className="w-full md:w-1/3 flex-shrink-0">
                             <Image
-                                src={templeImage.imageUrl}
-                                alt={templeImage.description}
-                                data-ai-hint={templeImage.imageHint}
+                                src={baseHamikdash.imageUrl}
+                                alt={baseHamikdash.description}
+                                data-ai-hint={baseHamikdash.imageHint}
                                 width={400}
                                 height={300}
                                 className="rounded-lg shadow-lg object-cover w-full"
@@ -34,12 +34,12 @@ export function IntroSection() {
                 </div>
 
                 <div className="mt-12 text-lg text-foreground/90 space-y-4 text-left">
-                    <p>Preparation is not only spiritual. At a certain point, it must become practical.</p>
+                <h2 className="font-headline text-xl md:text-2xl text-foreground mb-4">Preparation is not only spiritual. At a certain point, it must become practical.</h2>
                     <p>If Moshiach were to come today, would we be ready for the very first mitzvah our nation will once again fulfill together; the Korban Tamid?</p>
                 </div>
 
-                <div className="mt-12 text-center">
-                    <h3 className="font-headline text-4xl md:text-5xl text-foreground font-bold">That mitzvah requires the Machatzis Hashekel.</h3>
+                <div className="mt-12">
+                <h2 className="font-headline text-1xl md:text-2xl text-foreground mb-4">That mitzvah requires the Machatzis Hashekel.</h2>
                 </div>
                 
                 <div className="mt-12 text-lg text-foreground/90 space-y-4">
@@ -50,23 +50,23 @@ export function IntroSection() {
                             <p>The Machatzis Hashekel enables each of us to move from hope to action: united, prepared, and ready.</p>
                         </div>
                         {coinImage && (
-                            <div className="w-full md:w-1/3 flex-shrink-0 order-1 md:order-2 self-center">
+                            <div className=" md:w-1/3 flex-shrink-0 order-1 md:order-2 self-center">
                                 <Image
                                     src={coinImage.imageUrl}
                                     alt={coinImage.description}
                                     data-ai-hint={coinImage.imageHint}
                                     width={200}
                                     height={200}
-                                    className="rounded-full shadow-lg object-cover mx-auto"
+                                    className=""
                                 />
                             </div>
                         )}
                     </div>
                 </div>
-
+{/* 
                 <div className="flex justify-center mt-16">
                     <ArrowDown className="w-12 h-12 text-muted-foreground/50 animate-bounce" />
-                </div>
+                </div> */}
             </div>
         </div>
     );
