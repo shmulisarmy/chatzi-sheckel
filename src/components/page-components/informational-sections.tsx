@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -20,7 +21,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, BookOpen, ArrowUp } from "lucide-react";
+import { ArrowRight, BookOpen, ArrowUp, Mail, ArrowUpRight } from "lucide-react";
 import { HaskomohSection } from "./haskomoh-section";
 import { SHOPIFY_PRODUCT_URL } from "@/app/urls";
 import React, { useState, useEffect, useRef } from "react";
@@ -54,7 +55,7 @@ function useDynamicShadow() {
         const spread = -3 - normalized * 2;
         const newShadow = `0px ${offsetY}px ${blur}px ${spread}px rgba(0,0,0,0.1)`;
 
-        const rotateX = -normalized * 2; // Tilt from -2deg to 2deg
+        const rotateX = -normalized * 0.5; // Tilt from -2deg to 2deg
         const newTransform = `perspective(1000px) rotateX(${rotateX}deg)`;
 
         setStyle((prev) => ({
@@ -87,7 +88,7 @@ function SourcesSection() {
         </CardHeader>
         <CardContent className="space-y-4 text-base leading-relaxed text-foreground/90">
           <p>The Rambam writes:</p>
-          <ol className="list-alpha list-outside space-y-2 pl-6">
+          <ol className="list-decimal list-outside space-y-2 pl-6">
             <li>
               There is a positive commandment that every Jewish man gives a
               half-shekel [to the Bais Hamikdash treasury], as stated in the
@@ -100,10 +101,13 @@ function SourcesSection() {
               not add to it or diminish from it.
             </li>
             <li>
-              In the era of Moshiach, when the Jews return to Eretz Yisroel,
-              and rebuild the Bais Hamikdash; [the observance of] all the laws will return to
-              their previous state.. according to all the particulars mentioned
-              by the Torah.
+
+              In the era of Moshiach, when the Jews return to Eretz Yisroel, and
+              rebuild the Bais Hamikdash; [the observance of] all the laws will
+              return to their previous state.. according to all the particulars
+              mentioned by the Torah.
+
+
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
@@ -143,8 +147,8 @@ function SourcesSection() {
                       <strong>According to Rashi:</strong>
                       <ul className="list-circle space-y-1 pl-5 mt-1">
                         <li>
-                          An ounce (Kolonia standard): 450 barley grains (~29.16
-                          grams)
+                          An ounce (Kolonia standard): 450 barley grains
+                          (~29.16 grams)
                         </li>
                         <li>
                           Shekel is ½ of the Kolonia standard of the ounce= 225
@@ -203,52 +207,6 @@ function SourcesSection() {
             child who reaches the age of 13 years old (see Ramban Exodus 30:12;
             Tosfos Yom Tov Shkolim 1:4).
           </p>
-        </CardContent>
-      </Card>
-    </section>
-  );
-}
-
-function RabbiKellerSection() {
-  const rabbiImage = PlaceHolderImages.find(
-    (p) => p.id === "rabbi-keller-portrait"
-  );
-  const shadowProps = useDynamicShadow();
-  return (
-    <section id="rabbi-keller" className="mb-12 scroll-mt-24">
-      <Card {...shadowProps}>
-        <CardHeader>
-          <CardTitle className="font-headline text-3xl">
-            Who is Rabbi Keller
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 text-base leading-relaxed">
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            {rabbiImage && (
-              <Image
-                src={rabbiImage.imageUrl}
-                alt={rabbiImage.description}
-                data-ai-hint={rabbiImage.imageHint}
-                width={150}
-                height={150}
-                className="rounded-lg object-cover  shrink-0"
-              />
-            )}
-            <div className="space-y-2 text-center sm:text-left text-foreground/90">
-              <p>
-                With a profound dedication to Torah and Mitzvos, Rabbi Keller
-                has been a guiding light in the community for decades. His
-                teachings emphasize the importance of preparing for the coming
-                of Moshiach, not just spiritually, but through practical actions
-                that strengthen our connection to the Bais Hamikdash.
-              </p>
-              <p>
-                This campaign is a direct result of his vision to empower every
-                individual to be ready to fulfill the Mitzvah of Machatzis
-                Hashekel immediately, without delay, when the time comes.{" "}
-              </p>
-            </div>
-          </div>
         </CardContent>
       </Card>
     </section>
@@ -542,42 +500,34 @@ function FaqSection() {
   );
 }
 
-function QuestionnaireSection() {
+function ContactSection() {
   const shadowProps = useDynamicShadow();
   return (
     <section id="questionnaire" className="mb-12 scroll-mt-24">
       <Card {...shadowProps}>
         <CardHeader>
-          <CardTitle className="font-headline text-3xl">
-            Questionnaire
+          <CardTitle className="font-headline text-3xl flex items-center gap-3">
+            <Mail className="w-8 h-8 text-primary" />
+            Have a Question?
           </CardTitle>
           <CardDescription>
-            Have a question not listed here? Ask us directly.
+            If your question isn&apos;t answered in the{' '}
+            <Link href="/#faq" className="text-foreground underline">
+              FAQ
+            </Link>
+            , feel free to reach out.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="your@email.com" />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="question">Your Question</Label>
-              <Textarea
-                id="question"
-                placeholder="Type your question here..."
-              />
-            </div>
-            <Button type="submit" className="w-full md:w-auto">
-              Submit Question
-            </Button>
-          </form>
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <p className="text-foreground/90">
+              You can email us directly at:
+            </p>
+            <a href="mailto:mindel@chatzishekel.com" className="inline-flex items-center gap-2 rounded-md bg-secondary/80 px-4 py-2 text-base font-semibold text-secondary-foreground transition-colors hover:bg-secondary">
+              mindel@chatzishekel.com
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
         </CardContent>
       </Card>
     </section>
@@ -587,23 +537,17 @@ function QuestionnaireSection() {
 function FinalCtaSection() {
   const shadowProps = useDynamicShadow();
   return (
-    <section id="final-cta" className="mb-12 text-center">
-      <Card className="bg-primary/10 border-primary/20" {...shadowProps}>
-        <CardContent className="p-8 md:p-12 space-y-6">
-          {/* <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
-            don't wanna wait till the last minute?
-          </h2> */}
-          <p className="max-w-2xl mx-auto text-lg text-primary/90">
-            theres no time better then right now. Acquire your Machatzis
-            Hashekel coin and be prepared for the coming of Moshiach.
-          </p>
-          <div className="flex justify-center">
+    <section id="final-cta" className="mb-12 scroll-mt-24">
+      <Card {...shadowProps}>
+        <CardContent className="p-6">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <p className="max-w-prose text-foreground/90">
+              Be prepared for the coming of Moshiach. Purchase your authentic
+              Machatzis Hashekel today and be ready to perform the mitzvah.
+            </p>
             <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
-              <Button
-                size="lg"
-                className="text-lg font-semibold transition-transform hover:scale-105 active:scale-100 py-6 px-10"
-              >
-                Start Preparing for Moshiach Today
+              <Button size="lg">
+                Order Your Coin Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -614,14 +558,14 @@ function FinalCtaSection() {
   );
 }
 
+
 export function InformationalSections() {
   return (
-    <div className="flex flex-col">
+    <div id="rabbi-keller" className="flex flex-col">
       <SourcesSection />
-      <RabbiKellerSection />
       <HaskomohSection />
       <FaqSection />
-      <QuestionnaireSection />
+      <ContactSection />
       <FinalCtaSection />
     </div>
   );

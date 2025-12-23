@@ -65,8 +65,12 @@ export function Hero() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+
             <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
-                <Button size="lg" className="px-8 py-6 text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105">
+                <Button size="lg" className="px-8 py-6 text-lg font-semibold    hover:bg-blue-700 transition-transform hover:scale-105"
+                  style={{}}
+                >
+
                     Order Your Coin Now
                 </Button>
             </Link>
