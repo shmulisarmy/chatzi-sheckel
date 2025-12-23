@@ -16,7 +16,7 @@ export function RabbiKellerIntro() {
 
     return (
         <div 
-            className="bg-secondary/5 py-12"
+            className="rabbi-keller-intro | bg-secondary/5 py-12"
         >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">

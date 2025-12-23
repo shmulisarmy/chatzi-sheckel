@@ -4,7 +4,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Link } from 'lucide-react';
+import { Button } from 'react-day-picker';
+import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
 
 export function IntroSection() {
     const baseHamikdash = PlaceHolderImages.find(p => p.id === 'base-hamikdash');
@@ -14,10 +16,9 @@ export function IntroSection() {
         <div className="bg-background py-16" style={{
             background: `linear-gradient(
                                 160deg,
-                                rgb(96, 120, 170) 0%,
-                                rgb(40, 50, 100) 50%,
+                                black 0%,
                                 rgb(4, 4, 31) 100%
-                            );
+                            )
                             `, color: 'white'
         }}>
             <div className="container mx-auto max-w-4xl px-4">
@@ -59,7 +60,9 @@ export function IntroSection() {
                             <p>The Machatzis Hashekel enables each of us to move from hope to action: united, prepared, and ready.</p>
                         </div>
                         {coinImage && (
-                            <div className="md:w-1/2 flex-shrink-0 order-1 md:order-2 flex justify-center"> 
+                            <div className="md:w-1/2 flex-shrink-0 order-1 md:order-2 "> 
+                            <div className='flex justify-center'>
+
                                 <Image
                                     src={coinImage.imageUrl}
                                     alt={coinImage.description}
@@ -67,7 +70,20 @@ export function IntroSection() {
                                     width={300}
                                     height={300}
                                     className=""
-                                />
+                                    />
+                                    </div>
+                                {/* <Link href={SHOPIFY_PREVIEW_URL}  target="_blank">
+                <button  className="px-8 py-6 text-lg font-semibold    hover:bg-blue-700 transition-transform hover:scale-105"
+                  style={{}}
+                >
+                    Order Your Coin Now
+                </button>
+            </Link> */}
+                            <div className='flex justify-center pt-10'>
+
+
+                        <button className=' bg-transparent text-lg font-semibold hover:bg-blue-800 text-white border-opacity-100 border   p-3 rounded-lg'>Order Your Coin Now</button>
+                            </div>
                             </div>
                         )}
                     </div>
