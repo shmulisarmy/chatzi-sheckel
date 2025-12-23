@@ -14,6 +14,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      {/* <div className="bg-white h-10"></div> */}
       <IntroSection />
       <RabbiKellerIntro />
 

@@ -11,7 +11,15 @@ export function IntroSection() {
     const coinImage = PlaceHolderImages.find(p => p.id === 'transparent-coin');
 
     return (
-        <div className="bg-background py-16">
+        <div className="bg-background py-16" style={{
+            background: `linear-gradient(
+                                160deg,
+                                rgb(96, 120, 170) 0%,
+                                rgb(40, 50, 100) 50%,
+                                rgb(4, 4, 31) 100%
+                            );
+                            `, color: 'white'
+        }}>
             <div className="container mx-auto max-w-4xl px-4">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     {baseHamikdash && (
@@ -27,23 +35,23 @@ export function IntroSection() {
                         </div>
                     )}
                     <div className="w-full md:w-2/3">
-                        <h2 className="font-headline text-3xl md:text-4xl text-foreground mb-4">On Shabbos Parshas Vayigash 5747 (1987)</h2>
-                        <p className="text-lg text-foreground/80">
+                        <h2 className="font-headline text-3xl md:text-4xl  mb-4">On Shabbos Parshas Vayigash 5747 (1987)</h2>
+                        <p className="text-lg">
                             the Rebbe spoke of the extraordinary moment we are living in, a time that calls for unity and preparation for the rebuilding of the Beis HaMikdash and the coming of Moshiach.
                         </p>
                     </div>
                 </div>
 
-                <div className="mt-12 text-lg text-foreground/90 space-y-4 text-left">
-                <h2 className="font-headline text-xl md:text-2xl text-foreground mb-4">Preparation is not only spiritual. At a certain point, it must become practical.</h2>
+                <div className="mt-12 text-lg  space-y-4 text-left">
+                <h2 className="font-headline text-xl md:text-2xl  mb-4">Preparation is not only spiritual. At a certain point, it must become practical.</h2>
                     <p>If Moshiach were to come today, would we be ready for the very first mitzvah our nation will once again fulfill together; the Korban Tamid?</p>
                 </div>
 
                 <div className="mt-12">
-                <h2 className="font-headline text-1xl md:text-2xl text-foreground mb-4">That mitzvah requires the Machatzis Hashekel.</h2>
+                <h2 className="font-headline text-1xl md:text-2xl  mb-4">That mitzvah requires the Machatzis Hashekel.</h2>
                 </div>
                 
-                <div className="mt-12 text-lg text-foreground/90 space-y-4">
+                <div className="mt-12 text-lg  space-y-4">
                      <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="space-y-4 order-2 md:order-1 md:w-1/2">
                             <p>This is not symbolic. It is a tangible halachic requirement, something that must already be in hand.</p>
