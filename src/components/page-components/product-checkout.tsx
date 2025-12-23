@@ -30,8 +30,11 @@ export function ProductCheckout() {
                 <CarouselContent>
                     {productImages.map((image) => (
                     <CarouselItem key={image.id}>
-                        <div className="relative aspect-square bg-muted">
+                        <div className="relative aspect-square bg-muted"
+                            
+                        >
                         <Image
+                        style={{transform: "translateX(2px)"}}
                             src={image.imageUrl}
                             alt={image.description}
                             data-ai-hint={image.imageHint}
