@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowDown, Link } from 'lucide-react';
 import { Button } from 'react-day-picker';
-import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
+import { SHOPIFY_PRODUCT_URL } from '@/app/urls';
 
 export function IntroSection() {
     const baseHamikdash = PlaceHolderImages.find(p => p.id === 'base-hamikdash');

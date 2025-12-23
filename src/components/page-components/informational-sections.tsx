@@ -545,7 +545,7 @@ function FinalCtaSection() {
               Be prepared for the coming of Moshiach. Purchase your authentic
               Machatzis Hashekel today and be ready to perform the mitzvah.
             </p>
-            <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
+            <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
               <Button size="lg">
                 Order Your Coin Now
                 <ArrowRight className="ml-2 h-5 w-5" />
