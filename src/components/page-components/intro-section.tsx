@@ -44,14 +44,14 @@ export function IntroSection() {
                 </div>
                 
                 <div className="mt-12 text-lg text-foreground/90 space-y-4">
-                     <div className="flex flex-col md:flex-row items-start gap-8">
+                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="space-y-4 order-2 md:order-1 md:w-1/2">
                             <p>This is not symbolic. It is a tangible halachic requirement, something that must already be in hand.</p>
                             <p>Rabbi Keller received a direct directive from the Rebbe to prepare himself to rule together with the Beis Din. This project is part of that charge: turning anticipation into readiness.</p>
                             <p>The Machatzis Hashekel enables each of us to move from hope to action: united, prepared, and ready.</p>
                         </div>
                         {coinImage && (
-                            <div className="md:w-1/2 flex-shrink-0 order-1 md:order-2 self-center flex justify-center width-100 height-100"> 
+                            <div className="md:w-1/2 flex-shrink-0 order-1 md:order-2 flex justify-center"> 
                                 <Image
                                     src={coinImage.imageUrl}
                                     alt={coinImage.description}
