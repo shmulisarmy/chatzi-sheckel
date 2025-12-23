@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Coins, Mail, Phone } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const quickLinks = [
   { name: "Sources", href: "/#sources" },
@@ -7,6 +8,10 @@ const quickLinks = [
   { name: "FAQ", href: "/#faq" },
   { name: "Questionnaire", href: "/#questionnaire" },
 ];
+
+const productFrontImage = PlaceHolderImages.find(
+  (image) => image.id === 'product-image-new-1'
+);
 
 export default function Footer() {
   return (
@@ -16,7 +21,8 @@ export default function Footer() {
             
             <div className="space-y-4">
                 <div className="flex items-center space-x-2">
-                    <Coins className="h-8 w-8 text-primary" />
+                    {/* <Coins className="h-8 w-8 text-primary" /> */}
+                    <img src={productFrontImage?.imageUrl} alt="Logo" width={32} height={32} className="h-8 w-8" />
                     <span className="font-headline text-3xl font-bold">Chatzi Shekel</span>
                 </div>
                 <p className="text-sm text-secondary-foreground/70 max-w-xs">

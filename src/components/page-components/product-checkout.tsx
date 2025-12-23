@@ -14,7 +14,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ShoppingCart } from 'lucide-react';
-import { SHOPIFY_PREVIEW_URL } from '@/app/urls';
+import { SHOPIFY_PRODUCT_URL } from '@/app/urls';
 
 
 export function ProductCheckout() {
@@ -63,7 +63,7 @@ export function ProductCheckout() {
                 </div>
                 
                 <div className='pt-4'>
-                    <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
+                    <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
                         <Button size="lg" className="w-full font-semibold transition-transform hover:scale-[1.02] active:scale-100">
                             <ShoppingCart className="mr-2 h-4 w-4" />
                             Add to Cart

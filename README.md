@@ -1,5 +1,5 @@
-# Firebase Studio
+# Author – shmuli keller
 
-This is a NextJS starter in Firebase Studio.
+## Live at [chatzishekel.com](https://chatzishekel.com)
 
-To get started, take a look at src/app/page.tsx.
+![Site Preview](site-preview.png)

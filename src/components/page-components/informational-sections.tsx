@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight, BookOpen, ArrowUp, Mail, ArrowUpRight } from "lucide-react";
 import { HaskomohSection } from "./haskomoh-section";
-import { SHOPIFY_PREVIEW_URL } from "@/app/urls";
+import { SHOPIFY_PRODUCT_URL } from "@/app/urls";
 import React, { useState, useEffect, useRef } from "react";
 
 function useDynamicShadow() {
@@ -101,10 +101,13 @@ function SourcesSection() {
               not add to it or diminish from it.
             </li>
             <li>
+
               In the era of Moshiach, when the Jews return to Eretz Yisroel, and
               rebuild the Bais Hamikdash; [the observance of] all the laws will
               return to their previous state.. according to all the particulars
               mentioned by the Torah.
+
+
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
@@ -126,9 +129,9 @@ function SourcesSection() {
             The Beis Hamikdosh is rebuilt, the Kohanim will bring the communal
             sacrifices that are financed by every member of Klal Yisroel
             (obligatory for Men who are thirteen years and older; optional for
-            boys under the age of thirteen and for women) contributing a
-            Machatzis Hashekel (a half-shekel) once a year (which pays: for the
-            Communal offerings).
+            boys under the age of thirteen and for women) contributing a Machatzis
+            Hashekel (a half-shekel) once a year (which pays: for the Communal
+            offerings).
           </p>
 
           <div className="pt-4">

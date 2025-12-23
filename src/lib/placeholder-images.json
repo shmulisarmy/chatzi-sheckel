@@ -5,6 +5,11 @@
       "description": "Signatures",
       "imageUrl": "/images/Haskomoh.jpg"
     },
+     {
+      "id": "2-coins",
+      "description": "2-coins",
+      "imageUrl": "/images/2-coins.jpg"
+    },
     {
       "id": "kosel",
       "description": "Kosel",
