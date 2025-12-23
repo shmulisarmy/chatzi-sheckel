@@ -18,16 +18,13 @@
     {
       "id": "transparent-coin",
       "description": "transparent-coin",
-      "imageUrl": "/images/transparent-coin.png"
+      "imageUrl": "/images/new-silver-coin.png"
     },
-    
     {
       "id": "silver-coin",
       "description": "silver-coin",
       "imageUrl": "/images/silver-coin.png"
     },
-    
-    
     {
       "id": "temple-illustration",
       "description": "An illustration of the Beis Hamikdash",
