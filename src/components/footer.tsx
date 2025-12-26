@@ -44,7 +44,12 @@ export default function Footer() {
             </div>
 
             <div className="md:justify-self-end">
-                <h3 className="font-headline text-xl font-semibold mb-4">Contact</h3>
+                <div className='mb-4'>
+                    
+                <h3 className="font-headline text-xl font-semibold ">Contact</h3>
+                <p className="text-secondary-foreground/70 text-xs">by mail or whatsapp</p>
+                </div>
+
                 <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-secondary-foreground/70" />
@@ -95,3 +100,5 @@ function WhatsAppIcon(){
   </svg>
 
 }
+
+
