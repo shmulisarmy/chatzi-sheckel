@@ -33,10 +33,12 @@ export default function Header() {
       "sticky top-0 z-40 w-full shadow-md shadow-secondary/20 bg-white"
       // bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     )}>
-      <div className="container flex h-16 items-center sm:justify-between sm:space-x-0">
+      <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 
+      px-4
+      ">
         <Link href="/" className="flex items-center space-x-2">
           {productImage && (
-            <Image
+            <img
               src={productImage.imageUrl}
               alt="Chatzi Shekel coin"
               width={24}
