@@ -16,7 +16,20 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
-    if (!scrollTriggerRef.current) return;
+    const triggerElement = scrollTriggerRef.current;
+    if (!triggerElement) return;
+
+    // Check initial position on mount
+    const handleInitialCheck = () => {
+      if (hasScrolled) return;
+      const rect = triggerElement.getBoundingClientRect();
+      // If the top of the trigger element is already in the viewport or above it
+      if (rect.top <= 100) { // Using a threshold, e.g., 100px from top
+        setHasScrolled(true);
+      }
+    };
+
+    handleInitialCheck();
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -26,18 +39,13 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
       },
       { threshold: 0.1 } 
     );
-
-    const currentRef = scrollTriggerRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+      
+    observer.observe(triggerElement);
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+        observer.unobserve(triggerElement);
     };
-  }, [scrollTriggerRef]);
+  }, [scrollTriggerRef, hasScrolled]);
 
 
   return (
@@ -46,7 +54,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
       hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "text-white"
     )}
     style={!hasScrolled ? {
-      background: `linear-gradient(180deg, black 0%, rgb(4, 4, 31) 100%)`
+        background: `linear-gradient(160deg, black 0%, rgb(4, 4, 31) 100%)`
     } : {}}
     >
       <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 px-4">
