@@ -16,11 +16,13 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
+    if (!scrollTriggerRef.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setHasScrolled(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 } 
     );
 
     const currentRef = scrollTriggerRef.current;
@@ -39,8 +41,12 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
   return (
     <header className={cn(
       "sticky top-0 z-40 w-full transition-all duration-300",
-      hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "bg-secondary text-white"
-    )}>
+      hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "text-white"
+    )}
+    style={!hasScrolled ? {
+      background: `linear-gradient(160deg, black 0%, rgb(4, 4, 31) 100%)`
+    } : {}}
+    >
       <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 px-4">
         <Link href="/" className="flex items-center space-x-2">
           {productImage && (
