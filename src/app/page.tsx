@@ -8,6 +8,8 @@ import DesignComment from '@/components/design-comment';
 import { RabbiKellerIntro } from '@/components/page-components/rabbi-keller-intro';
 import { IntroSection } from '@/components/page-components/intro-section';
 import {Analytics}  from '@vercel/analytics/react';
+import {GoogleAnalytics}  from '@next/third-parties/google';
+import Script from 'next/script';
 
 DesignComment()
 export default function Home() {
@@ -16,6 +18,7 @@ export default function Home() {
   return (
     <>
      <Analytics />
+     <GoogleAnalytics gaId='G-4LESCPJW7N'/>
       <Header scrollTriggerRef={rabbiKellerRef} />
       <Hero />
       <IntroSection />
