@@ -19,7 +19,7 @@ const navItems = [
   { name: "Questionnaire", href: "/#questionnaire" },
 ];
 
-export function MainNav() {
+export function MainNav({ isDark }: { isDark: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const productImage = PlaceHolderImages.find(p => p.id === '2-coins');
@@ -43,8 +43,9 @@ export function MainNav() {
         {desktopNavItems.map((item) => (
           <Button key={item.name} variant="ghost" asChild className={cn(
             'transition-colors font-semibold',
-            'text-muted-foreground hover:text-foreground',
-            (pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))) && 'text-foreground'
+            isDark ? 'text-white/80 hover:text-white' : 'text-muted-foreground hover:text-foreground',
+            ((pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))) && !isDark) && 'text-foreground',
+            ((pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))) && isDark) && 'text-white'
           )}>
             <Link
               href={item.href}

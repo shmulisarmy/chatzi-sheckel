@@ -15,8 +15,9 @@ export function IntroSection() {
     return (
         <div className="bg-background py-16" style={{
             background: `linear-gradient(
-                                160deg,
-                                black 0%,
+                180deg,
+                rgb(4, 4, 20) 0%,
+                rgb(0, 0, 6) 4%,
                                 rgb(4, 4, 31) 100%
                             )
                             `, color: 'white'
