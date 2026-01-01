@@ -42,6 +42,8 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef?: React.
       ([entry]) => {
         if (entry.isIntersecting) {
             setHasScrolled(true);
+        } else {
+            setHasScrolled(false);
         }
       },
       { threshold: 0.1 } 
