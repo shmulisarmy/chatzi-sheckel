@@ -54,7 +54,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
       hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "text-white"
     )}
     style={!hasScrolled ? {
-        background: `linear-gradient(160deg, black 0%, rgb(4, 4, 31) 100%)`
+        background: `linear-gradient(180deg, black 0%, rgb(4, 4, 31) 100%)`
     } : {}}
     >
       <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 px-4">
