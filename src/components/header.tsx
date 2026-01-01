@@ -11,13 +11,20 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import React, { useState, useEffect } from 'react';
 
 
-export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.RefObject<HTMLDivElement> }) {
+export default function Header({ scrollTriggerRef }: { scrollTriggerRef?: React.RefObject<HTMLDivElement> }) {
   const productImage = PlaceHolderImages.find(p => p.id === 'product-image-new-1');
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
+    if (!scrollTriggerRef?.current) {
+        // On pages without a scroll trigger, default to a scrolled state (white header)
+        // unless it's the home page, but we can't easily know that here.
+        // A simple solution is to just have a solid header on other pages.
+        setHasScrolled(true);
+        return;
+    }
     const triggerElement = scrollTriggerRef.current;
-    if (!triggerElement) return;
+
 
     // Check initial position on mount
     const handleInitialCheck = () => {
@@ -43,7 +50,9 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
     observer.observe(triggerElement);
 
     return () => {
-        observer.unobserve(triggerElement);
+        if (triggerElement) {
+            observer.unobserve(triggerElement);
+        }
     };
   }, [scrollTriggerRef, hasScrolled]);
 
@@ -54,7 +63,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
       hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "text-white"
     )}
     style={!hasScrolled ? {
-        background: `linear-gradient(180deg, black 0%, rgb(4, 4, 31) 100%)`
+        background: `linear-gradient(180deg, black 0%, rgb(4, 4, 31) 60%)`
     } : {}}
     >
       <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 px-4">

@@ -56,10 +56,18 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         {/* Glassmorphism container */}
-        <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 shadow-lg">
+        <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20 shadow-lg">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tight text-shadow-lg">
-                Be Ready for <span className="bg-gradient-to-r from-black via-blue-900 to-black bg-clip-text text-transparent">Moshiach</span>
+              <h1 style={{
+    fontFamily: '"Poppins", sans-serif',
+    fontWeight: 600,
+    letterSpacing: '-0.01em',
+    lineHeight: 1.1,
+    color: '#ffffff',
+  }}
+              className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tight text-shadow-lg">
+                Be Ready for Moshiach
+                 {/* <span className="bg-gradient-to-r from-black via-blue-900 to-black bg-clip-text text-transparent">Moshiach</span> */}
               </h1>
               <p className="mt-4 md:mt-6 text-base md:text-xl max-w-2xl mx-auto text-neutral-200 text-shadow">
                 The authentic Machatzis Hashekel coin, prepared according to tradition for when the time comes.
