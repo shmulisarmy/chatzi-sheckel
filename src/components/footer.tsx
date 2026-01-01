@@ -51,18 +51,13 @@ export default function Footer() {
                 </div>
 
                 <ul className="space-y-3">
-                    <li className="flex items-center gap-3">
+                    {/* <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-secondary-foreground/70" />
                         <a href="mailto:mindel@chatzishekel.com" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
                             mindel@chatzishekel.com
                         </a>
-                    </li>
-                    <li className="flex items-center gap-3">
-                        <WhatsAppIcon />
-                        <a href="https://wa.me/+13472204282" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
-                            +1 (347) 220-4282
-                        </a>
-                    </li>
+                    </li> */}
+            
                     {/* <p className="text-secondary-foreground/70 text-xs">for all your questions about Machatzis Hashekel </p> */}
                     <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-secondary-foreground/70" />
@@ -76,6 +71,12 @@ export default function Footer() {
                         <Mail className="h-5 w-5 text-secondary-foreground/70" />
                         <a href="mailto:orders@chatzishekel.com" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
                             orders@chatzishekel.com
+                        </a>
+                    </li>
+                            <li className="flex items-center gap-3">
+                        <WhatsAppIcon />
+                        <a href="https://wa.me/+13472204282" className="text-base text-secondary-foreground/70 hover:text-primary transition-colors">
+                            +1 (347) 220-4282
                         </a>
                     </li>
                     
