@@ -5,15 +5,41 @@
       "description": "Signatures",
       "imageUrl": "/images/Haskomoh.jpg"
     },
+     {
+      "id": "2-coins",
+      "description": "2-coins",
+      "imageUrl": "/images/2-coins.jpg"
+    },
     {
       "id": "kosel",
       "description": "Kosel",
       "imageUrl": "/images/kosel-2.png"
     },
     {
+      "id": "base-hamikdash",
+      "description": "base-hamikdash",
+      "imageUrl": "/images/base-hamikdash1.png"
+    },
+    {
+      "id": "transparent-coin",
+      "description": "Machatzis Hashekel coin",
+      "imageUrl": "/images/silver-coin-2.png"
+    },
+    {
+      "id": "silver-coin",
+      "description": "silver-coin",
+      "imageUrl": "/images/silver-coin.png"
+    },
+    {
+      "id": "temple-illustration",
+      "description": "An illustration of the Beis Hamikdash",
+      "imageUrl": "https://images.unsplash.com/photo-1679685808091-3ef6056dde59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0ZW1wbGUlMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzY1NzgzMDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "temple illustration"
+    },
+    {
       "id": "product-image-new-1",
       "description": "Local Machatzis Hashekel coin image",
-      "imageUrl": "/images/product-image-new-front.png",
+      "imageUrl": "/images/silver-coin-2.png",
       "imageHint": "local silver coin"
     },
     {

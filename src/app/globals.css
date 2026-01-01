@@ -85,3 +85,30 @@
     z-index: 2;
   }
 }
+
+
+
+
+
+/*
+animations
+*/
+
+
+@keyframes appear-upwards {
+    0% {
+        opacity: 0;
+        transform: translateY(1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rabbi-keller-intro {
+    animation: appear-upwards  ease-in-out;
+        animation-timeline: scroll();
+    animation-range: entry 30% cover 100%;
+
+}

@@ -7,63 +7,23 @@ import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 
 export function RabbiKellerIntro() {
     const rabbiImage = PlaceHolderImages.find(
         (p) => p.id === "rabbi-keller-portrait"
     );
-    const [scrollY, setScrollY] = useState(0);
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const [startParallax, setStartParallax] = useState(0);
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
-
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setIsLargeScreen(window.innerWidth >= 1024);
-        };
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
-
-    useEffect(() => {
-        if (sectionRef.current) {
-            setStartParallax(sectionRef.current.offsetTop);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (!isLargeScreen) return;
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [isLargeScreen]);
-
-    const parallaxOffset = isLargeScreen && scrollY > startParallax ? (scrollY - startParallax) * 0.2 : 0;
-    const blur = isLargeScreen && scrollY > startParallax ? Math.min(((scrollY - startParallax) / 300), 5) : 0;
-    const opacity = isLargeScreen && scrollY > startParallax ? Math.max(1 - ((scrollY - startParallax) / 500), 0.5) : 1;
 
     return (
         <div 
-            ref={sectionRef}
-            className="bg-secondary/5 py-12"
-            style={isLargeScreen ? { 
-                transform: `translateY(${parallaxOffset}px)`,
-                filter: `blur(${blur}px)`,
-                opacity: opacity,
-                position: 'relative',
-                zIndex: 0,
-            } : {}}
+            className="rabbi-keller-intro | bg-secondary/5 py-12"
         >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center">
                     <CardHeader className="p-0 mb-8">
-                        <CardTitle className="font-headline text-4xl text-center">
+                        {/* <CardTitle className="font-headline text-4xl text-center">
                             Who is Rabbi Keller?
-                        </CardTitle>
+                        </CardTitle> */}
                     </CardHeader>
                     <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch">
                         <div className="w-full lg:w-1/2 flex">

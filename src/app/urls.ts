@@ -1,1 +1,1 @@
-export const SHOPIFY_PREVIEW_URL = "https://xxdxz5kroz9zjil4-92269838653.shopifypreview.com/products_preview?preview_key=f4a3bd4785d67da46851b566a1096b66";
+export const SHOPIFY_PRODUCT_URL = "https://r0ja9y-0g.myshopify.com/products/half-shekel-coin";

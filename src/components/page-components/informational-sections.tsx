@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight, BookOpen, ArrowUp, Mail, ArrowUpRight } from "lucide-react";
 import { HaskomohSection } from "./haskomoh-section";
-import { SHOPIFY_PREVIEW_URL } from "@/app/urls";
+import { SHOPIFY_PRODUCT_URL } from "@/app/urls";
 import React, { useState, useEffect, useRef } from "react";
 
 function useDynamicShadow() {
@@ -101,10 +101,13 @@ function SourcesSection() {
               not add to it or diminish from it.
             </li>
             <li>
+
               In the era of Moshiach, when the Jews return to Eretz Yisroel, and
               rebuild the Bais Hamikdash; [the observance of] all the laws will
               return to their previous state.. according to all the particulars
               mentioned by the Torah.
+
+
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
@@ -126,9 +129,9 @@ function SourcesSection() {
             The Beis Hamikdosh is rebuilt, the Kohanim will bring the communal
             sacrifices that are financed by every member of Klal Yisroel
             (obligatory for Men who are thirteen years and older; optional for
-            boys under the age of thirteen and for women) contributing a
-            Machatzis Hashekel (a half-shekel) once a year (which pays: for the
-            Communal offerings).
+            boys under the age of thirteen and for women) contributing a Machatzis
+            Hashekel (a half-shekel) once a year (which pays: for the Communal
+            offerings).
           </p>
 
           <div className="pt-4">
@@ -520,9 +523,13 @@ function ContactSection() {
             <p className="text-foreground/90">
               You can email us directly at:
             </p>
-            <a href="mailto:mindel@chatzishekel.com" className="inline-flex items-center gap-2 rounded-md bg-secondary/80 px-4 py-2 text-base font-semibold text-secondary-foreground transition-colors hover:bg-secondary">
-              mindel@chatzishekel.com
+
+            <a href="mailto:Questions@chatzishekel.com" className="">
+            <Button>
+              Questions@chatzishekel.com
+
               <ArrowUpRight className="h-4 w-4" />
+            </Button>
             </a>
           </div>
         </CardContent>
@@ -542,7 +549,7 @@ function FinalCtaSection() {
               Be prepared for the coming of Moshiach. Purchase your authentic
               Machatzis Hashekel today and be ready to perform the mitzvah.
             </p>
-            <Link href={SHOPIFY_PREVIEW_URL} passHref target="_blank">
+            <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
               <Button size="lg">
                 Order Your Coin Now
                 <ArrowRight className="ml-2 h-5 w-5" />
