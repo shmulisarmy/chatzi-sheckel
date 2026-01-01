@@ -55,33 +55,35 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tight text-shadow-lg">
-            Be Ready for <span className="bg-gradient-to-r from-black via-blue-900 to-black bg-clip-text text-transparent">Moshiach</span>
-          </h1>
-          <p className="mt-4 md:mt-6 text-base md:text-xl max-w-2xl mx-auto text-neutral-200 text-shadow">
-            The authentic Machatzis Hashekel coin, prepared according to tradition for when the time comes.
-          </p>
-        </div>
+        {/* Glassmorphism container */}
+        <div className="bg-black/20 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 shadow-lg">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tight text-shadow-lg">
+                Be Ready for <span className="bg-gradient-to-r from-black via-blue-900 to-black bg-clip-text text-transparent">Moshiach</span>
+              </h1>
+              <p className="mt-4 md:mt-6 text-base md:text-xl max-w-2xl mx-auto text-neutral-200 text-shadow">
+                The authentic Machatzis Hashekel coin, prepared according to tradition for when the time comes.
+              </p>
+            </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-            <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
-                <Button 
-                  size="lg" 
-                  className="px-8 py-6 text-lg font-semibold border-0 transition-transform hover:scale-105"
-                  style={{
-                    backgroundImage: `linear-gradient(160deg, black 0%, rgb(4, 4, 31) 100%)`
-                  }}
-                >
-                    Order Your Coin Now
-                </Button>
-            </Link>
-            <Link href="/#sources" passHref>
-                <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-semibold bg-white/10 border-white/50 backdrop-blur-sm hover:bg-white/20 transition-transform hover:scale-105">
-                    Learn More
-                </Button>
-            </Link>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
+                    <Button 
+                      size="lg" 
+                      className="px-8 py-6 text-lg font-semibold border-0 transition-transform hover:scale-105"
+                      style={{
+                        backgroundImage: `linear-gradient(160deg, black 0%, rgb(4, 4, 31) 100%)`
+                      }}
+                    >
+                        Order Your Coin Now
+                    </Button>
+                </Link>
+                <Link href="/#sources" passHref>
+                    <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-semibold bg-white/10 border-white/50 backdrop-blur-sm hover:bg-white/20 transition-transform hover:scale-105">
+                        Learn More
+                    </Button>
+                </Link>
+            </div>
         </div>
       </div>
     </div>
