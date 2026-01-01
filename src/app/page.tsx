@@ -10,13 +10,16 @@ import { IntroSection } from '@/components/page-components/intro-section';
 
 DesignComment()
 export default function Home() {
+    const rabbiKellerRef = React.useRef<HTMLDivElement>(null);
+
   return (
     <>
-      <Header />
+      <Header scrollTriggerRef={rabbiKellerRef} />
       <Hero />
-      {/* <div className="bg-white h-10"></div> */}
       <IntroSection />
-      <RabbiKellerIntro />
+      <div ref={rabbiKellerRef}>
+        <RabbiKellerIntro />
+      </div>
 
       {/* Main Content Section (Sources & Product) */}
       <div className="relative z-10 bg-background">
