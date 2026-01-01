@@ -20,7 +20,9 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setHasScrolled(entry.isIntersecting);
+        if (entry.isIntersecting) {
+            setHasScrolled(true);
+        }
       },
       { threshold: 0.1 } 
     );
@@ -44,7 +46,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
       hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "text-white"
     )}
     style={!hasScrolled ? {
-      background: `linear-gradient(160deg, black 0%, rgb(4, 4, 31) 100%)`
+      background: `linear-gradient(180deg, black 0%, rgb(4, 4, 31) 100%)`
     } : {}}
     >
       <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 px-4">
@@ -55,7 +57,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
               alt="Chatzi Shekel coin"
               width={24}
               height={24}
-              className={cn("h-6 w-6 transition-all", !hasScrolled && "brightness-0 invert")}
+              className={cn("h-6 w-6 transition-all")}
             />
           )}
           <span className="font-headline text-2xl font-bold">Chatzi Shekel</span>
