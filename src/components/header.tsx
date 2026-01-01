@@ -18,7 +18,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setHasScrolled(!entry.isIntersecting);
+        setHasScrolled(entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
@@ -39,7 +39,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
   return (
     <header className={cn(
       "sticky top-0 z-40 w-full transition-all duration-300",
-      hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "bg-transparent text-white"
+      hasScrolled ? "shadow-md shadow-secondary/20 bg-white text-foreground" : "bg-secondary text-white"
     )}>
       <div className="container flex h-16 items-center sm:justify-between sm:space-x-0 px-4">
         <Link href="/" className="flex items-center space-x-2">
@@ -57,7 +57,7 @@ export default function Header({ scrollTriggerRef }: { scrollTriggerRef: React.R
         <div className="flex flex-1 items-center justify-end space-x-2">
           <MainNav isDark={!hasScrolled} />
           <Link href={SHOPIFY_PRODUCT_URL} passHref target="_blank">
-            <Button variant="ghost" size="icon" className='hover:bg-accent'>
+            <Button variant="ghost" size="icon" className={cn('hover:bg-accent', !hasScrolled && 'hover:bg-white/20')}>
               <ShoppingCart className="h-5 w-5" />
               <span className="sr-only">Shopping Cart</span>
             </Button>
