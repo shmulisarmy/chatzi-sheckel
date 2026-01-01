@@ -56,7 +56,7 @@ export function IntroSection() {
                      <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="space-y-4 order-2 md:order-1 md:w-1/2">
                             <p>This is not symbolic. It is a tangible halachic requirement, something that must already be in hand.</p>
-                            <p>Rabbi Keller received a direct directive from the Rebbe to prepare himself to rule together with the Beis Din. This project is part of that charge: turning anticipation into readiness.</p>
+                            <p>Rabbi Keller received a directive from the Rebbe to prepare himself to rule together with the Beis Din. This project is part of that charge: turning anticipation into readiness.</p>
                             <p>The Machatzis Hashekel enables each of us to move from hope to action: united, prepared, and ready.</p>
                         </div>
                         {coinImage && (

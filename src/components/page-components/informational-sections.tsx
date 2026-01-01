@@ -523,9 +523,13 @@ function ContactSection() {
             <p className="text-foreground/90">
               You can email us directly at:
             </p>
-            <a href="mailto:mindel@chatzishekel.com" className="inline-flex items-center gap-2 rounded-md bg-secondary/80 px-4 py-2 text-base font-semibold text-secondary-foreground transition-colors hover:bg-secondary">
-              mindel@chatzishekel.com
+
+            <a href="mailto:Questions@chatzishekel.com" className="">
+            <Button>
+              Questions@chatzishekel.com
+
               <ArrowUpRight className="h-4 w-4" />
+            </Button>
             </a>
           </div>
         </CardContent>
