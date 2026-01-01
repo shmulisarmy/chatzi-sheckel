@@ -7,6 +7,7 @@ import Header from '@/components/header';
 import DesignComment from '@/components/design-comment';
 import { RabbiKellerIntro } from '@/components/page-components/rabbi-keller-intro';
 import { IntroSection } from '@/components/page-components/intro-section';
+import {Analytics}  from '@vercel/analytics/react';
 
 DesignComment()
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
 
   return (
     <>
+     <Analytics />
       <Header scrollTriggerRef={rabbiKellerRef} />
       <Hero />
       <IntroSection />
