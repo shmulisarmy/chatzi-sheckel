@@ -18,7 +18,7 @@ import { SHOPIFY_PRODUCT_URL } from '@/app/urls';
 
 
 export function ProductCheckout() {
-  const price = 75.00;
+  const price =90.00;
   const productImages = PlaceHolderImages.filter(p => p.id.startsWith('product-image-new')).sort((a, b) => a.id.localeCompare(b.id));
 
   return (
