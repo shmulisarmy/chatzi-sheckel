@@ -105,10 +105,3 @@ animations
         transform: translateY(0);
     }
 }
-
-.rabbi-keller-intro {
-    animation: appear-upwards  ease-in-out;
-        animation-timeline: scroll();
-    animation-range: entry 30% cover 100%;
-
-}

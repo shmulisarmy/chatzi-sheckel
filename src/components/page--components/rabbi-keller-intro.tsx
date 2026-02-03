@@ -14,19 +14,19 @@ export function RabbiKellerIntro() {
     const rabbiImage = PlaceHolderImages.find(
         (p) => p.id === "rabbi-keller-portrait"
     );
-    const [scrollY, setScrollY] = useState(0);
+    // const [scrollY, setScrollY] = useState(0);
     const sectionRef = useRef<HTMLDivElement>(null);
-    const [startParallax, setStartParallax] = useState(0);
+    // const [startParallax, setStartParallax] = useState(0);
 
-    useEffect(() => {
-        if (sectionRef.current) {
-            setStartParallax(sectionRef.current.offsetTop);
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (sectionRef.current) {
+    //         setStartParallax(sectionRef.current.offsetTop);
+    //     }
+    // }, []);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollY(window.scrollY);
+            // setScrollY(window.scrollY);
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
