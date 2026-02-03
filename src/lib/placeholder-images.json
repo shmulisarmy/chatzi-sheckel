@@ -1,6 +1,11 @@
 {
   "placeholderImages": [
     {
+      "id": "rebbe-giving-dollar",
+      "description": "Rebbe giving dollar",
+      "imageUrl": "/images/rebbe-giving-dollar.png"
+    },
+    {
       "id": "Haskomoh",
       "description": "Signatures",
       "imageUrl": "/images/Haskomoh.jpg"

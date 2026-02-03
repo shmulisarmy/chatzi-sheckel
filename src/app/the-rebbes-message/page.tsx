@@ -1,8 +1,17 @@
 
 "use client";
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/header';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ThumbedVideo } from '@/components/ThumbedVideo';
+
+
+
+
+
+
+
 
 export default function RebbesMessagePage() {
   return (
@@ -13,7 +22,7 @@ export default function RebbesMessagePage() {
             <div className="container mx-auto max-w-4xl px-4 py-8 md:py-16">
                  <div className="text-left space-y-8">
                         <div className="relative w-full overflow-hidden rounded-lg shadow-xl aspect-video">
-                            <iframe style={{width: "100%", height: "100%", position: "absolute", top: 0, left: 0}} src="https://drive.google.com/file/d/1SofcE-GGlla-BZt3CACMhWQfV0u1N0h2/preview" title="272  Yud Zayin Av, 5751   Dollars Peninim   י ז מנחם אב תנש א" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <ThumbedVideo iframeSrc="https://drive.google.com/file/d/15-hHJ5IstaBmimqxM0Hdf2MjP_5tbac_/preview" thumbSrc={PlaceHolderImages.find(image => image.id === "rebbe-giving-dollar")?.imageUrl} />
                         </div>
 
                     <div className="space-y-4 text-lg leading-relaxed text-foreground/90">
