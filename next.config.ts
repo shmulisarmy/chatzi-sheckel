@@ -1,7 +1,19 @@
 
 import type {NextConfig} from 'next';
 
+
+// next.config.js
+
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/product',
+        destination: 'https://r0ja9y-0g.myshopify.com/products/half-shekel-coin',
+        permanent: false, // 308 redirect
+      },
+    ]
+  },
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
