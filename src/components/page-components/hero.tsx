@@ -74,7 +74,7 @@ export function Hero() {
                  {/* <span className="bg-gradient-to-r from-black via-blue-900 to-black bg-clip-text text-transparent">Moshiach</span> */}
               </h3>
               <p className="mt-4 md:mt-6 text-base md:text-xl max-w-2xl mx-auto text-neutral-200 text-shadow">
-                The authentic Machatzis Hashekel coin, prepared according to tradition for when the time comes.
+                The authentic Machatzis Hashekel coin, prepared according to Halacha for when the time comes.
               </p>
             </div>
 
