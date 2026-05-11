@@ -91,6 +91,27 @@ function SourcesSection() {
           <h3 className="text-xl">The Rambam writes:</h3>
           <ul className="list-disc list-outside space-y-2 pl-6">
             <li>
+              The Rambam writes that in addition to believing in Moshiach one also needs to anticipate him coming any day: אחכה לו בכל יום שיבוא (see Rambam’s Mishneh Torah, Hilchos Mlochim 11:1).
+            </li>
+
+
+            <li>
+
+              One can anticipate Moshiach coming, when he knows what will happen when Moshiach comes:
+            </li>
+            <li>
+
+              The Jews will return to Eretz Yisroel, and rebuild the Bais Hamikdash; and we will bring Korbonos (Rambam ibid).
+            </li>
+            <li>
+
+              On the first day that Moshiach comes, Korbonos Tzibur (=communal sacrifices) will be brought [even if the Bais Hamikdosh is not yet completely rebuilt (see Rambam’s Mishneh Torah, Hilchos Beis Habchiroh 2:4)].
+            </li>
+            <li>
+
+              The communal sacrifices are financed by an annual contribution of a silver Half-Shekel (“Machatzis Hashekel”) by each JewIsh man over the age of 13.
+            </li>
+            <li>
               There is a positive commandment that every Jewish man gives a
               half-shekel [to the Bais Hamikdash treasury], as stated in the
               Torah: “..This shall be given by all those included in the
@@ -107,8 +128,6 @@ function SourcesSection() {
               rebuild the Bais Hamikdash; [the observance of] all the laws will
               return to their previous state.. according to all the particulars
               mentioned by the Torah.
-
-
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
