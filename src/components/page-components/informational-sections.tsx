@@ -160,27 +160,24 @@ function SourcesSection() {
                       <strong>According to Rashi:</strong>
                       <ul className="list-circle space-y-1 pl-5 mt-1">
                         <li>
-                          An ounce (Kolonia standard): 450 barley grains
-                          (~29.16 grams)
+                          A ounce (Kolonia standard) is 450 barley grains [according to the Northwest European standard common in England, France and Italy] (~29.16 grams)
                         </li>
                         <li>
-                          Shekel is ½ of the Kolonia standard of the ounce= 225
-                          grains (~14.58 g)
+                          A Shekel is ½ of the Kolonia standard of the ounce= 225 grains (~14.58 grams)
                         </li>
-                        <li>Half-shekel = 112.5 grains (~7.29 g)</li>
+                        <li>A Half-shekel is 112.5 grains (~7.29 grams)</li>
                       </ul>
                     </li>
                     <li>
                       <strong>Other Opinions:</strong>
                       <ul className="list-circle space-y-1 pl-5 mt-1">
                         <li>
-                          Lekach Tov / Rabbeinu Tam: Machatzis HaShekel ≈ 108
-                          grains (~7 g)
+                          According to the Lekach Tov & Rabbeinu Tam: A Shekel is ½ of the Kolonia standard of the ounce= 216 grains (approx. 14 grams) and a Half-shekel = 108 grains (approx. 7 grams)
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <strong>The Rambam rules (Hilchos Shkolim 1:5):</strong>
+                      <strong>The Rambam writes (Hilchos Shkolim 1:5):</strong>
                       <p className="pl-5 mt-1">
                         One may never give less than the weight of Moshe
                         Rabbeinu’s half-shekel.
@@ -188,13 +185,13 @@ function SourcesSection() {
                     </li>
                     <li>
                       <strong>
-                        Some interpret the Rif (in the beginning of the first
-                        chapter of Kidushin) that:
+                        According to the Rif (in the beginning of the first chapter in kidushin) and the Rambam: 
+
+
                       </strong>
                       <ul className="list-circle space-y-1 pl-5 mt-1">
                         <li>
-                          A Shekel in time of Moshe Rabeinu = 320 wheat grains,
-                          a half of a Troy Ounce: 15.552 gram
+                          A Shekel in time of Moshe Rabeinu = 320 grains of barley (in Spain and Africa, which is identical to grains of wheat in northwestern Europe), a half of a Troy Ounce: 15.552 gram
                         </li>
                         <li>
                           A Half-Shekel in time of Moshe Rabeinu = 160 wheat
