@@ -111,23 +111,25 @@ function SourcesSection() {
 
               The communal sacrifices are financed by an annual contribution of a silver Half-Shekel (“Machatzis Hashekel”) by each JewIsh man over the age of 13.
             </li>
+         
             <li>
               There is a positive commandment that every Jewish man gives a
-              half-shekel [to the Bais Hamikdash treasury], as stated in the
+              half-shekel [to the Beis Hamikdash treasury], as stated in the
               Torah: “..This shall be given by all those included in the
-              census”.
+              census” (Rambam’s Sefer Hamitzvoth, Positive commandment # 171).
             </li>
             <li>
-              It is clear and explicit in the Torah, that G-d’s commandments
-              remain forever without change, addition, or diminishment; one may
-              not add to it or diminish from it.
+              A Jewish man must give the half-shekel all at once [not a portion
+              of it at one time and the remainder in a separate donation] (see
+              Rambam’s Mishneh Torah, Hilchos Shkolim 1:5).
             </li>
             <li>
-
-              In the era of Moshiach, when the Jews return to Eretz Yisroel, and
-              rebuild the Bais Hamikdash; [the observance of] all the laws will
-              return to their previous state.. according to all the particulars
-              mentioned by the Torah.
+              Therefore, the first Machatzis Hashekel is due on the day Moshiach
+              comes (subsequently, every year at the month of Adar, there is a
+              new collection of Machatzis Hashekel, so the communal sacrifices
+              of the new year (from Rosh Chodesh Nisan onwards) is financed by
+              the new contribution of Machatzish Hashekel (see Rambam’s Mishneh
+              Torah, Hilchos Shkolim 4:11)).
             </li>
             <li>
               A Jewish man must give the half-shekel all at once (and not a
@@ -137,21 +139,12 @@ function SourcesSection() {
           </ul>
 
           <p>
-            Therefore, a prerequisite to fulfilling the Mitzvah of “Machatzis
-            Hashekel” is to mint a silver “Machatzis Hashekel” coin that people
+            a prerequisite to fulfilling the Mitzvah of "Machatzis Hashekel" is to mint a silver “Machatzis Hashekel” coin that people
             can contribute to the Beis Hamikdosh once a year.
           </p>
 
           <p>
-            We pray each day: והשב העבודה לדביר ביתך .. ותחזינה עינינו בשובך
-            לציון ברחמים (restore the service to Your holy Sanctuary.. May our
-            eyes behold Your merciful return to Zion). When Moshiach comes and
-            The Beis Hamikdosh is rebuilt, the Kohanim will bring the communal
-            sacrifices that are financed by every member of Klal Yisroel
-            (obligatory for Men who are thirteen years and older; optional for
-            boys under the age of thirteen and for women) contributing a Machatzis
-            Hashekel (a half-shekel) once a year (which pays: for the Communal
-            offerings).
+           We pray each day: והשב העבודה לדביר ביתך .. ותחזינה עינינו בשובך לציון ברחמים (restore the service to Your holy Sanctuary.. May our eyes behold Your merciful return to Zion). When Moshiach comes and The Beis Hamikdosh is rebuilt, the Kohanim will bring the communal sacrifices that are financed by every member of Klal Yisroel (obligatory for Men who are thirteen years and older (see Ramban Exodus 30:12; Tosfos Yom Tov Shkolim 1:4); optional for boys under the age of thirteen and for women) contributing a Machatzis Hashekel once a year (which pays: for the Communal offerings).
           </p>
 
           <div className="pt-4">
@@ -439,7 +432,7 @@ function FaqSection() {
         {
           type: "p",
           content:
-            "Once the Mizbeiach is built, every Jewish community will appoint a trusted treasurer who collects the half-shekel coins and brings them to the Lishkah (the chamber where the coins collected for the Korbonos Tzibur are kept).",
+            "every Jewish community will appoint a trusted treasurer who collects the half-shekel coins and brings them to the Lishkah (the chamber where the coins collected for the Korbonos Tzibur are kept).",
         },
         {
           type: "p",
