@@ -157,6 +157,13 @@ function SourcesSection() {
                   <p>A half-shekel weighs one quarter of an ounce of silver.</p>
                   <ul className="list-disc space-y-3 pl-5 mt-3">
                     <li>
+                      A Half-Shekel in time of Moshe Rabeinu = 160 wheat grains, which is a quarter of a Troy ounce: 7.776 grams.
+                      <br />
+                      A Sela in the times of the 2nd Beis Hamikdosh = 384 grains (ibid 1:2).
+                      <br />
+                      A dinar is a quarter of a sela = 96 grains (ibid 1:3).
+                    </li>
+                    <li>
                       <strong>According to Rashi:</strong>
                       <ul className="list-circle space-y-1 pl-5 mt-1">
                         <li>
